@@ -13,6 +13,14 @@
                         <i class="bi bi-calendar-event"></i> Próximos Shows
                     </a>
                 </div>
+                <div class="d-flex gap-2 justify-content-center justify-content-lg-start flex-wrap mt-3">
+                    <a href="https://www.instagram.com/vox_in_progress/" class="btn btn-sm btn-outline-light" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-instagram"></i> Instagram
+                    </a>
+                    <a href="https://www.facebook.com/voxinprogress" class="btn btn-sm btn-outline-light" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-facebook"></i> Facebook
+                    </a>
+                </div>
             </div>
             <div class="col-lg-4 col-xl-5 d-flex justify-content-center align-items-center mt-4 mt-lg-0">
                 <img src="<?php echo asset('img/pub.png'); ?>" alt="VIP" class="img-fluid" style="max-width: 420px; width: 100%; height: auto;">

@@ -8,7 +8,7 @@
     </nav>
 
     <h1 class="mb-4">
-        <i class="bi bi-person-lines-fill"></i> Nossa Equipe Vocal
+        <i class="bi bi-person-lines-fill"></i> Músicos do VIP
     </h1>
 
     <?php if (!empty($cantores)): ?>
@@ -19,19 +19,21 @@
                 <div class="card-body text-center">
                     <div class="mb-3">
                             <?php $fotoUrl = cantor_photo_url($cantor); ?>
+                            <a href="<?php echo url('cantor', ['id' => $cantor['id']]); ?>" aria-label="Ver perfil de <?php echo e($cantor['nome']); ?>">
                             <?php if (!empty($fotoUrl)): ?>
                                 <img src="<?php echo e($fotoUrl); ?>" alt="<?php echo e($cantor['nome']); ?>" class="img-fluid rounded-circle" style="width: 96px; height: 96px; object-fit: cover;">
                             <?php else: ?>
                                 <i class="bi bi-person-circle" style="font-size: 4rem; color: #667eea;"></i>
                             <?php endif; ?>
+                            </a>
                     </div>
-                    <h5 class="card-title"><?php echo e($cantor['nome']); ?></h5>
+                    <h5 class="card-title">
+                        <a href="<?php echo url('cantor', ['id' => $cantor['id']]); ?>" class="text-decoration-none">
+                            <?php echo e($cantor['nome']); ?>
+                        </a>
+                    </h5>
                     <p class="badge bg-primary mb-3"><?php echo e($cantor['voz']); ?></p>
                     <p class="card-text text-muted small"><?php echo e($cantor['bioCurta']); ?></p>
-                    
-                    <a href="<?php echo url('cantor', ['id' => $cantor['id']]); ?>" class="btn btn-sm btn-primary mt-3">
-                        Ver Perfil Completo
-                    </a>
                 </div>
             </div>
         </div>

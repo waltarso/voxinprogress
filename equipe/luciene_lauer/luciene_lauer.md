@@ -1,1 +1,13 @@
-# Luciene Lauer  ## Sobre Mezzo\ chega\ em\ 2025\ e\ integrou\ a\ apresentaÃ§Ã£o\ no\ Nimbus\.  ## TrajetÃ³ria no VIP - Entrada no grupo:  - Voz: Mezzosoprano - Destaques:   ## Links - Instagram:  - YouTube: 
+# Luciene Lauer
+
+## Sobre
+Mezzo chega em 2025 e integrou a apresentação no Nimbus.
+
+## Trajetória no VIP
+- Entrada no grupo:
+- Voz: Mezzosoprano
+- Destaques:
+
+## Links
+- [Instagram](https://www.instagram.com/vox_in_progress/)
+- [Facebook](https://www.facebook.com/voxinprogress)

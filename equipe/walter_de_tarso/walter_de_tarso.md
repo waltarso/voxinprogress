@@ -1,1 +1,13 @@
-# Walter de Tarso  ## Sobre Fundador\ e\ regente,\ alterna\ entre\ barÃ­tono\ e\ direÃ§Ã£o\ desde\ 2019\.  ## TrajetÃ³ria no VIP - Entrada no grupo:  - Voz: BarÃƒÂ­tono - Destaques:   ## Links - Instagram:  - YouTube: 
+# Walter de Tarso
+
+## Sobre
+Fundador e regente, alterna entre barítono e direção desde 2019.
+
+## Trajetória no VIP
+- Entrada no grupo:
+- Voz: Barítono
+- Destaques:
+
+## Links
+- [Instagram](https://www.instagram.com/vox_in_progress/)
+- [Facebook](https://www.facebook.com/voxinprogress)

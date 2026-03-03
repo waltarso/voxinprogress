@@ -1,50 +1,104 @@
 [
-  {
-    "id": "fabiola_kiforenco",
-    "nome": "Fabíola Kiforenco",
-    "voz": "Soprano",
-    "bioCurta": "Soprano versátil, presente desde 2021, participou da estreia no Tonton e Nimbus.",
-    "foto": null,
-    "links": []
-  },
-  {
-    "id": "luciene_lauer",
-    "nome": "Luciene Lauer",
-    "voz": "Mezzosoprano",
-    "bioCurta": "Mezzo chega em 2025 e integrou a apresentação no Nimbus.",
-    "foto": null,
-    "links": []
-  },
-  {
-    "id": "karina_mendes",
-    "nome": "Karina Mendes Gontijo",
-    "voz": "Contralto",
-    "bioCurta": "Contralto de longa data, participou dos principais vídeos e eventos do grupo.",
-    "foto": null,
-    "links": []
-  },
-  {
-    "id": "joao_rangel",
-    "nome": "João Rangel",
-    "voz": "Tenor",
-    "bioCurta": "Tenor e responsável pela divulgação, entrou em 2025 e canta em apresentações recentes.",
-    "foto": null,
-    "links": []
-  },
-  {
-    "id": "walter_de_tarso",
-    "nome": "Walter de Tarso",
-    "voz": "Barítono",
-    "bioCurta": "Fundador e regente, alterna entre barítono e direção desde 2019.",
-    "foto": null,
-    "links": []
-  },
-  {
-    "id": "araken_souza",
-    "nome": "Araken Souza",
-    "voz": "Baixo",
-    "bioCurta": "Baixo estável desde 2023, participou das estreias no Tonton e Nimbus.",
-    "foto": null,
-    "links": []
-  }
+    {
+        "id":  "fabiola_kiforenco",
+        "nome":  "Fabíola Kiforenco",
+        "voz":  "Soprano",
+        "bioCurta":  "Soprano versátil, presente desde 2021, participou da estreia no Tonton e Nimbus.",
+        "foto":  null,
+        "links":  [
+                      {
+                          "titulo":  "Instagram",
+                          "url":  "https://www.instagram.com/vox_in_progress/"
+                      },
+                      {
+                          "titulo":  "Facebook",
+                          "url":  "https://www.facebook.com/voxinprogress"
+                      }
+                  ]
+    },
+    {
+        "id":  "luciene_lauer",
+        "nome":  "Luciene Lauer",
+        "voz":  "Mezzosoprano",
+        "bioCurta":  "Mezzo chega em 2025 e integrou a apresentação no Nimbus.",
+        "foto":  null,
+        "links":  [
+                      {
+                          "titulo":  "Instagram",
+                          "url":  "https://www.instagram.com/vox_in_progress/"
+                      },
+                      {
+                          "titulo":  "Facebook",
+                          "url":  "https://www.facebook.com/voxinprogress"
+                      }
+                  ]
+    },
+    {
+        "id":  "karina_mendes",
+        "nome":  "Karina Mendes Gontijo",
+        "voz":  "Contralto",
+        "bioCurta":  "Contralto de longa data, participou dos principais vídeos e eventos do grupo.",
+        "foto":  null,
+        "links":  [
+                      {
+                          "titulo":  "Instagram",
+                          "url":  "https://www.instagram.com/vox_in_progress/"
+                      },
+                      {
+                          "titulo":  "Facebook",
+                          "url":  "https://www.facebook.com/voxinprogress"
+                      }
+                  ]
+    },
+    {
+        "id":  "joao_rangel",
+        "nome":  "João Rangel",
+        "voz":  "Tenor",
+        "bioCurta":  "Tenor e responsável pela divulgação, entrou em 2025 e canta em apresentações recentes.",
+        "foto":  null,
+        "links":  [
+                      {
+                          "titulo":  "Instagram",
+                          "url":  "https://www.instagram.com/vox_in_progress/"
+                      },
+                      {
+                          "titulo":  "Facebook",
+                          "url":  "https://www.facebook.com/voxinprogress"
+                      }
+                  ]
+    },
+    {
+        "id":  "walter_de_tarso",
+        "nome":  "Walter de Tarso",
+        "voz":  "Barítono",
+        "bioCurta":  "Fundador e regente, alterna entre barítono e direção desde 2019.",
+        "foto":  null,
+        "links":  [
+                      {
+                          "titulo":  "Instagram",
+                          "url":  "https://www.instagram.com/vox_in_progress/"
+                      },
+                      {
+                          "titulo":  "Facebook",
+                          "url":  "https://www.facebook.com/voxinprogress"
+                      }
+                  ]
+    },
+    {
+        "id":  "araken_souza",
+        "nome":  "Araken Souza",
+        "voz":  "Baixo",
+        "bioCurta":  "Baixo estável desde 2023, participou das estreias no Tonton e Nimbus.",
+        "foto":  null,
+        "links":  [
+                      {
+                          "titulo":  "Instagram",
+                          "url":  "https://www.instagram.com/vox_in_progress/"
+                      },
+                      {
+                          "titulo":  "Facebook",
+                          "url":  "https://www.facebook.com/voxinprogress"
+                      }
+                  ]
+    }
 ]

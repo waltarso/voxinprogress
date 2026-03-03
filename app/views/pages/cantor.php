@@ -9,7 +9,7 @@
     </nav>
 
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-12">
             <div class="card shadow-sm border-0">
                 <div class="card-body">
                     <div class="row align-items-start">
@@ -48,30 +48,6 @@
             </div>
         </div>
 
-        <!-- Sidebar -->
-        <div class="col-lg-4">
-            <div class="card shadow-sm border-0">
-                <div class="card-body">
-                    <h5 class="card-title mb-3">
-                        <i class="bi bi-info-circle"></i> Informações
-                    </h5>
-                    <p>
-                        <strong>Voz:</strong> <?php echo e($cantor['voz']); ?>
-                    </p>
-                    <hr>
-                    <p class="mb-2">
-                        <a href="<?php echo url('cantores'); ?>" class="btn btn-sm btn-outline-primary w-100 mb-2">
-                            <i class="bi bi-arrow-left"></i> Voltar aos Cantores
-                        </a>
-                    </p>
-                    <p>
-                        <a href="<?php echo url('home'); ?>" class="btn btn-sm btn-outline-secondary w-100">
-                            <i class="bi bi-house"></i> Home
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
