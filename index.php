@@ -71,19 +71,45 @@ include VIEWS_DIR . '/layout/header.php';
 // ===== HOME =====
 if ($p === 'home') {
     $pageTitle = 'Home';
-    
-    // Pegar 6 primeiros arranjos para destaque
-    $ultimos_arranjos = array_slice($arranjos, 0, 6);
+
+    // Exibir apenas arranjos com ordem definida no campo `homeOrder`
+    $arranjos_home = array_values(array_filter($arranjos, function ($arr) {
+        if (!array_key_exists('homeOrder', $arr)) {
+            return false;
+        }
+
+        $value = $arr['homeOrder'];
+        return $value !== null && $value !== '' && is_numeric($value);
+    }));
+
+    // Ordenar em ordem crescente de homeOrder
+    usort($arranjos_home, function ($a, $b) {
+        $ordemA = (int) $a['homeOrder'];
+        $ordemB = (int) $b['homeOrder'];
+
+        if ($ordemA === $ordemB) {
+            $tituloA = strtolower($a['titulo'] ?? '');
+            $tituloB = strtolower($b['titulo'] ?? '');
+            return $tituloA <=> $tituloB;
+        }
+
+        return $ordemA <=> $ordemB;
+    });
+
+    $ultimos_arranjos = $arranjos_home;
     
     render('pages/home', compact('albums', 'arranjos', 'cantores', 'ultimos_arranjos', 'pageTitle'));
 }
 
 // ===== ARRANJOS (lista com filtros) =====
 elseif ($p === 'arranjos') {
-    $pageTitle = 'Arranjos';
+    $pageTitle = 'Músicas';
     
     // Filtros
     $albumId = $_GET['album'] ?? null;
+    if (($albumId === null || $albumId === '') && isset($_GET['id']) && $_GET['id'] !== '') {
+        $albumId = $_GET['id'];
+    }
     $q = $_GET['q'] ?? null;
     
     // Validar album ID

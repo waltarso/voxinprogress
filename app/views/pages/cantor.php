@@ -15,7 +15,12 @@
                     <div class="row align-items-start">
                         <div class="col-md-4 text-center">
                             <div class="mb-3">
-                                <i class="bi bi-person-circle" style="font-size: 6rem; color: #667eea;"></i>
+                                <?php $fotoUrl = cantor_photo_url($cantor); ?>
+                                <?php if (!empty($fotoUrl)): ?>
+                                    <img src="<?php echo e($fotoUrl); ?>" alt="<?php echo e($cantor['nome']); ?>" class="img-fluid rounded-circle" style="width: 180px; height: 180px; object-fit: cover;">
+                                <?php else: ?>
+                                    <i class="bi bi-person-circle" style="font-size: 6rem; color: #667eea;"></i>
+                                <?php endif; ?>
                             </div>
                             <h1><?php echo e($cantor['nome']); ?></h1>
                             <p class="badge bg-primary mb-3" style="font-size: 1rem; padding: 0.5rem 1rem;">
@@ -25,7 +30,7 @@
 
                         <div class="col-md-8">
                             <h3 class="mb-3">Sobre</h3>
-                            <p class="lead"><?php echo e($cantor['bioCurta']); ?></p>
+                            <?php echo cantor_bio_html($cantor); ?>
 
                             <?php if (isset($cantor['links']) && is_array($cantor['links']) && count($cantor['links']) > 0): ?>
                             <h5 class="mb-3">Links</h5>

@@ -14,7 +14,7 @@
                     <i class="bi bi-house"></i> Voltar à Home
                 </a>
                 <a href="<?php echo url('arranjos'); ?>" class="btn btn-outline-primary btn-lg">
-                    <i class="bi bi-collection-play"></i> Ver Arranjos
+                    <i class="bi bi-collection-play"></i> Ver Músicas
                 </a>
             </div>
         </div>

@@ -60,7 +60,7 @@
                     </p>
                     <p class="mb-2">
                         <a href="<?php echo url('arranjos'); ?>" class="btn btn-sm btn-outline-primary w-100 mb-2">
-                            <i class="bi bi-collection-play"></i> Veja Nossos Arranjos
+                            <i class="bi bi-collection-play"></i> Veja Nossas Músicas
                         </a>
                     </p>
                     <p>

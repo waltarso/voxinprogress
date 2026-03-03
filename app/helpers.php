@@ -21,6 +21,9 @@ function load_json($path)
     }
     
     $json = file_get_contents($path);
+    if (strncmp($json, "\xEF\xBB\xBF", 3) === 0) {
+        $json = substr($json, 3);
+    }
     $data = json_decode($json, true);
     
     return is_array($data) ? $data : [];
@@ -215,6 +218,108 @@ function find_cantor($cantores, $id)
         }
     }
     return null;
+}
+
+function cantor_dir_path($cantorId)
+{
+    if (!valid_id($cantorId)) {
+        return null;
+    }
+
+    return dirname(APP_DIR) . '/equipe/' . $cantorId;
+}
+
+function cantor_base_url($cantorId)
+{
+    if (!valid_id($cantorId)) {
+        return null;
+    }
+
+    $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
+    if ($base === '/' || $base === '\\') {
+        $base = '';
+    }
+
+    return $base . '/equipe/' . rawurlencode($cantorId);
+}
+
+function cantor_photo_url($cantor)
+{
+    $cantorId = $cantor['id'] ?? null;
+    if (!$cantorId || !valid_id($cantorId)) {
+        return null;
+    }
+
+    $dirPath = cantor_dir_path($cantorId);
+    $baseUrl = cantor_base_url($cantorId);
+
+    if (!$dirPath || !$baseUrl || !is_dir($dirPath)) {
+        return null;
+    }
+
+    if (!empty($cantor['foto']) && is_string($cantor['foto'])) {
+        $foto = trim($cantor['foto']);
+
+        if (preg_match('/^https?:\/\//i', $foto)) {
+            return $foto;
+        }
+
+        if (preg_match('#^(img/|assets/)#', $foto)) {
+            return asset($foto);
+        }
+
+        if ($foto !== '' && strpos($foto, '..') === false) {
+            $candidatePath = $dirPath . '/' . ltrim(str_replace('\\', '/', $foto), '/');
+            if (file_exists($candidatePath)) {
+                return $baseUrl . '/' . ltrim(str_replace('\\', '/', $foto), '/');
+            }
+        }
+    }
+
+    $extensions = ['jpg', 'jpeg', 'png', 'webp', 'avif'];
+    $priorityNames = ['foto', 'profile', 'perfil', 'avatar'];
+
+    foreach ($priorityNames as $name) {
+        foreach ($extensions as $ext) {
+            $fileName = $name . '.' . $ext;
+            if (file_exists($dirPath . '/' . $fileName)) {
+                return $baseUrl . '/' . $fileName;
+            }
+        }
+    }
+
+    foreach ($extensions as $ext) {
+        $matches = glob($dirPath . '/*.' . $ext);
+        if (!empty($matches)) {
+            $fileName = basename($matches[0]);
+            return $baseUrl . '/' . rawurlencode($fileName);
+        }
+    }
+
+    return null;
+}
+
+function cantor_bio_html($cantor)
+{
+    $cantorId = $cantor['id'] ?? null;
+    $bioCurta = trim((string) ($cantor['bioCurta'] ?? ''));
+
+    if ($cantorId && valid_id($cantorId)) {
+        $dirPath = cantor_dir_path($cantorId);
+        if ($dirPath && is_dir($dirPath)) {
+            $preferredFile = $dirPath . '/' . $cantorId . '.md';
+            if (file_exists($preferredFile)) {
+                return render_markdown_file($preferredFile);
+            }
+
+            $fallbackFile = $dirPath . '/bio.md';
+            if (file_exists($fallbackFile)) {
+                return render_markdown_file($fallbackFile);
+            }
+        }
+    }
+
+    return $bioCurta !== '' ? '<p class="lead">' . e($bioCurta) . '</p>' : '';
 }
 
 /**

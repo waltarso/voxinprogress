@@ -16,14 +16,15 @@ RewriteBase /
     RewriteCond %{REQUEST_FILENAME} !-d
     
     # Rewrite para index.php
+    # filtro de álbum em arranjos: /arranjos/albumid
+    # precisa vir antes da regra genérica /pagina/slug
+    RewriteRule ^arranjos/([a-z0-9_-]+)/?$ index.php?p=arranjos&album=$1 [L,QSA]
+
     # rota básica: /pagina
     RewriteRule ^([a-z]+)/?$ index.php?p=$1 [L,QSA]
 
     # detalhe com identificador: /pagina/slug
     RewriteRule ^([a-z]+)/([a-z0-9_-]+)/?$ index.php?p=$1&id=$2 [L,QSA]
-
-    # filtro de álbum em arranjos: /arranjos/albumid
-    RewriteRule ^arranjos/([a-z0-9_-]+)/?$ index.php?p=arranjos&album=$1 [L,QSA]
 </IfModule>
 
 # Segurança

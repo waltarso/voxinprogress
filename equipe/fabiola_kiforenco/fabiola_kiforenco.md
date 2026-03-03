@@ -1,0 +1,1 @@
+# FabÃƒÂ­ola Kiforenco  ## Sobre Soprano\ versÃ¡til,\ presente\ desde\ 2021,\ participou\ da\ estreia\ no\ Tonton\ e\ Nimbus\.  ## TrajetÃ³ria no VIP - Entrada no grupo:  - Voz: Soprano - Destaques:   ## Links - Instagram:  - YouTube: 

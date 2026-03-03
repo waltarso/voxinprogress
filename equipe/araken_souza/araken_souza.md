@@ -1,0 +1,1 @@
+# Araken Souza  ## Sobre Baixo\ estÃ¡vel\ desde\ 2023,\ participou\ das\ estreias\ no\ Tonton\ e\ Nimbus\.  ## TrajetÃ³ria no VIP - Entrada no grupo:  - Voz: Baixo - Destaques:   ## Links - Instagram:  - YouTube: 

@@ -1,0 +1,1 @@
+# Karina Mendes Gontijo  ## Sobre Contralto\ de\ longa\ data,\ participou\ dos\ principais\ vÃ­deos\ e\ eventos\ do\ grupo\.  ## TrajetÃ³ria no VIP - Entrada no grupo:  - Voz: Contralto - Destaques:   ## Links - Instagram:  - YouTube: 

@@ -16,7 +16,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php echo ($current_page === 'arranjos' ? 'active' : ''); ?>" href="<?php echo url('arranjos'); ?>">
-                        <i class="bi bi-collection-play"></i> Arranjos
+                        <i class="bi bi-collection-play"></i> Músicas
                     </a>
                 </li>
                 <li class="nav-item">

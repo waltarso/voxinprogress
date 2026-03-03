@@ -1,0 +1,1 @@
+# JoÃƒÂ£o Rangel  ## Sobre Tenor\ e\ responsÃ¡vel\ pela\ divulgaÃ§Ã£o,\ entrou\ em\ 2025\ e\ canta\ em\ apresentaÃ§Ãµes\ recentes\.  ## TrajetÃ³ria no VIP - Entrada no grupo:  - Voz: Tenor - Destaques:   ## Links - Instagram:  - YouTube: 

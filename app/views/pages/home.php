@@ -1,28 +1,31 @@
 <!-- Hero Section -->
-<section class="bg-gradient py-5 text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-    <div class="container py-5">
+<section class="py-2 text-white" style="background: #000;">
+    <div class="container py-2">
         <div class="row align-items-center">
-            <div class="col-lg-8">
-                <h1 class="display-3 fw-bold mb-3"><?php echo e(SITE_NAME); ?></h1>
+            <div class="col-lg-8 col-xl-7 text-center text-lg-start">
+                <h1 class="display-3 fw-bold mb-3 text-white"><?php echo e(SITE_NAME); ?></h1>
                 <p class="lead mb-4"><?php echo e(SITE_TAGLINE); ?></p>
-                <div class="d-flex gap-2">
+                <div class="d-flex gap-2 justify-content-center justify-content-lg-start flex-wrap">
                     <a href="<?php echo url('arranjos'); ?>" class="btn btn-light btn-lg">
-                        <i class="bi bi-collection-play"></i> Ver Arranjos
+                        <i class="bi bi-collection-play"></i> Ver Músicas
                     </a>
                     <a href="<?php echo url('agenda'); ?>" class="btn btn-outline-light btn-lg">
                         <i class="bi bi-calendar-event"></i> Próximos Shows
                     </a>
                 </div>
             </div>
+            <div class="col-lg-4 col-xl-5 d-flex justify-content-center align-items-center mt-4 mt-lg-0">
+                <img src="<?php echo asset('img/pub.png'); ?>" alt="VIP" class="img-fluid" style="max-width: 420px; width: 100%; height: auto;">
+            </div>
         </div>
     </div>
 </section>
 
-<!-- Seção de Últimos Arranjos -->
+<!-- Seção de Últimas Músicas -->
 <section class="py-5">
     <div class="container">
         <h2 class="mb-4" style="border-bottom: 3px solid #667eea; padding-bottom: 10px; display: inline-block;">
-            <i class="bi bi-stars"></i> Últimos Arranjos
+            <i class="bi bi-stars"></i> Últimas Músicas
         </h2>
         
         <?php if (!empty($ultimos_arranjos)): ?>
@@ -56,7 +59,7 @@
             <?php endforeach; ?>
         </div>
         <?php else: ?>
-        <p class="text-muted">Nenhum arranjo disponível.</p>
+        <p class="text-muted">Nenhuma música disponível.</p>
         <?php endif; ?>
     </div>
 </section>
@@ -75,7 +78,12 @@
                 <div class="card shadow-sm border-0">
                     <div class="card-body text-center">
                         <div class="mb-3">
-                            <i class="bi bi-person-circle" style="font-size: 3rem; color: #667eea;"></i>
+                            <?php $fotoUrl = cantor_photo_url($cantor); ?>
+                            <?php if (!empty($fotoUrl)): ?>
+                                <img src="<?php echo e($fotoUrl); ?>" alt="<?php echo e($cantor['nome']); ?>" class="img-fluid rounded-circle" style="width: 72px; height: 72px; object-fit: cover;">
+                            <?php else: ?>
+                                <i class="bi bi-person-circle" style="font-size: 3rem; color: #667eea;"></i>
+                            <?php endif; ?>
                         </div>
                         <h5 class="card-title"><?php echo e($cantor['nome']); ?></h5>
                         <p class="badge bg-primary mb-2"><?php echo e($cantor['voz']); ?></p>

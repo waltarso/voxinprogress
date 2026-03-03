@@ -3,12 +3,12 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo url('home'); ?>">Home</a></li>
-            <li class="breadcrumb-item active">Arranjos</li>
+            <li class="breadcrumb-item active">Músicas</li>
         </ol>
     </nav>
 
     <h1 class="mb-4">
-        <i class="bi bi-collection-play"></i> Catálogo de Arranjos
+        <i class="bi bi-collection-play"></i> Repertório de Músicas
     </h1>
 
     <!-- Filtros -->
@@ -96,10 +96,16 @@
             ?>
             <div class="card h-100 shadow-sm border-0 hover-card">
                 <?php if (!empty($thumb)): ?>
-                    <img src="<?php echo e($thumb); ?>" class="card-img-top" alt="<?php echo e($arranjo['titulo']); ?>">
+                    <a href="<?php echo url('arranjo', ['id' => $arranjo['id']]); ?>" aria-label="Ver detalhes de <?php echo e($arranjo['titulo']); ?>">
+                        <img src="<?php echo e($thumb); ?>" class="card-img-top" alt="<?php echo e($arranjo['titulo']); ?>">
+                    </a>
                 <?php endif; ?>
                 <div class="card-body">
-                    <h5 class="card-title text-truncate"><?php echo e($arranjo['titulo']); ?></h5>
+                    <h5 class="card-title text-truncate">
+                        <a href="<?php echo url('arranjo', ['id' => $arranjo['id']]); ?>" class="text-decoration-none">
+                            <?php echo e($arranjo['titulo']); ?>
+                        </a>
+                    </h5>
                     <p class="card-text text-muted small mb-2">
                         <strong>Artista:</strong> <?php echo e($arranjo['artistaOriginal']); ?>
                     </p>
@@ -126,9 +132,6 @@
                     </p>
                     <?php endif; ?>
                     
-                    <a href="<?php echo url('arranjo', ['id' => $arranjo['id']]); ?>" class="btn btn-sm btn-primary mt-3">
-                        Ver Detalhes <i class="bi bi-arrow-right"></i>
-                    </a>
                 </div>
             </div>
         </div>
@@ -136,12 +139,12 @@
     </div>
 
     <div class="mt-4 text-muted">
-        <p>Mostrando <?php echo count($arranjos); ?> arranjo(s)</p>
+        <p>Mostrando <?php echo count($arranjos); ?> música(s)</p>
     </div>
     <?php else: ?>
     <div class="alert alert-info">
         <i class="bi bi-info-circle"></i>
-        Nenhum arranjo encontrado com os critérios especificados.
+        Nenhuma música encontrada com os critérios especificados.
     </div>
     <?php endif; ?>
 </div>

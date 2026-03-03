@@ -33,6 +33,11 @@ if (php_sapi_name() === 'cli-server') {
 // Habilitar envio de email (mail())
 define('ENABLE_EMAIL', false);
 
+// Critério dos "Últimos Arranjos" na home:
+// - 'file_order' : usa a ordem do arranjos.json (padrão atual)
+// - 'year_desc'  : ordena por ano (mais recentes primeiro)
+define('HOME_LATEST_CRITERIA', 'file_order');
+
 // Caminhos absolutos (baseado em dirname(__FILE__))
 define('APP_DIR', __DIR__);
 define('DATA_DIR', APP_DIR . '/data');

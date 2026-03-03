@@ -3,7 +3,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo url('home'); ?>">Home</a></li>
-            <li class="breadcrumb-item"><a href="<?php echo url('arranjos'); ?>">Arranjos</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo url('arranjos'); ?>">Músicas</a></li>
             <?php if ($album): ?>
             <li class="breadcrumb-item"><a href="<?php echo url('arranjos', ['album' => $album['id']]); ?>"><?php echo e($album['titulo']); ?></a></li>
             <?php endif; ?>
@@ -122,7 +122,7 @@
             <?php else: ?>
             <div class="alert alert-warning">
                 <i class="bi bi-exclamation-triangle"></i>
-                Nenhum arquivo disponível para este arranjo.
+                Nenhum arquivo disponível para esta música.
             </div>
             <?php endif; ?>
         </div>
@@ -132,10 +132,10 @@
             <div class="card shadow-sm border-0 sticky-top arranjo-sidebar" style="top: 70px; z-index:102;">
                 <div class="card-body">
                     <h5 class="card-title mb-3">
-                        <i class="bi bi-info-circle"></i> Sobre este Arranjo
+                        <i class="bi bi-info-circle"></i> Sobre esta Música
                     </h5>
                     <p class="text-muted small">
-                        Este arranjo faz parte da série <strong><?php echo e($album['titulo']); ?></strong>.
+                        Esta música faz parte da série <strong><?php echo e($album['titulo']); ?></strong>.
                     </p>
                     <?php
                         $albumImage = null;
@@ -165,7 +165,7 @@
                     </p>
                     <p>
                         <a href="<?php echo url('arranjos'); ?>" class="btn btn-sm btn-outline-primary w-100">
-                            <i class="bi bi-arrow-left"></i> Voltar ao Catálogo
+                            <i class="bi bi-arrow-left"></i> Voltar ao Repertório
                         </a>
                     </p>
                 </div>
