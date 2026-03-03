@@ -322,6 +322,63 @@ function cantor_bio_html($cantor)
     return $bioCurta !== '' ? '<p class="lead">' . e($bioCurta) . '</p>' : '';
 }
 
+function cantor_profile_links($cantor)
+{
+    $resultado = [];
+
+    if (isset($cantor['links']) && is_array($cantor['links'])) {
+        foreach ($cantor['links'] as $link) {
+            if (!is_array($link)) {
+                continue;
+            }
+
+            $titulo = trim((string) ($link['titulo'] ?? ''));
+            $url = trim((string) ($link['url'] ?? ''));
+
+            if ($titulo === '' || $url === '') {
+                continue;
+            }
+
+            $resultado[] = [
+                'titulo' => $titulo,
+                'url' => $url,
+                'icon' => 'box-arrow-up-right'
+            ];
+        }
+    }
+
+    $whatsapp = trim((string) ($cantor['whatsapp'] ?? ''));
+    if ($whatsapp !== '') {
+        if (preg_match('#^https?://#i', $whatsapp)) {
+            $waUrl = $whatsapp;
+        } else {
+            $numero = preg_replace('/\D+/', '', $whatsapp);
+            if ($numero !== '') {
+                $waUrl = 'https://wa.me/' . $numero;
+            }
+        }
+
+        if (!empty($waUrl)) {
+            $resultado[] = [
+                'titulo' => 'WhatsApp',
+                'url' => $waUrl,
+                'icon' => 'whatsapp'
+            ];
+        }
+    }
+
+    $email = trim((string) ($cantor['email'] ?? ''));
+    if ($email !== '' && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $resultado[] = [
+            'titulo' => 'Email',
+            'url' => 'mailto:' . $email,
+            'icon' => 'envelope'
+        ];
+    }
+
+    return $resultado;
+}
+
 /**
  * Agrupa arquivos por tipo
  */

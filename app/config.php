@@ -6,7 +6,7 @@
 // Informações do site
 define('SITE_NAME', 'Vox in Progress');
 define('SITE_TAGLINE', 'Arranjos e Performances Vocais');
-define('CONTACT_EMAIL', 'contato@voxinprogress.vip');
+define('CONTACT_EMAIL', 'vip@voxinprogress.vip');
 
 // URL da base de dados de arquivos (relative path)
 // o site pode ficar sob a raiz ou num subdiretório (ex: /vip). Para não

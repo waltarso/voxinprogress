@@ -5,6 +5,8 @@
         "voz":  "Soprano",
         "bioCurta":  "Soprano versátil, presente desde 2021, participou da estreia no Tonton e Nimbus.",
         "foto":  null,
+        "whatsapp":  "5511999999999",
+        "email":  "fabiola_kiforenco@exemplo.com",
         "links":  [
                       {
                           "titulo":  "Instagram",
@@ -22,6 +24,8 @@
         "voz":  "Mezzosoprano",
         "bioCurta":  "Mezzo chega em 2025 e integrou a apresentação no Nimbus.",
         "foto":  null,
+        "whatsapp":  "5511888888888",
+        "email":  "luciene_lauer@exemplo.com",
         "links":  [
                       {
                           "titulo":  "Instagram",
@@ -39,6 +43,8 @@
         "voz":  "Contralto",
         "bioCurta":  "Contralto de longa data, participou dos principais vídeos e eventos do grupo.",
         "foto":  null,
+        "whatsapp":  "5511777777777",
+        "email":  "karina_mendes@exemplo.com",
         "links":  [
                       {
                           "titulo":  "Instagram",
@@ -56,6 +62,8 @@
         "voz":  "Tenor",
         "bioCurta":  "Tenor e responsável pela divulgação, entrou em 2025 e canta em apresentações recentes.",
         "foto":  null,
+        "whatsapp":  "5511666666666",
+        "email":  "joao_rangel@exemplo.com",
         "links":  [
                       {
                           "titulo":  "Instagram",
@@ -73,6 +81,8 @@
         "voz":  "Barítono",
         "bioCurta":  "Fundador e regente, alterna entre barítono e direção desde 2019.",
         "foto":  null,
+        "whatsapp":  "5511555555555",
+        "email":  "walter_de_tarso@exemplo.com",
         "links":  [
                       {
                           "titulo":  "Instagram",
@@ -90,6 +100,8 @@
         "voz":  "Baixo",
         "bioCurta":  "Baixo estável desde 2023, participou das estreias no Tonton e Nimbus.",
         "foto":  null,
+        "whatsapp":  "5511444444444",
+        "email":  "araken_souza@exemplo.com",
         "links":  [
                       {
                           "titulo":  "Instagram",

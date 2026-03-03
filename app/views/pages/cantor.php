@@ -32,12 +32,13 @@
                             <h3 class="mb-3">Sobre</h3>
                             <?php echo cantor_bio_html($cantor); ?>
 
-                            <?php if (isset($cantor['links']) && is_array($cantor['links']) && count($cantor['links']) > 0): ?>
+                            <?php $profileLinks = cantor_profile_links($cantor); ?>
+                            <?php if (!empty($profileLinks)): ?>
                             <h5 class="mb-3">Links</h5>
                             <div class="d-flex gap-2 mb-3">
-                                <?php foreach ($cantor['links'] as $link): ?>
-                                <a href="<?php echo e($link['url']); ?>" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi bi-box-arrow-up-right"></i> <?php echo e($link['titulo']); ?>
+                                <?php foreach ($profileLinks as $link): ?>
+                                <a href="<?php echo e($link['url']); ?>" class="btn btn-outline-primary btn-sm" <?php echo (strpos($link['url'], 'mailto:') === 0 ? '' : 'target="_blank" rel="noopener noreferrer"'); ?>>
+                                    <i class="bi bi-<?php echo e($link['icon']); ?>"></i> <?php echo e($link['titulo']); ?>
                                 </a>
                                 <?php endforeach; ?>
                             </div>
