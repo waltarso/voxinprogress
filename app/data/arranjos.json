@@ -1,0 +1,159 @@
+[
+  {
+    "id": "balada_do_louco",
+    "albumId": "insanity",
+    "titulo": "Balada do Louco",
+    "artistaOriginal": "Raul Seixas",
+    "ano": 1974,
+    "duracao": "5:30",
+    "dificuldade": 3,
+    "observacoes": "Arranjo para vozes mistas com dinâmica em progressão",
+    "storagePath": "Insanity/Balada_do_louco",
+    "image": null,
+    "files": [
+      {
+        "label": "Partitura Sibelius",
+        "relpath": "Balada_do_louco.sib",
+        "type": "sib"
+      },
+      {
+        "label": "MIDI Reference",
+        "relpath": "Balada_do_louco.mid",
+        "type": "midi"
+      }
+    ]
+  },
+  {
+    "id": "here_comes_the_sun",
+    "albumId": "insanity",
+    "titulo": "Here Comes the Sun",
+    "artistaOriginal": "The Beatles",
+    "ano": 1969,
+    "duracao": "3:05",
+    "dificuldade": 2,
+    "observacoes": "Versão clara e luminosa para ensemble vocal",
+    "storagePath": "Insanity/Here_comes_the_sun",
+    "image": null,
+    "files": [
+      {
+        "label": "Partitura Completa",
+        "relpath": "parts/Here_comes_the_sun.sib",
+        "type": "sib"
+      }
+    ]
+  },
+  {
+    "id": "astronomy_domine",
+    "albumId": "introspective",
+    "titulo": "Astronomy Domine",
+    "artistaOriginal": "Pink Floyd",
+    "ano": 1967,
+    "duracao": "4:15",
+    "dificuldade": 4,
+    "observacoes": "Arranjo elaborado com vozes em camadas",
+    "storagePath": "Introspective/Astronomy_Domine",
+    "image": "Astronomy_Domine.jpg",
+    "files": [
+      {
+        "label": "Partitura Principal",
+        "relpath": "Astronomy_Domine.sib",
+        "type": "sib"
+      }
+    ]
+  },
+  {
+    "id": "songs_from_the_wood",
+    "albumId": "introspective",
+    "titulo": "Songs from the Wood",
+    "artistaOriginal": "Jethro Tull",
+    "ano": 1977,
+    "duracao": "3:50",
+    "dificuldade": 3,
+    "observacoes": "Inspirado na tradição folk britânica com vozes",
+    "storagePath": "Introspective/Songs_from_the_wood",
+    "image": "Songs_from_the_Wood.jpg",
+    "files": [
+      {
+        "label": "Partitura",
+        "relpath": "parts/Songs_from_the_wood.sib",
+        "type": "sib"
+      }
+    ]
+  },
+  {
+    "id": "bicycle_race",
+    "albumId": "queen_at_six",
+    "titulo": "Bicycle Race",
+    "artistaOriginal": "Queen",
+    "ano": 1978,
+    "duracao": "3:00",
+    "dificuldade": 2,
+    "observacoes": "Diversão e energia para seis vozes",
+    "storagePath": "Queen_at_six/Bicycle_Race",
+    "image": "Bicycle_Race.jpg",
+    "files": [
+      {
+        "label": "Partitura",
+        "relpath": "bicycle_race.sib",
+        "type": "sib"
+      }
+    ]
+  },
+  {
+    "id": "under_pressure",
+    "albumId": "queen_at_six",
+    "titulo": "Under Pressure",
+    "artistaOriginal": "Queen feat. David Bowie",
+    "ano": 1981,
+    "duracao": "4:08",
+    "dificuldade": 4,
+    "observacoes": "Clássico dos clássicos em arranjo vocal ousado",
+    "storagePath": "Queen_at_six/Under_pressure",
+    "image": "Under_pressure.jpg",
+    "files": [
+      {
+        "label": "Partitura Completa",
+        "relpath": "Under_Pressure.sib",
+        "type": "sib"
+      }
+    ]
+  },
+  {
+    "id": "kashmir",
+    "albumId": "insanity",
+    "titulo": "Kashmir",
+    "artistaOriginal": "Led Zeppelin",
+    "ano": 1975,
+    "duracao": "8:00",
+    "dificuldade": 4,
+    "observacoes": "Arranjo épico com vozes masculinas e femininas",
+    "storagePath": "Insanity/Kashmir",
+    "image": "kashmir.webp",
+    "files": [
+      {
+        "label": "Partitura",
+        "relpath": "parts/Kashmir.sib",
+        "type": "sib"
+      }
+    ]
+  },
+  {
+    "id": "wonderous_stories",
+    "albumId": "introspective",
+    "titulo": "Wonderous Stories",
+    "artistaOriginal": "Yes",
+    "ano": 1977,
+    "duracao": "5:20",
+    "dificuldade": 3,
+    "observacoes": "Arranjo focado em vozes femininas, produzido em 2018",
+    "storagePath": "Introspective/Wonderous_Stories",
+    "image": "Wonderous_Stories.avif",
+    "files": [
+      {
+        "label": "Partitura",
+        "relpath": "parts/Wonderous_Stories.sib",
+        "type": "sib"
+      }
+    ]
+  }
+]

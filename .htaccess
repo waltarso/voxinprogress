@@ -1,0 +1,37 @@
+# VIP Project - .htaccess (Opcional)
+# Use apenas se quiser URLs amigáveis sem ?p=
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # O site será servido diretamente em https://voxinprogress.vip/,
+# portanto a base é a raiz do domínio.
+RewriteBase /
+    
+    # Redirecionar HTTPS
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Evitar rewrite de arquivos e pastas reais
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Rewrite para index.php
+    RewriteRule ^([a-z]+)/?$ index.php?p=$1 [L,QSA]
+    RewriteRule ^([a-z]+)/([a-z0-9_-]+)/?$ index.php?p=$1&id=$2 [L,QSA]
+</IfModule>
+
+# Segurança
+<Files "config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files "helpers.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<FilesMatch "\.json$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

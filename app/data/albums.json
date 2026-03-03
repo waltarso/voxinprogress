@@ -1,0 +1,23 @@
+[
+  {
+    "id": "insanity",
+    "titulo": "Insanity",
+    "descricao": "Arranjos de rock e pop clássico usados nos primeiros vídeos do grupo",
+    "image": "img/Insanity.png",
+    "ordem": 1
+  },
+  {
+    "id": "introspective",
+    "titulo": "Introspective",
+    "descricao": "Ciclo progressivo que serviu de base para gravações e primeiros vídeos",
+    "image": "img/Introspective.png",
+    "ordem": 2
+  },
+  {
+    "id": "queen_at_six",
+    "titulo": "Queen at Six",
+    "descricao": "Homenagem a Queen em arranjos para seis vozes, foco das apresentações de 2024–25",
+    "image": "img/Queen-at-six-Chimp.png",
+    "ordem": 3
+  }
+]

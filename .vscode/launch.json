@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Open index.php in browser",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8000/index.php",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "Start PHP Built-in Server"
+        }
+    ]
+}
