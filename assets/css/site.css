@@ -17,7 +17,8 @@ html, body {
 
 /* Navbar customizado */
 .navbar-dark {
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%) !important;
+    /* usar preto puro */
+    background-color: #000000 !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 

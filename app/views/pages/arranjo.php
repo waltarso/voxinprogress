@@ -137,9 +137,19 @@
                     <p class="text-muted small">
                         Este arranjo faz parte da série <strong><?php echo e($album['titulo']); ?></strong>.
                     </p>
-                    <?php if (!empty($album['image'])): ?>
+                    <?php
+                        $albumImage = null;
+                        if (!empty($album['image'])) {
+                            if (preg_match('#^(img/|assets/)#', $album['image'])) {
+                                $albumImage = asset($album['image']);
+                            } else {
+                                $albumImage = rtrim(ACERVO_BASE_URL, '/') . '/' . ltrim($album['image'], '/');
+                            }
+                        }
+                    ?>
+                    <?php if (!empty($albumImage)): ?>
                         <p class="text-center mb-2">
-                            <img src="<?php echo e(asset($album['image'])); ?>" alt="Capa de <?php echo e($album['titulo']); ?>" class="img-fluid rounded">
+                            <img src="<?php echo e($albumImage); ?>" alt="Capa de <?php echo e($album['titulo']); ?>" class="img-fluid rounded">
                         </p>
                     <?php endif; ?>
                     <p class="text-muted small">

@@ -3,6 +3,7 @@
         <footer class="mt-5 py-4 bg-dark text-white text-center border-top">
             <div class="container-fluid">
                 <p class="mb-2">
+                    <img src="<?php echo asset('img/vip-logo-transp.png'); ?>" alt="VIP" style="height:2em;" class="d-inline-block align-text-bottom me-1"> 
                     <strong><?php echo e(SITE_NAME); ?></strong> - <?php echo e(SITE_TAGLINE); ?>
                 </p>
                 <p class="mb-3 text-muted">
@@ -11,8 +12,9 @@
                         <?php echo e(CONTACT_EMAIL); ?>
                     </a>
                 </p>
-                <p class="text-muted small mb-0">
-                    &copy; <?php echo date('Y'); ?> VIP - Vox in Progress. Todos os direitos reservados.
+                <p class="text-white-50 small mb-0">
+                    &copy; <?php echo date('Y'); ?> 
+                    vip - Vox in Progress. Conteúdo livre; sinta-se à vontade para usar, copiar e modificar.
                 </p>
             </div>
         </footer>

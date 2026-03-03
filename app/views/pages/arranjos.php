@@ -14,10 +14,11 @@
     <!-- Filtros -->
     <div class="row mb-4">
         <div class="col-md-6">
-            <form method="GET" action="<?php echo url('arranjos'); ?>">
+            <!-- formulário transformado em navegação JS para permitir URLs amigáveis -->
+            <form id="filterForm" action="<?php echo url('arranjos'); ?>" method="GET">
                 <div class="row g-2">
                     <div class="col-md-6">
-                        <select name="album" class="form-select" onchange="this.form.submit()">
+                        <select name="album" id="albumSelect" class="form-select">
                             <option value="">Todos os Álbuns</option>
                             <?php foreach ($albums as $album): ?>
                             <option value="<?php echo e($album['id']); ?>" <?php echo isset($albumId) && $albumId === $album['id'] ? 'selected' : ''; ?>>
@@ -27,7 +28,7 @@
                         </select>
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="q" class="form-control" placeholder="Buscar por título..." 
+                        <input type="text" name="q" id="searchInput" class="form-control" placeholder="Buscar por título..." 
                                value="<?php echo isset($q) ? e($q) : ''; ?>">
                     </div>
                     <div class="col-12">
@@ -44,6 +45,44 @@
             </form>
         </div>
     </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.getElementById('filterForm');
+        var album = document.getElementById('albumSelect');
+        var search = document.getElementById('searchInput');
+        var pretty = <?php echo defined('USE_PRETTY_URLS') && USE_PRETTY_URLS ? 'true' : 'false'; ?>;
+
+        function navigate() {
+            if (!pretty) {
+                // fallback para servidor sem rewrite: usar query string normal
+                form.submit();
+                return;
+            }
+
+            var url = '<?php echo url('arranjos'); ?>';
+            var params = {};
+            if (album.value) {
+                url += '/' + encodeURIComponent(album.value);
+            }
+            if (search.value.trim()) {
+                params.q = search.value.trim();
+            }
+            if (Object.keys(params).length) {
+                url += '?' + new URLSearchParams(params).toString();
+            }
+            window.location = url;
+        }
+
+        album.addEventListener('change', function(e) {
+            navigate();
+        });
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            navigate();
+        });
+    });
+    </script>
 
     <!-- Resultados -->
     <?php if (!empty($arranjos)): ?>

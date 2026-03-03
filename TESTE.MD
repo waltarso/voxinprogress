@@ -1,6 +1,16 @@
 # VIP - Guia de Teste
 
 > ⚠️ **Nota**: após a instalação inicial, remova `install.php` e `status.php` do servidor.
+>
+> 💡 No servidor de desenvolvimento (`php -S localhost:8000`) o site roda na
+> raiz. URLs e links de imagem não devem conter `/vip`; eles são gerados
+> dinamicamente de acordo com o caminho base, então basta abrir
+> `http://localhost:8000`.
+>
+> 🚧 O servidor embutido **não processa** `.htaccess`, portanto o recurso de
+> URLs amigáveis fica desabilitado automaticamente nessa configuração. Você
+> verá URLs com `?p=...` durante os testes locais, mas na hospedagem Apache as
+> rotas ficarão limpas.
 
 
 ## Como Testar o Site Localmente
@@ -77,7 +87,7 @@ docker run -p 80:80 vip-site
 ### ✅ Arranjos (Catálogo)
 - [ ] Lista de arranjos aparece
 - [ ] Thumbnails das capas aparecem (retiradas de acervo se especificado)
-- [ ] Dropdown de álbum funciona
+- [ ] Dropdown de álbum funciona e atualiza a URL para `/arranjos/ALBUMID` sem querystring
 - [ ] Busca por texto funciona
 - [ ] Filtrar por álbum + busca simultaneamente funciona
 - [ ] Botão "Limpar" volta ao estado inicial

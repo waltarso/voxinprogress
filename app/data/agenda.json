@@ -1,18 +1,10 @@
 [
   {
-    "data": "2026-04-15",
+    "data": "2026-09-18",
     "hora": "20:00",
-    "titulo": "Concerto Primavera",
-    "local": "Teatro Municipal - São Paulo",
-    "descricao": "Apresentação dos arranjos da série Introspective",
-    "link": null
-  },
-  {
-    "data": "2026-05-22",
-    "hora": "19:30",
-    "titulo": "Noites de Câmara",
-    "local": "Espaço Cultural Vera Cruz",
-    "descricao": "Sessão de música de câmara com seleção de clássicos",
-    "link": null
+    "titulo": "Festival CoralUSP 2026",
+    "local": "Centro Cultural Camargo Guarnieri - São Paulo",
+    "descricao": "Encontro dos grupos do Corausp com participação de outros corais de todo o Brasil.",
+    "link": "https://coralusp.prceu.usp.br/?page_id=8363"
   }
 ]

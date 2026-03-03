@@ -76,7 +76,7 @@ Depois abra no navegador: `http://localhost:8000`
 Edite `app/config.php` para customizar:
 
 ```php
-define('SITE_NAME', 'VIP - Vox in Progress');
+define('SITE_NAME', 'Vox in Progress');
 define('SITE_TAGLINE', 'Arranjos e Performances Vocais');
 define('CONTACT_EMAIL', 'seu@email.com');
 define('ENABLE_EMAIL', false); // Ative para usar mail()
@@ -113,6 +113,15 @@ O valor de `image` aceita dois formatos:
 * nome de arquivo ou caminho relativo dentro do respectivo diretório do acervo
   (ex.: "cover.jpg", "folder/mini.png"). Neste caso a imagem é servida de
   `ACERVO_BASE_URL/<storagePath>/…`.
+
+  `ACERVO_BASE_URL` é configurado dinamicamente em `app/config.php` para refletir
+  o diretório base do site; não é necessário ajustar manualmente quando o
+  site é movido entre `/vip` e `/`.
+
+  **Importante:** o servidor embutido (`php -S`) não processa `.htaccess`, por
+  isso `USE_PRETTY_URLS` é automaticamente definido como `false` nesse ambiente
+  e as URLs voltam ao formato com query string. Em produção com Apache ou
+  outro servidor com rewrite habilitado, as URLs amigáveis funcionam normalmente.
 
 ```json
 [

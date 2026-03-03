@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold d-flex align-items-center" href="<?php echo url('home'); ?>">
-            <img src="<?php echo asset('img/vip-logo-simples.PNG'); ?>" alt="VIP" height="30" class="d-inline-block align-text-top me-2 logo-img">
+            <img src="<?php echo asset('img/vip-logo-transp.png'); ?>" alt="VIP" height="30" class="d-inline-block align-text-top me-2 logo-img">
             <?php echo e(SITE_NAME); ?>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

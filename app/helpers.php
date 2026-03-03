@@ -100,6 +100,39 @@ function arranjo_image_url($arranjo, $album = null)
  */
 function url($p, $params = [])
 {
+    // se o modo amigável estiver ligado e o servidor aceitar rewrites, gerar
+    // uma rota legível em vez de query string.
+    if (defined('USE_PRETTY_URLS') && USE_PRETTY_URLS) {
+        // caminho base do script (pode ser "" ou "/vip")
+        $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
+        if ($base === '/' || $base === '\\') {
+            $base = '';
+        }
+        
+        switch ($p) {
+            case 'arranjos':
+                $url = $base . '/arranjos';
+                if (isset($params['album'])) {
+                    $url .= '/' . urlencode($params['album']);
+                    unset($params['album']);
+                }
+                break;
+            case 'arranjo':
+                $id = $params['id'] ?? '';
+                $url = $base . '/arranjo/' . urlencode($id);
+                unset($params['id']);
+                break;
+            default:
+                $url = $base . '/' . $p;
+                break;
+        }
+        if (!empty($params)) {
+            $url .= '?' . http_build_query($params);
+        }
+        return $url;
+    }
+    
+    // fallback tradicional (query string)
     $baseUrl = 'index.php?p=' . urlencode($p);
     
     if (!empty($params)) {

@@ -4,14 +4,31 @@
  */
 
 // Informações do site
-define('SITE_NAME', 'VIP - Vox in Progress');
+define('SITE_NAME', 'Vox in Progress');
 define('SITE_TAGLINE', 'Arranjos e Performances Vocais');
 define('CONTACT_EMAIL', 'contato@voxinprogress.vip');
 
 // URL da base de dados de arquivos (relative path)
-// mudou: acervo agora fica sob /vip/acervo no servidor
-// ajuste conforme a configuração do seu ambiente
-define('ACERVO_BASE_URL', '/vip/acervo/');
+// o site pode ficar sob a raiz ou num subdiretório (ex: /vip). Para não
+// precisar editar esta constante a cada mudança, calculamos automaticamente
+// o prefixo usando SCRIPT_NAME.
+$baseAcervo = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
+if ($baseAcervo === '/' || $baseAcervo === '\\') {
+    $baseAcervo = '';
+}
+define('ACERVO_BASE_URL', $baseAcervo . '/acervo/');
+
+// URLs amigáveis: o helper `url()` irá gerar rotas sem querystring quando essa
+// opção estiver ativa. Requer mod_rewrite no Apache (arquivo .htaccess). O
+// servidor embutido do PHP (`php -S`) **não respeita** .htaccess, portanto
+// desabilitamos automaticamente quando estivermos usando o CLI server.
+
+if (php_sapi_name() === 'cli-server') {
+    // desenvolvimento local via "php -S"
+    define('USE_PRETTY_URLS', false);
+} else {
+    define('USE_PRETTY_URLS', true);
+}
 
 // Habilitar envio de email (mail())
 define('ENABLE_EMAIL', false);
