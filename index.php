@@ -154,7 +154,7 @@ elseif ($p === 'arranjo') {
 elseif ($p === 'historia') {
     $pageTitle = 'História';
     
-    render('pages/historia', compact('pageTitle'));
+    render('pages/historia', compact('pageTitle', 'current_page'));
 }
 
 // ===== CANTORES (lista) =====
@@ -270,4 +270,11 @@ elseif ($p === 'contato') {
     }
     
     render('pages/contato', compact('message', 'pageTitle'));
+}
+
+// ===== PÁGINAS MARKDOWN DINÂMICAS =====
+elseif (!in_array($p, $allowed_pages, true)) {
+    // Nesta altura, a validação inicial já confirmou que DATA_DIR/md/$p.md existe.
+    $pageTitle = ucwords(str_replace('_', ' ', $p));
+    render('pages/historia', compact('pageTitle', 'current_page'));
 }

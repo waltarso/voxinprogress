@@ -8,7 +8,7 @@ Site institucional do grupo vocal VIP, feito em PHP puro + Bootstrap, com dados 
 - Sem framework
 - Bootstrap 5 e Bootstrap Icons via CDN
 - Dados em `app/data/*.json`
-- Acervo de arquivos em `acervo/`
+- Acervo de arquivos em `material/`
 - Perfis dos cantores com foto e biografia em Markdown (`equipe/<id>/`)
 
 ## Estrutura principal
@@ -30,7 +30,7 @@ vip/
 ├── assets/
 │   ├── css/site.css
 │   └── img/
-├── acervo/
+├── material/
 └── equipe/
     └── <cantor_id>/
         ├── <cantor_id>.md
@@ -45,6 +45,21 @@ php -S localhost:8000
 ```
 
 Abra: `http://localhost:8000`
+
+## Sincronizar novos arquivos do material
+
+Quando voce adicionar novos arquivos/pastas em `material/`, rode:
+
+```bash
+php sync_material.php
+```
+
+O script:
+
+- atualiza `app/data/arranjos.json` com os arquivos encontrados
+- cria novos arranjos quando achar pastas novas
+- gera backup automatico em `app/data/arranjos.json.bak-YYYYMMDD-HHMMSS`
+- nao remove arranjos antigos automaticamente
 
 ## URLs
 
@@ -124,14 +139,14 @@ Prioridade de foto:
 
 - escape de HTML (`e()`)
 - validação de IDs (`valid_id()`)
-- proteção contra path traversal em arquivos de acervo
+- proteção contra path traversal em arquivos de material
 - CSRF + honeypot no formulário de contato
 - leitura JSON tolerante a BOM UTF-8
 
 ## Observações
 
 - Não depende de Composer/npm.
-- Se mover o projeto entre raiz e subpasta, URLs de assets/acervo são ajustadas dinamicamente.
+- Se mover o projeto entre raiz e subpasta, URLs de assets/material são ajustadas dinamicamente.
 
 ## Edição de conteúdo
 

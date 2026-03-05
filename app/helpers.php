@@ -506,9 +506,67 @@ function render_markdown($text)
         return '<ul>' . $m[0] . '</ul>';
     }, $text);
 
+    // tabelas Markdown (linhas com | + linha separadora com ---)
+    $tables = [];
+    $text = preg_replace_callback('/((?:^\|.*\|\s*(?:\r\n|\r|\n|$)){2,})/m', function ($m) use (&$tables) {
+        $block = trim($m[1]);
+        $lines = preg_split('/\r\n|\r|\n/', $block);
+        if (!is_array($lines) || count($lines) < 2) {
+            return $m[0];
+        }
+
+        $headerLine = trim($lines[0]);
+        $separatorLine = trim($lines[1]);
+
+        // exige separador típico de tabela markdown: | --- | --- |
+        if (!preg_match('/^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?$/', $separatorLine)) {
+            return $m[0];
+        }
+
+        $parseRow = function ($line) {
+            $line = trim($line);
+            $line = trim($line, '|');
+            $cells = explode('|', $line);
+            return array_map('trim', $cells);
+        };
+
+        $headers = $parseRow($headerLine);
+        if (empty($headers)) {
+            return $m[0];
+        }
+
+        $html = '<table class="table table-sm table-bordered align-middle"><thead><tr>';
+        foreach ($headers as $cell) {
+            $html .= '<th>' . $cell . '</th>';
+        }
+        $html .= '</tr></thead><tbody>';
+
+        for ($i = 2; $i < count($lines); $i++) {
+            $rowLine = trim($lines[$i]);
+            if ($rowLine === '') {
+                continue;
+            }
+            $cells = $parseRow($rowLine);
+            $html .= '<tr>';
+            foreach ($cells as $cell) {
+                $html .= '<td>' . $cell . '</td>';
+            }
+            $html .= '</tr>';
+        }
+        $html .= '</tbody></table>';
+
+        $tables[] = $html;
+        return '%%TABLE' . (count($tables) - 1) . '%%';
+    }, $text);
+
     // parágrafos: separar por duas quebras de linha
     $text = preg_replace('/(\r\n|\r|\n){2,}/', '</p><p>', $text);
     $text = '<p>' . $text . '</p>';
+
+    // restaurar blocos de tabela após a etapa de parágrafos
+    foreach ($tables as $idx => $tableHtml) {
+        $text = str_replace('%%TABLE' . $idx . '%%', $tableHtml, $text);
+    }
     
     return $text;
 }
@@ -538,8 +596,16 @@ function build_acervo_url($storagePath, $relpath)
         return null;
     }
     
+    // Normalizar separadores de diretório para URL (Windows usa "\\").
+    $storagePath = str_replace('\\', '/', (string) $storagePath);
+    $relpath = str_replace('\\', '/', (string) $relpath);
+
     $storagePath = rtrim($storagePath, '/');
     $relpath = ltrim($relpath, '/');
+
+    // Para PDFs com sufixo de versão (ex.: -v3.4, -ver-2.1, -2.3),
+    // resolve automaticamente o arquivo de maior versão disponível.
+    $relpath = resolve_latest_pdf_relpath($storagePath, $relpath);
     
     $fullPath = ACERVO_BASE_URL . $storagePath . '/' . $relpath;
     
@@ -547,4 +613,118 @@ function build_acervo_url($storagePath, $relpath)
     $fullPath = preg_replace('#/+#', '/', $fullPath);
     
     return $fullPath;
+}
+
+/**
+ * Resolve, para PDFs, o arquivo com maior versão na pasta.
+ */
+function resolve_latest_pdf_relpath($storagePath, $relpath)
+{
+    if (strtolower(pathinfo($relpath, PATHINFO_EXTENSION)) !== 'pdf') {
+        return $relpath;
+    }
+
+    $dirRel = pathinfo($relpath, PATHINFO_DIRNAME);
+    $fileName = pathinfo($relpath, PATHINFO_BASENAME);
+    $targetStem = pathinfo($fileName, PATHINFO_FILENAME);
+    $targetBase = strip_version_suffix($targetStem);
+
+    $materialRoot = dirname(APP_DIR) . '/material';
+    $storageFs = $materialRoot . '/' . str_replace('/', DIRECTORY_SEPARATOR, $storagePath);
+    $dirFs = $storageFs;
+    if ($dirRel !== '.' && $dirRel !== '') {
+        $dirFs .= '/' . str_replace('/', DIRECTORY_SEPARATOR, $dirRel);
+    }
+
+    if (!is_dir($dirFs)) {
+        return $relpath;
+    }
+
+    $entries = @scandir($dirFs);
+    if (!is_array($entries)) {
+        return $relpath;
+    }
+
+    $bestFile = null;
+    $bestVersion = null;
+
+    foreach ($entries as $entry) {
+        if ($entry === '.' || $entry === '..') {
+            continue;
+        }
+
+        if (strtolower(pathinfo($entry, PATHINFO_EXTENSION)) !== 'pdf') {
+            continue;
+        }
+
+        $stem = pathinfo($entry, PATHINFO_FILENAME);
+        if (strip_version_suffix($stem) !== $targetBase) {
+            continue;
+        }
+
+        $version = extract_version_parts($stem);
+        if ($bestFile === null || compare_version_parts($version, $bestVersion) > 0) {
+            $bestFile = $entry;
+            $bestVersion = $version;
+        }
+    }
+
+    if ($bestFile === null) {
+        return $relpath;
+    }
+
+    if ($dirRel === '.' || $dirRel === '') {
+        return $bestFile;
+    }
+
+    return $dirRel . '/' . $bestFile;
+}
+
+/**
+ * Remove sufixos comuns de versão no final do nome.
+ */
+function strip_version_suffix($stem)
+{
+    $out = preg_replace('/(?:[._-](?:v|ver)[._-]?\d+(?:[._]\d+)*)$/i', '', $stem);
+    $out = preg_replace('/(?:[._-]\d+[._]\d+(?:[._]\d+)*)$/', '', $out);
+    return $out;
+}
+
+/**
+ * Extrai versão numérica no final do nome (se houver).
+ */
+function extract_version_parts($stem)
+{
+    if (preg_match('/(?:[._-](?:v|ver)[._-]?(\d+(?:[._]\d+)*))$/i', $stem, $m)
+        || preg_match('/(?:[._-](\d+[._]\d+(?:[._]\d+)*))$/', $stem, $m)) {
+        $parts = preg_split('/[._]/', $m[1]);
+        if (is_array($parts)) {
+            return array_map('intval', $parts);
+        }
+    }
+
+    return [];
+}
+
+/**
+ * Compara dois vetores de versão. Retorna 1, 0 ou -1.
+ */
+function compare_version_parts($a, $b)
+{
+    $a = is_array($a) ? $a : [];
+    $b = is_array($b) ? $b : [];
+
+    $max = max(count($a), count($b));
+    for ($i = 0; $i < $max; $i++) {
+        $va = $a[$i] ?? 0;
+        $vb = $b[$i] ?? 0;
+        if ($va > $vb) {
+            return 1;
+        }
+        if ($va < $vb) {
+            return -1;
+        }
+    }
+
+    return 0;
 }

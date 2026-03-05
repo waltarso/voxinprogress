@@ -12,11 +12,11 @@ define('CONTACT_EMAIL', 'vip@voxinprogress.vip');
 // o site pode ficar sob a raiz ou num subdiretório (ex: /vip). Para não
 // precisar editar esta constante a cada mudança, calculamos automaticamente
 // o prefixo usando SCRIPT_NAME.
-$baseAcervo = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
-if ($baseAcervo === '/' || $baseAcervo === '\\') {
-    $baseAcervo = '';
+$baseMaterial = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
+if ($baseMaterial === '/' || $baseMaterial === '\\') {
+    $baseMaterial = '';
 }
-define('ACERVO_BASE_URL', $baseAcervo . '/acervo/');
+define('ACERVO_BASE_URL', $baseMaterial . '/material/');
 
 // URLs amigáveis: o helper `url()` irá gerar rotas sem querystring quando essa
 // opção estiver ativa. Requer mod_rewrite no Apache (arquivo .htaccess). O

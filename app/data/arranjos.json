@@ -1,1007 +1,1597 @@
 [
     {
-        "id":  "balada_do_louco",
-        "albumId":  "insanity",
-        "titulo":  "Balada do Louco",
-        "artistaOriginal":  "Raul Seixas",
-        "ano":  1974,
-        "duracao":  "5:30",
-        "dificuldade":  3,
-        "observacoes":  "Arranjo para vozes mistas com dinÃƒÂ¢mica em progressÃƒÂ£o",
-        "storagePath":  "Insanity/Balada_do_louco",
-        "image":  null,
-        "files":  [
-                      {
-                          "label":  "Partitura Sibelius",
-                          "relpath":  "Balada_do_louco.sib",
-                          "type":  "sib"
-                      },
-                      {
-                          "label":  "MIDI Reference",
-                          "relpath":  "Balada_do_louco.mid",
-                          "type":  "midi"
-                      }
-                  ],
-        "homeOrder":  null
+        "id": "balada_do_louco",
+        "albumId": "insanity",
+        "titulo": "Balada do Louco",
+        "artistaOriginal": "Raul Seixas",
+        "ano": 1974,
+        "duracao": "5:30",
+        "dificuldade": 3,
+        "observacoes": "Arranjo em construção",
+        "storagePath": "Insanity/Balada_do_louco",
+        "image": "Balada_do_louco.jpg",
+        "files": [
+            {
+                "label": "Balada_do_louco",
+                "relpath": "Balada_do_louco.mid",
+                "type": "midi"
+            },
+            {
+                "label": "Balada_do_louco-Tutti-v0.1",
+                "relpath": "Balada_do_louco-Tutti-v0.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Balada_do_louco",
+                "relpath": "Balada_do_louco.sib",
+                "type": "sib"
+            }
+        ],
+        "homeOrder": null
     },
     {
-        "id":  "here_comes_the_sun",
-        "albumId":  "insanity",
-        "titulo":  "Here Comes the Sun",
-        "artistaOriginal":  "The Beatles",
-        "ano":  1969,
-        "duracao":  "3:05",
-        "dificuldade":  2,
-        "observacoes":  "VersÃƒÂ£o clara e luminosa para ensemble vocal",
-        "storagePath":  "Insanity/Here_comes_the_sun",
-        "image":  null,
-        "files":  [
-                      {
-                          "label":  "Partitura Completa",
-                          "relpath":  "parts/Here_comes_the_sun.sib",
-                          "type":  "sib"
-                      }
-                  ],
-        "homeOrder":  null
+        "id": "here_comes_the_sun",
+        "albumId": "insanity",
+        "titulo": "Here Comes the Sun",
+        "artistaOriginal": "The Beatles",
+        "ano": 1969,
+        "duracao": "3:05",
+        "dificuldade": 2,
+        "observacoes": "VersÃƒÂ£o clara e luminosa para ensemble vocal",
+        "storagePath": "Insanity/Here_comes_the_sun",
+        "image": "Here_comes_the_sun.avif",
+        "files": [
+            {
+                "label": "Click-Here_comes_the_sun",
+                "relpath": "recordings\\Click-Here_comes_the_sun.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Here_comes_the_sun",
+                "relpath": "recordings\\Here_comes_the_sun.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Here_comes_the_sun-Bai",
+                "relpath": "recordings\\Here_comes_the_sun-Bai.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Here_comes_the_sun-Bar",
+                "relpath": "recordings\\Here_comes_the_sun-Bar.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Here_comes_the_sun-Con",
+                "relpath": "recordings\\Here_comes_the_sun-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Here_comes_the_sun-Mez",
+                "relpath": "recordings\\Here_comes_the_sun-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Here_comes_the_sun-Sop",
+                "relpath": "recordings\\Here_comes_the_sun-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Here_comes_the_sun-Ten",
+                "relpath": "recordings\\Here_comes_the_sun-Ten.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Here_comes_the_sun-Bai-v3.4",
+                "relpath": "parts\\Here_comes_the_sun-Bai-v3.4.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Here_comes_the_sun-Bar-v3.4",
+                "relpath": "parts\\Here_comes_the_sun-Bar-v3.4.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Here_comes_the_sun-Con-v3.4",
+                "relpath": "parts\\Here_comes_the_sun-Con-v3.4.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Here_comes_the_sun-Mez-v3.4",
+                "relpath": "parts\\Here_comes_the_sun-Mez-v3.4.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Here_comes_the_sun-Sop-v3.4",
+                "relpath": "parts\\Here_comes_the_sun-Sop-v3.4.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Here_comes_the_sun-Ten-v3.4",
+                "relpath": "parts\\Here_comes_the_sun-Ten-v3.4.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Here_comes_the_sun-Tutti-v3.4",
+                "relpath": "parts\\Here_comes_the_sun-Tutti-v3.4.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Here_comes_the_sun",
+                "relpath": "parts\\Here_comes_the_sun.sib",
+                "type": "sib"
+            }
+        ],
+        "homeOrder": null
     },
     {
-        "id":  "astronomy_domine",
-        "albumId":  "introspective",
-        "titulo":  "Astronomy Domine",
-        "artistaOriginal":  "Pink Floyd",
-        "ano":  1967,
-        "duracao":  "4:15",
-        "dificuldade":  4,
-        "observacoes":  "Arranjo elaborado com vozes em camadas",
-        "storagePath":  "Introspective/Astronomy_Domine",
-        "image":  "Astronomy_Domine.jpg",
-        "files":  [
-                      {
-                          "label":  "Partitura Principal",
-                          "relpath":  "Astronomy_Domine.sib",
-                          "type":  "sib"
-                      }
-                  ],
-        "homeOrder":  null
+        "id": "maluco_beleza",
+        "albumId": "insanity",
+        "titulo": "Maluco Beleza",
+        "artistaOriginal": "Raul Seixas",
+        "ano": 1977,
+        "duracao": null,
+        "dificuldade": 3,
+        "observacoes": "Arranjo para seis vozes: SMATBB",
+        "storagePath": "Insanity/Maluco_Beleza",
+        "image": "Maluco_Beleza.jpg",
+        "files": [
+            {
+                "label": "Maluco_Beleza",
+                "relpath": "recordings\\Maluco_Beleza.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Maluco_Beleza_Baixo",
+                "relpath": "recordings\\Maluco_Beleza_Baixo.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Maluco_Beleza_Baritono",
+                "relpath": "recordings\\Maluco_Beleza_Baritono.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Maluco_Beleza_Contralto",
+                "relpath": "recordings\\Maluco_Beleza_Contralto.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Maluco_Beleza_Mezzo",
+                "relpath": "recordings\\Maluco_Beleza_Mezzo.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Maluco_Beleza_Soprano",
+                "relpath": "recordings\\Maluco_Beleza_Soprano.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Maluco_Beleza_Tenor",
+                "relpath": "recordings\\Maluco_Beleza_Tenor.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Maluco beleza-2.3",
+                "relpath": "parts\\Maluco beleza-2.3.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Maluco beleza-Baixo",
+                "relpath": "parts\\Maluco beleza-Baixo.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Maluco beleza-Baritono",
+                "relpath": "parts\\Maluco beleza-Baritono.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Maluco beleza-Contralto",
+                "relpath": "parts\\Maluco beleza-Contralto.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Maluco beleza-Mezzo",
+                "relpath": "parts\\Maluco beleza-Mezzo.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Maluco beleza-Soprano",
+                "relpath": "parts\\Maluco beleza-Soprano.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Maluco beleza-Tenor",
+                "relpath": "parts\\Maluco beleza-Tenor.pdf",
+                "type": "pdf"
+            }
+        ],
+        "homeOrder": null
     },
     {
-        "id":  "songs_from_the_wood",
-        "albumId":  "introspective",
-        "titulo":  "Songs from the Wood",
-        "artistaOriginal":  "Jethro Tull",
-        "ano":  1977,
-        "duracao":  "3:50",
-        "dificuldade":  3,
-        "observacoes":  "Inspirado na tradiÃƒÂ§ÃƒÂ£o folk britÃƒÂ¢nica com vozes",
-        "storagePath":  "Introspective/Songs_from_the_wood",
-        "image":  "Songs_from_the_Wood.jpg",
-        "files":  [
-                      {
-                          "label":  "Partitura",
-                          "relpath":  "parts/Songs_from_the_wood.sib",
-                          "type":  "sib"
-                      }
-                  ],
-        "homeOrder":  null
+        "id": "sangue_latino",
+        "albumId": "insanity",
+        "titulo": "Sangue Latino",
+        "artistaOriginal": "Secos & Molhados",
+        "ano": 1973,
+        "duracao": null,
+        "dificuldade": 3,
+        "observacoes": "Arranjo para seis vozes: SMATBB",
+        "storagePath": "Insanity/Sangue_latino",
+        "image": "Sangue_latino.webp",
+        "files": [
+            {
+                "label": "Sangue_Latino-Bai",
+                "relpath": "recordings\\Sangue_Latino-Bai.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Sangue_Latino-Bar",
+                "relpath": "recordings\\Sangue_Latino-Bar.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Sangue_Latino-Click",
+                "relpath": "recordings\\Sangue_Latino-Click.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Sangue_Latino-Con",
+                "relpath": "recordings\\Sangue_Latino-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Sangue_Latino-Mez",
+                "relpath": "recordings\\Sangue_Latino-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Sangue_Latino-Sop",
+                "relpath": "recordings\\Sangue_Latino-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Sangue_Latino-Ten",
+                "relpath": "recordings\\Sangue_Latino-Ten.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Sangue_Latino-Tutti",
+                "relpath": "recordings\\Sangue_Latino-Tutti.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Sangue_Latino_Tutti-v.4.0",
+                "relpath": "parts\\Sangue_Latino_Tutti-v.4.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Sangue_Latino_v4.0-Bai",
+                "relpath": "parts\\Sangue_Latino_v4.0-Bai.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Sangue_Latino_v4.0-Bar",
+                "relpath": "parts\\Sangue_Latino_v4.0-Bar.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Sangue_Latino_v4.0-Con",
+                "relpath": "parts\\Sangue_Latino_v4.0-Con.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Sangue_Latino_v4.0-Mez",
+                "relpath": "parts\\Sangue_Latino_v4.0-Mez.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Sangue_Latino_v4.0-Sop",
+                "relpath": "parts\\Sangue_Latino_v4.0-Sop.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Sangue_Latino_v4.0-Ten",
+                "relpath": "parts\\Sangue_Latino_v4.0-Ten.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Sangue_Latino",
+                "relpath": "parts\\Sangue_Latino.sib",
+                "type": "sib"
+            }
+        ],
+        "homeOrder": null
     },
     {
-        "id":  "bicycle_race",
-        "albumId":  "queen_at_six",
-        "titulo":  "Bicycle Race",
-        "artistaOriginal":  "Queen",
-        "ano":  1978,
-        "duracao":  "3:00",
-        "dificuldade":  2,
-        "observacoes":  "DiversÃƒÂ£o e energia para seis vozes",
-        "storagePath":  "Queen_at_six/Bicycle_Race",
-        "image":  "Bicycle_Race.jpg",
-        "files":  [
-                      {
-                          "label":  "Partitura",
-                          "relpath":  "bicycle_race.sib",
-                          "type":  "sib"
-                      }
-                  ],
-        "homeOrder":  5
+        "id": "somebody_to_love",
+        "albumId": "insanity",
+        "titulo": "Somebody To Love",
+        "artistaOriginal": "",
+        "ano": null,
+        "duracao": null,
+        "dificuldade": 3,
+        "observacoes": "Importado automaticamente do material",
+        "storagePath": "Insanity/Somebody_to_love",
+        "image": null,
+        "files": [
+            {
+                "label": "Somebody_to_love",
+                "relpath": "audios\\Somebody_to_love.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Somebody_to_love-Bai",
+                "relpath": "audios\\Somebody_to_love-Bai.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Somebody_to_love-Con",
+                "relpath": "audios\\Somebody_to_love-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Somebody_to_love-Mez",
+                "relpath": "audios\\Somebody_to_love-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Somebody_to_love-Sop",
+                "relpath": "audios\\Somebody_to_love-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Somebody_to_love-Ten",
+                "relpath": "audios\\Somebody_to_love-Ten.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Somebody_to_love-Bai-ver_1.2",
+                "relpath": "parts\\Somebody_to_love-Bai-ver_1.2.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Somebody_to_love-Con-ver_1.2",
+                "relpath": "parts\\Somebody_to_love-Con-ver_1.2.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Somebody_to_love-Mez-ver_1.2",
+                "relpath": "parts\\Somebody_to_love-Mez-ver_1.2.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Somebody_to_love-Solo-ver_1.0",
+                "relpath": "parts\\Somebody_to_love-Solo-ver_1.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Somebody_to_love-Sop-ver_1.2",
+                "relpath": "parts\\Somebody_to_love-Sop-ver_1.2.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Somebody_to_love-Ten-ver_1.2",
+                "relpath": "parts\\Somebody_to_love-Ten-ver_1.2.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Somebody_to_love-Vozes-ver_1.2",
+                "relpath": "parts\\Somebody_to_love-Vozes-ver_1.2.pdf",
+                "type": "pdf"
+            }
+        ],
+        "homeOrder": null
     },
     {
-        "id":  "under_pressure",
-        "albumId":  "queen_at_six",
-        "titulo":  "Under Pressure",
-        "artistaOriginal":  "Queen feat. David Bowie",
-        "ano":  1981,
-        "duracao":  "4:08",
-        "dificuldade":  4,
-        "observacoes":  "ClÃƒÂ¡ssico dos clÃƒÂ¡ssicos em arranjo vocal ousado",
-        "storagePath":  "Queen_at_six/Under_pressure",
-        "image":  "Under_pressure.jpg",
-        "files":  [
-                      {
-                          "label":  "Partitura Completa",
-                          "relpath":  "Under_Pressure.sib",
-                          "type":  "sib"
-                      }
-                  ],
-        "homeOrder":  6
+        "id": "the_wall",
+        "albumId": "insanity",
+        "titulo": "The Wall",
+        "artistaOriginal": "Pink Floyd",
+        "ano": 1979,
+        "duracao": null,
+        "dificuldade": 4,
+        "observacoes": "Arranjo para seis vozes: SMATBB",
+        "storagePath": "Insanity/The_Wall",
+        "image": "The_Wall.jpg",
+        "files": [
+            {
+                "label": "The_Wall",
+                "relpath": "recordings\\The_Wall.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_Wall-Bai",
+                "relpath": "recordings\\The_Wall-Bai.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_Wall-Bar",
+                "relpath": "recordings\\The_Wall-Bar.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_Wall-Con",
+                "relpath": "recordings\\The_Wall-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_Wall-Mez",
+                "relpath": "recordings\\The_Wall-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_Wall-Sop",
+                "relpath": "recordings\\The_Wall-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_Wall-Ten",
+                "relpath": "recordings\\The_Wall-Ten.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_Wall-Bai-ver-4.1",
+                "relpath": "parts\\The_Wall-Bai-ver-4.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_Wall-Bar-ver-4.1",
+                "relpath": "parts\\The_Wall-Bar-ver-4.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_Wall-Con-ver-4.1",
+                "relpath": "parts\\The_Wall-Con-ver-4.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_Wall-Mez-ver-4.1",
+                "relpath": "parts\\The_Wall-Mez-ver-4.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_Wall-Sop-ver-4.1",
+                "relpath": "parts\\The_Wall-Sop-ver-4.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_Wall-Ten-ver-4.1",
+                "relpath": "parts\\The_Wall-Ten-ver-4.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_Wall-ver-4.1",
+                "relpath": "parts\\The_Wall-ver-4.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_Wall",
+                "relpath": "parts\\The_Wall.sib",
+                "type": "sib"
+            }
+        ],
+        "homeOrder": null
     },
     {
-        "id":  "kashmir",
-        "albumId":  "introspective",
-        "titulo":  "Kashmir",
-        "artistaOriginal":  "Led Zeppelin",
-        "ano":  1975,
-        "duracao":  "8:00",
-        "dificuldade":  4,
-        "observacoes":  "Arranjo ÃƒÂ©pico com vozes masculinas e femininas",
-        "storagePath":  "Introspective/kashmir",
-        "image":  "kashmir.webp",
-        "files":  [
-                      {
-                          "label":  "Partitura",
-                          "relpath":  "parts/Kashmir.sib",
-                          "type":  "sib"
-                      }
-                  ],
-        "homeOrder":  null
+        "id": "astronomy_domine",
+        "albumId": "introspective",
+        "titulo": "Astronomy Domine",
+        "artistaOriginal": "Pink Floyd",
+        "ano": 1967,
+        "duracao": "4:15",
+        "dificuldade": 4,
+        "observacoes": "Arranjo elaborado com vozes em camadas",
+        "storagePath": "Introspective/Astronomy_Domine",
+        "image": "Astronomy_Domine.jpg",
+        "files": [
+            {
+                "label": "Astronomy_Domine-Bai",
+                "relpath": "recordings\\Astronomy_Domine-Bai.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Astronomy_Domine-Bar",
+                "relpath": "recordings\\Astronomy_Domine-Bar.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Astronomy_Domine-Click",
+                "relpath": "recordings\\Astronomy_Domine-Click.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Astronomy_Domine-Con",
+                "relpath": "recordings\\Astronomy_Domine-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Astronomy_Domine-Mez",
+                "relpath": "recordings\\Astronomy_Domine-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Astronomy_Domine-Sop",
+                "relpath": "recordings\\Astronomy_Domine-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Astronomy_Domine-Ten",
+                "relpath": "recordings\\Astronomy_Domine-Ten.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Astronomy_Domine-Tutti",
+                "relpath": "recordings\\Astronomy_Domine-Tutti.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Astronomy_Domine-Bai-v3.0",
+                "relpath": "parts\\Astronomy_Domine-Bai-v3.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Astronomy_Domine-Bar-v3.0",
+                "relpath": "parts\\Astronomy_Domine-Bar-v3.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Astronomy_Domine-Con-v3.0",
+                "relpath": "parts\\Astronomy_Domine-Con-v3.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Astronomy_Domine-Mez-v3.0",
+                "relpath": "parts\\Astronomy_Domine-Mez-v3.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Astronomy_Domine-Sop-v3.0",
+                "relpath": "parts\\Astronomy_Domine-Sop-v3.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Astronomy_Domine-Ten-v3.0",
+                "relpath": "parts\\Astronomy_Domine-Ten-v3.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Astronomy_Domine-Tutti-v3.0",
+                "relpath": "parts\\Astronomy_Domine-Tutti-v3.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Astronomy_Domine",
+                "relpath": "Astronomy_Domine.sib",
+                "type": "sib"
+            }
+        ],
+        "homeOrder": null
     },
     {
-        "id":  "wonderous_stories",
-        "albumId":  "introspective",
-        "titulo":  "Wonderous Stories",
-        "artistaOriginal":  "Yes",
-        "ano":  1977,
-        "duracao":  "5:20",
-        "dificuldade":  3,
-        "observacoes":  "Arranjo focado em vozes femininas, produzido em 2018",
-        "storagePath":  "Introspective/Wonderous_Stories",
-        "image":  "Wonderous_Stories.avif",
-        "files":  [
-                      {
-                          "label":  "Partitura",
-                          "relpath":  "parts/Wonderous_Stories.sib",
-                          "type":  "sib"
-                      }
-                  ],
-        "homeOrder":  null
+        "id": "can_utility_and_the_coastliners",
+        "albumId": "introspective",
+        "titulo": "Can-Utility and the Coastliners",
+        "artistaOriginal": "Genesis",
+        "ano": 1972,
+        "duracao": null,
+        "dificuldade": 4,
+        "observacoes": "Arranjo para seis vozes: SMATBB",
+        "storagePath": "Introspective/Can_utility_and_the_coastliners",
+        "image": "Can_utility_and_the_coastliners.jpg",
+        "files": [
+            {
+                "label": "Can_utility_and_the_coastliners",
+                "relpath": "recordings\\Can_utility_and_the_coastliners.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Can_utility_and_the_coastliners-Bai",
+                "relpath": "recordings\\Can_utility_and_the_coastliners-Bai.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Can_utility_and_the_coastliners-Bar",
+                "relpath": "recordings\\Can_utility_and_the_coastliners-Bar.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Can_utility_and_the_coastliners-Con",
+                "relpath": "recordings\\Can_utility_and_the_coastliners-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Can_utility_and_the_coastliners-Mez",
+                "relpath": "recordings\\Can_utility_and_the_coastliners-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Can_utility_and_the_coastliners-Sop",
+                "relpath": "recordings\\Can_utility_and_the_coastliners-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Can_utility_and_the_coastliners-Ten",
+                "relpath": "recordings\\Can_utility_and_the_coastliners-Ten.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Can_utility_and_the_coastliners-Bai-v4.1",
+                "relpath": "parts\\Can_utility_and_the_coastliners-Bai-v4.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Can_utility_and_the_coastliners-Bar-v4.1",
+                "relpath": "parts\\Can_utility_and_the_coastliners-Bar-v4.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Can_utility_and_the_coastliners-Con-v4.1",
+                "relpath": "parts\\Can_utility_and_the_coastliners-Con-v4.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Can_utility_and_the_coastliners-Mez-v4.1",
+                "relpath": "parts\\Can_utility_and_the_coastliners-Mez-v4.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Can_utility_and_the_coastliners-Sop-v4.1",
+                "relpath": "parts\\Can_utility_and_the_coastliners-Sop-v4.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Can_utility_and_the_coastliners-Ten-v4.1",
+                "relpath": "parts\\Can_utility_and_the_coastliners-Ten-v4.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Can_utility_and_the_coastliners-Tutti-v4.1",
+                "relpath": "parts\\Can_utility_and_the_coastliners-Tutti-v4.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Can_utility_and_the_coastliners-Tutti-v4.1-Compacta",
+                "relpath": "parts\\Can_utility_and_the_coastliners-Tutti-v4.1-Compacta.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Can_utility_and_the_coastliners",
+                "relpath": "parts\\Can_utility_and_the_coastliners.sib",
+                "type": "sib"
+            }
+        ],
+        "homeOrder": null
     },
     {
-        "id":  "maluco_beleza",
-        "albumId":  "insanity",
-        "titulo":  "Maluco Beleza",
-        "artistaOriginal":  "Raul Seixas",
-        "ano":  1977,
-        "duracao":  null,
-        "dificuldade":  3,
-        "observacoes":  "Importado automaticamente do acervo",
-        "storagePath":  "Insanity/Maluco_Beleza",
-        "image":  "Maluco_Beleza.jpg",
-        "files":  [
-                      {
-                          "label":  "Maluco beleza-2.3",
-                          "relpath":  "parts\\Maluco beleza-2.3.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Maluco beleza-Baixo",
-                          "relpath":  "parts\\Maluco beleza-Baixo.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Maluco beleza-Baritono",
-                          "relpath":  "parts\\Maluco beleza-Baritono.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Maluco beleza-Contralto",
-                          "relpath":  "parts\\Maluco beleza-Contralto.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Maluco beleza-Mezzo",
-                          "relpath":  "parts\\Maluco beleza-Mezzo.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Maluco beleza-Soprano",
-                          "relpath":  "parts\\Maluco beleza-Soprano.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Maluco beleza-Tenor",
-                          "relpath":  "parts\\Maluco beleza-Tenor.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Maluco_Beleza",
-                          "relpath":  "recordings\\Maluco_Beleza.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Maluco_Beleza_Baixo",
-                          "relpath":  "recordings\\Maluco_Beleza_Baixo.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Maluco_Beleza_Baritono",
-                          "relpath":  "recordings\\Maluco_Beleza_Baritono.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Maluco_Beleza_Contralto",
-                          "relpath":  "recordings\\Maluco_Beleza_Contralto.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Maluco_Beleza_Mezzo",
-                          "relpath":  "recordings\\Maluco_Beleza_Mezzo.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Maluco_Beleza_Soprano",
-                          "relpath":  "recordings\\Maluco_Beleza_Soprano.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Maluco_Beleza_Tenor",
-                          "relpath":  "recordings\\Maluco_Beleza_Tenor.mp3",
-                          "type":  "mp3"
-                      }
-                  ],
-        "homeOrder":  null
+        "id": "kashmir",
+        "albumId": "introspective",
+        "titulo": "Kashmir",
+        "artistaOriginal": "Led Zeppelin",
+        "ano": 1975,
+        "duracao": "8:00",
+        "dificuldade": 4,
+        "observacoes": "Arranjo ÃƒÂ©pico com vozes masculinas e femininas",
+        "storagePath": "Introspective/kashmir",
+        "image": "kashmir.webp",
+        "files": [
+            {
+                "label": "Kashmir-Bai",
+                "relpath": "recordings\\Kashmir-Bai.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Kashmir-Bar",
+                "relpath": "recordings\\Kashmir-Bar.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Kashmir-Con",
+                "relpath": "recordings\\Kashmir-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Kashmir-Guia",
+                "relpath": "recordings\\Kashmir-Guia.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Kashmir-Mez",
+                "relpath": "recordings\\Kashmir-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Kashmir-Sop",
+                "relpath": "recordings\\Kashmir-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Kashmir-Ten",
+                "relpath": "recordings\\Kashmir-Ten.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Kashmir-Tutti",
+                "relpath": "recordings\\Kashmir-Tutti.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Kashmir-Bai-v7.0",
+                "relpath": "parts\\Kashmir-Bai-v7.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Kashmir-Bar-v7.0",
+                "relpath": "parts\\Kashmir-Bar-v7.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Kashmir-Con-v7.0",
+                "relpath": "parts\\Kashmir-Con-v7.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Kashmir-Mez-v7.0",
+                "relpath": "parts\\Kashmir-Mez-v7.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Kashmir-Sop-v7.0",
+                "relpath": "parts\\Kashmir-Sop-v7.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Kashmir-Ten-v7.0",
+                "relpath": "parts\\Kashmir-Ten-v7.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Kashmir-Tutti-v7.0",
+                "relpath": "parts\\Kashmir-Tutti-v7.0.pdf",
+                "type": "pdf"
+            }
+        ],
+        "homeOrder": null
     },
     {
-        "id":  "sangue_latino",
-        "albumId":  "insanity",
-        "titulo":  "Sangue Latino",
-        "artistaOriginal":  "Secos \u0026 Molhados",
-        "ano":  1973,
-        "duracao":  null,
-        "dificuldade":  3,
-        "observacoes":  "Importado automaticamente do acervo",
-        "storagePath":  "Insanity/Sangue_latino",
-        "image":  "Sangue_latino.webp",
-        "files":  [
-                      {
-                          "label":  "Sangue_Latino",
-                          "relpath":  "parts\\Sangue_Latino.sib",
-                          "type":  "sib"
-                      },
-                      {
-                          "label":  "Sangue_Latino_Tutti-v.4.0",
-                          "relpath":  "parts\\Sangue_Latino_Tutti-v.4.0.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Sangue_Latino_v4.0-Bai",
-                          "relpath":  "parts\\Sangue_Latino_v4.0-Bai.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Sangue_Latino_v4.0-Bar",
-                          "relpath":  "parts\\Sangue_Latino_v4.0-Bar.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Sangue_Latino_v4.0-Con",
-                          "relpath":  "parts\\Sangue_Latino_v4.0-Con.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Sangue_Latino_v4.0-Mez",
-                          "relpath":  "parts\\Sangue_Latino_v4.0-Mez.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Sangue_Latino_v4.0-Sop",
-                          "relpath":  "parts\\Sangue_Latino_v4.0-Sop.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Sangue_Latino_v4.0-Ten",
-                          "relpath":  "parts\\Sangue_Latino_v4.0-Ten.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Sangue_Latino-Bai",
-                          "relpath":  "recordings\\Sangue_Latino-Bai.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Sangue_Latino-Bar",
-                          "relpath":  "recordings\\Sangue_Latino-Bar.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Sangue_Latino-Click",
-                          "relpath":  "recordings\\Sangue_Latino-Click.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Sangue_Latino-Con",
-                          "relpath":  "recordings\\Sangue_Latino-Con.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Sangue_Latino-Mez",
-                          "relpath":  "recordings\\Sangue_Latino-Mez.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Sangue_Latino-Sop",
-                          "relpath":  "recordings\\Sangue_Latino-Sop.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Sangue_Latino-Ten",
-                          "relpath":  "recordings\\Sangue_Latino-Ten.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Sangue_Latino-Tutti",
-                          "relpath":  "recordings\\Sangue_Latino-Tutti.mp3",
-                          "type":  "mp3"
-                      }
-                  ],
-        "homeOrder":  null
+        "id": "songs_from_the_wood",
+        "albumId": "introspective",
+        "titulo": "Songs from the Wood",
+        "artistaOriginal": "Jethro Tull",
+        "ano": 1977,
+        "duracao": "3:50",
+        "dificuldade": 3,
+        "observacoes": "Inspirado na tradiÃƒÂ§ÃƒÂ£o folk britÃƒÂ¢nica com vozes",
+        "storagePath": "Introspective/Songs_from_the_wood",
+        "image": "Songs_from_the_Wood.jpg",
+        "files": [
+            {
+                "label": "Songs_from_the_wood-Bai",
+                "relpath": "recordings\\Songs_from_the_wood-Bai.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Songs_from_the_wood-Bar",
+                "relpath": "recordings\\Songs_from_the_wood-Bar.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Songs_from_the_wood-Con",
+                "relpath": "recordings\\Songs_from_the_wood-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Songs_from_the_wood-Guia",
+                "relpath": "recordings\\Songs_from_the_wood-Guia.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Songs_from_the_wood-Mez",
+                "relpath": "recordings\\Songs_from_the_wood-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Songs_from_the_wood-Sop",
+                "relpath": "recordings\\Songs_from_the_wood-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Songs_from_the_wood-Ten",
+                "relpath": "recordings\\Songs_from_the_wood-Ten.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Songs_from_the_wood-Tutti",
+                "relpath": "recordings\\Songs_from_the_wood-Tutti.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Songs_from_the_wood-Bai-v4.4",
+                "relpath": "parts\\Songs_from_the_wood-Bai-v4.4.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Songs_from_the_wood-Bar-v4.4",
+                "relpath": "parts\\Songs_from_the_wood-Bar-v4.4.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Songs_from_the_wood-Con-v4.4",
+                "relpath": "parts\\Songs_from_the_wood-Con-v4.4.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Songs_from_the_wood-Mez-v4.4",
+                "relpath": "parts\\Songs_from_the_wood-Mez-v4.4.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Songs_from_the_wood-Sop-v4.4",
+                "relpath": "parts\\Songs_from_the_wood-Sop-v4.4.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Songs_from_the_wood-Ten-v4.4",
+                "relpath": "parts\\Songs_from_the_wood-Ten-v4.4.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Songs_from_the_wood-Tutti-v4.4",
+                "relpath": "parts\\Songs_from_the_wood-Tutti-v4.4.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Songs_from_the_wood",
+                "relpath": "parts\\Songs_from_the_wood.sib",
+                "type": "sib"
+            }
+        ],
+        "homeOrder": null
     },
     {
-        "id":  "the_wall",
-        "albumId":  "insanity",
-        "titulo":  "The Wall",
-        "artistaOriginal":  "Pink Floyd",
-        "ano":  1979,
-        "duracao":  null,
-        "dificuldade":  4,
-        "observacoes":  "Importado automaticamente do acervo",
-        "storagePath":  "Insanity/The_Wall",
-        "image":  "The_Wall.jpg",
-        "files":  [
-                      {
-                          "label":  "The_Wall",
-                          "relpath":  "parts\\The_Wall.sib",
-                          "type":  "sib"
-                      },
-                      {
-                          "label":  "The_Wall-Bai-ver-4.1",
-                          "relpath":  "parts\\The_Wall-Bai-ver-4.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_Wall-Bar-ver-4.1",
-                          "relpath":  "parts\\The_Wall-Bar-ver-4.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_Wall-Con-ver-4.1",
-                          "relpath":  "parts\\The_Wall-Con-ver-4.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_Wall-Mez-ver-4.1",
-                          "relpath":  "parts\\The_Wall-Mez-ver-4.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_Wall-Sop-ver-4.1",
-                          "relpath":  "parts\\The_Wall-Sop-ver-4.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_Wall-Ten-ver-4.1",
-                          "relpath":  "parts\\The_Wall-Ten-ver-4.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_Wall-ver-4.1",
-                          "relpath":  "parts\\The_Wall-ver-4.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_Wall",
-                          "relpath":  "recordings\\The_Wall.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_Wall-Bai",
-                          "relpath":  "recordings\\The_Wall-Bai.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_Wall-Bar",
-                          "relpath":  "recordings\\The_Wall-Bar.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_Wall-Con",
-                          "relpath":  "recordings\\The_Wall-Con.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_Wall-Mez",
-                          "relpath":  "recordings\\The_Wall-Mez.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_Wall-Sop",
-                          "relpath":  "recordings\\The_Wall-Sop.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_Wall-Ten",
-                          "relpath":  "recordings\\The_Wall-Ten.mp3",
-                          "type":  "mp3"
-                      }
-                  ],
-        "homeOrder":  null
+        "id": "the_prophets_song",
+        "albumId": "introspective",
+        "titulo": "The Prophet''s Song",
+        "artistaOriginal": "Queen",
+        "ano": 1975,
+        "duracao": null,
+        "dificuldade": 5,
+        "observacoes": "Arranjo para seis vozes: SMATBB",
+        "storagePath": "Introspective/The_Prophets_Song",
+        "image": "The_Prophets_Song.jpg",
+        "files": [
+            {
+                "label": "The_Prophet's_song",
+                "relpath": "recordings\\The_Prophet's_song.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_Prophet's_song-Bai",
+                "relpath": "recordings\\The_Prophet's_song-Bai.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_Prophet's_song-Bar",
+                "relpath": "recordings\\The_Prophet's_song-Bar.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_Prophet's_song-Con",
+                "relpath": "recordings\\The_Prophet's_song-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_Prophet's_song-Mez",
+                "relpath": "recordings\\The_Prophet's_song-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_Prophet's_song-Sop",
+                "relpath": "recordings\\The_Prophet's_song-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_Prophet's_song-Ten",
+                "relpath": "recordings\\The_Prophet's_song-Ten.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_Prophet's_song-guide",
+                "relpath": "recordings\\The_Prophet's_song-guide.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_prophets_song-Bai-v5.2",
+                "relpath": "parts\\The_prophets_song-Bai-v5.2.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_prophets_song-Bar-v5.2",
+                "relpath": "parts\\The_prophets_song-Bar-v5.2.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_prophets_song-Con-v5.2",
+                "relpath": "parts\\The_prophets_song-Con-v5.2.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_prophets_song-Mez-v5.2",
+                "relpath": "parts\\The_prophets_song-Mez-v5.2.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_prophets_song-Sop-v5.2",
+                "relpath": "parts\\The_prophets_song-Sop-v5.2.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_prophets_song-Ten-v5.2",
+                "relpath": "parts\\The_prophets_song-Ten-v5.2.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_prophets_song-Tutti-v5.2",
+                "relpath": "parts\\The_prophets_song-Tutti-v5.2.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_prophets_song",
+                "relpath": "parts\\The_prophets_song.sib",
+                "type": "sib"
+            }
+        ],
+        "homeOrder": null
     },
     {
-        "id":  "can_utility_and_the_coastliners",
-        "albumId":  "introspective",
-        "titulo":  "Can-Utility and the Coastliners",
-        "artistaOriginal":  "Genesis",
-        "ano":  1972,
-        "duracao":  null,
-        "dificuldade":  4,
-        "observacoes":  "Importado automaticamente do acervo",
-        "storagePath":  "Introspective/Can_utility_and_the_coastliners",
-        "image":  "Can_utility_and_the_coastliners.jpg",
-        "files":  [
-                      {
-                          "label":  "Can_utility_and_the_coastliners",
-                          "relpath":  "parts\\Can_utility_and_the_coastliners.sib",
-                          "type":  "sib"
-                      },
-                      {
-                          "label":  "Can_utility_and_the_coastliners-Bai-v4.1",
-                          "relpath":  "parts\\Can_utility_and_the_coastliners-Bai-v4.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Can_utility_and_the_coastliners-Bar-v4.1",
-                          "relpath":  "parts\\Can_utility_and_the_coastliners-Bar-v4.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Can_utility_and_the_coastliners-Con-v4.1",
-                          "relpath":  "parts\\Can_utility_and_the_coastliners-Con-v4.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Can_utility_and_the_coastliners-Mez-v4.1",
-                          "relpath":  "parts\\Can_utility_and_the_coastliners-Mez-v4.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Can_utility_and_the_coastliners-Sop-v4.1",
-                          "relpath":  "parts\\Can_utility_and_the_coastliners-Sop-v4.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Can_utility_and_the_coastliners-Ten-v4.1",
-                          "relpath":  "parts\\Can_utility_and_the_coastliners-Ten-v4.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Can_utility_and_the_coastliners-Tutti-v4.1",
-                          "relpath":  "parts\\Can_utility_and_the_coastliners-Tutti-v4.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Can_utility_and_the_coastliners-Tutti-v4.1-Compacta",
-                          "relpath":  "parts\\Can_utility_and_the_coastliners-Tutti-v4.1-Compacta.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Can_utility_and_the_coastliners",
-                          "relpath":  "recordings\\Can_utility_and_the_coastliners.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Can_utility_and_the_coastliners-Bai",
-                          "relpath":  "recordings\\Can_utility_and_the_coastliners-Bai.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Can_utility_and_the_coastliners-Bar",
-                          "relpath":  "recordings\\Can_utility_and_the_coastliners-Bar.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Can_utility_and_the_coastliners-Con",
-                          "relpath":  "recordings\\Can_utility_and_the_coastliners-Con.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Can_utility_and_the_coastliners-Mez",
-                          "relpath":  "recordings\\Can_utility_and_the_coastliners-Mez.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Can_utility_and_the_coastliners-Sop",
-                          "relpath":  "recordings\\Can_utility_and_the_coastliners-Sop.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Can_utility_and_the_coastliners-Ten",
-                          "relpath":  "recordings\\Can_utility_and_the_coastliners-Ten.mp3",
-                          "type":  "mp3"
-                      }
-                  ],
-        "homeOrder":  null
+        "id": "wonderous_stories",
+        "albumId": "introspective",
+        "titulo": "Wonderous Stories",
+        "artistaOriginal": "Yes",
+        "ano": 1977,
+        "duracao": "5:20",
+        "dificuldade": 3,
+        "observacoes": "Arranjo focado em vozes femininas, produzido em 2018",
+        "storagePath": "Introspective/Wonderous_Stories",
+        "image": "Wonderous_Stories.avif",
+        "files": [
+            {
+                "label": "Wonderous_Stories-Con",
+                "relpath": "recordings\\Wonderous_Stories-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Wonderous_Stories-Mez",
+                "relpath": "recordings\\Wonderous_Stories-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Wonderous_Stories-Sop",
+                "relpath": "recordings\\Wonderous_Stories-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Wonderous_stories",
+                "relpath": "recordings\\Wonderous_stories.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Wonderous_Stories-Bai-v4.0",
+                "relpath": "parts\\Wonderous_Stories-Bai-v4.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Wonderous_Stories-Bar-v4.0",
+                "relpath": "parts\\Wonderous_Stories-Bar-v4.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Wonderous_Stories-Con-v4.0",
+                "relpath": "parts\\Wonderous_Stories-Con-v4.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Wonderous_Stories-Fem-v4.0",
+                "relpath": "parts\\Wonderous_Stories-Fem-v4.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Wonderous_Stories-Mas-v4.0",
+                "relpath": "parts\\Wonderous_Stories-Mas-v4.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Wonderous_Stories-Mez-v4.0",
+                "relpath": "parts\\Wonderous_Stories-Mez-v4.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Wonderous_Stories-Sop-v4.0",
+                "relpath": "parts\\Wonderous_Stories-Sop-v4.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Wonderous_Stories-Ten-v4.0",
+                "relpath": "parts\\Wonderous_Stories-Ten-v4.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Wonderous_Stories-Tutti-v4.0",
+                "relpath": "parts\\Wonderous_Stories-Tutti-v4.0.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Wonderous_Stories",
+                "relpath": "parts\\Wonderous_Stories.sib",
+                "type": "sib"
+            }
+        ],
+        "homeOrder": null
     },
     {
-        "id":  "the_prophets_song",
-        "albumId":  "introspective",
-        "titulo":  "The Prophet\u0027\u0027s Song",
-        "artistaOriginal":  "Queen",
-        "ano":  1975,
-        "duracao":  null,
-        "dificuldade":  5,
-        "observacoes":  "Importado automaticamente do acervo",
-        "storagePath":  "Introspective/The_Prophets_Song",
-        "image":  "The_Prophets_Song.jpg",
-        "files":  [
-                      {
-                          "label":  "The_prophets_song",
-                          "relpath":  "parts\\The_prophets_song.sib",
-                          "type":  "sib"
-                      },
-                      {
-                          "label":  "The_prophets_song-Bai-v5.2",
-                          "relpath":  "parts\\The_prophets_song-Bai-v5.2.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_prophets_song-Bar-v5.2",
-                          "relpath":  "parts\\The_prophets_song-Bar-v5.2.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_prophets_song-Con-v5.2",
-                          "relpath":  "parts\\The_prophets_song-Con-v5.2.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_prophets_song-Mez-v5.2",
-                          "relpath":  "parts\\The_prophets_song-Mez-v5.2.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_prophets_song-Sop-v5.2",
-                          "relpath":  "parts\\The_prophets_song-Sop-v5.2.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_prophets_song-Ten-v5.2",
-                          "relpath":  "parts\\The_prophets_song-Ten-v5.2.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_prophets_song-Tutti-v5.2",
-                          "relpath":  "parts\\The_prophets_song-Tutti-v5.2.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_Prophet\u0027s_song",
-                          "relpath":  "recordings\\The_Prophet\u0027s_song.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_Prophet\u0027s_song-Bai",
-                          "relpath":  "recordings\\The_Prophet\u0027s_song-Bai.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_Prophet\u0027s_song-Bar",
-                          "relpath":  "recordings\\The_Prophet\u0027s_song-Bar.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_Prophet\u0027s_song-Con",
-                          "relpath":  "recordings\\The_Prophet\u0027s_song-Con.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_Prophet\u0027s_song-guide",
-                          "relpath":  "recordings\\The_Prophet\u0027s_song-guide.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_Prophet\u0027s_song-Mez",
-                          "relpath":  "recordings\\The_Prophet\u0027s_song-Mez.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_Prophet\u0027s_song-Sop",
-                          "relpath":  "recordings\\The_Prophet\u0027s_song-Sop.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_Prophet\u0027s_song-Ten",
-                          "relpath":  "recordings\\The_Prophet\u0027s_song-Ten.mp3",
-                          "type":  "mp3"
-                      }
-                  ],
-        "homeOrder":  null
+        "id": "bicycle_race",
+        "albumId": "queen_at_six",
+        "titulo": "Bicycle Race",
+        "artistaOriginal": "Queen",
+        "ano": 1978,
+        "duracao": "3:00",
+        "dificuldade": 2,
+        "observacoes": "DiversÃƒÂ£o e energia para seis vozes",
+        "storagePath": "Queen_at_six/Bicycle_Race",
+        "image": "Bicycle_Race.jpg",
+        "files": [
+            {
+                "label": "Bicycle_race-Bai",
+                "relpath": "recordings\\Bicycle_race-Bai.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Bicycle_race-Bar",
+                "relpath": "recordings\\Bicycle_race-Bar.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Bicycle_race-Click",
+                "relpath": "recordings\\Bicycle_race-Click.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Bicycle_race-Con",
+                "relpath": "recordings\\Bicycle_race-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Bicycle_race-Mez",
+                "relpath": "recordings\\Bicycle_race-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Bicycle_race-Sop",
+                "relpath": "recordings\\Bicycle_race-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Bicycle_race-Ten",
+                "relpath": "recordings\\Bicycle_race-Ten.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Bicycle_race-Tutti",
+                "relpath": "recordings\\Bicycle_race-Tutti.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "bicycle_race-Bai-v2.5",
+                "relpath": "parts\\bicycle_race-Bai-v2.5.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "bicycle_race-Bar-v2.5",
+                "relpath": "parts\\bicycle_race-Bar-v2.5.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "bicycle_race-Con-v2.5",
+                "relpath": "parts\\bicycle_race-Con-v2.5.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "bicycle_race-Mez-v2.5",
+                "relpath": "parts\\bicycle_race-Mez-v2.5.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "bicycle_race-Sop-v2.5",
+                "relpath": "parts\\bicycle_race-Sop-v2.5.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "bicycle_race-Ten-v2.5",
+                "relpath": "parts\\bicycle_race-Ten-v2.5.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "bicycle_race-Tutti-v2.5",
+                "relpath": "parts\\bicycle_race-Tutti-v2.5.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "bicycle_race",
+                "relpath": "bicycle_race.sib",
+                "type": "sib"
+            }
+        ],
+        "homeOrder": 5
     },
     {
-        "id":  "crazy_little_thing_called_love",
-        "albumId":  "queen_at_six",
-        "titulo":  "Crazy Little Thing Called Love",
-        "artistaOriginal":  "Queen",
-        "ano":  1979,
-        "duracao":  null,
-        "dificuldade":  2,
-        "observacoes":  "Importado automaticamente do acervo",
-        "storagePath":  "Queen_at_six/Crazy_little_thing_called_love",
-        "image":  "Crazy_little_thing_called_love.jpg",
-        "files":  [
-                      {
-                          "label":  "Crazy_Little_Thing_Called_Love",
-                          "relpath":  "Crazy_Little_Thing_Called_Love.sib",
-                          "type":  "sib"
-                      },
-                      {
-                          "label":  "Crazy_Little_Thing_Called_Love-Bai-v2.6",
-                          "relpath":  "parts\\Crazy_Little_Thing_Called_Love-Bai-v2.6.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Crazy_Little_Thing_Called_Love-Bar-v2.6",
-                          "relpath":  "parts\\Crazy_Little_Thing_Called_Love-Bar-v2.6.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Crazy_Little_Thing_Called_Love-Con-v2.6",
-                          "relpath":  "parts\\Crazy_Little_Thing_Called_Love-Con-v2.6.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Crazy_Little_Thing_Called_Love-Mez-v2.6",
-                          "relpath":  "parts\\Crazy_Little_Thing_Called_Love-Mez-v2.6.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Crazy_Little_Thing_Called_Love-Sop-v2.6",
-                          "relpath":  "parts\\Crazy_Little_Thing_Called_Love-Sop-v2.6.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Crazy_Little_Thing_Called_Love-Ten-v2.6",
-                          "relpath":  "parts\\Crazy_Little_Thing_Called_Love-Ten-v2.6.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Crazy_Little_Thing_Called_Love-Tutti-v2.6",
-                          "relpath":  "parts\\Crazy_Little_Thing_Called_Love-Tutti-v2.6.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Crazy_little_thing_called_love-Bai",
-                          "relpath":  "recordings\\Crazy_little_thing_called_love-Bai.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Crazy_little_thing_called_love-Bar",
-                          "relpath":  "recordings\\Crazy_little_thing_called_love-Bar.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Crazy_little_thing_called_love-Click",
-                          "relpath":  "recordings\\Crazy_little_thing_called_love-Click.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Crazy_little_thing_called_love-Con",
-                          "relpath":  "recordings\\Crazy_little_thing_called_love-Con.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Crazy_little_thing_called_love-Mez",
-                          "relpath":  "recordings\\Crazy_little_thing_called_love-Mez.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Crazy_little_thing_called_love-Sop",
-                          "relpath":  "recordings\\Crazy_little_thing_called_love-Sop.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Crazy_little_thing_called_love-Ten",
-                          "relpath":  "recordings\\Crazy_little_thing_called_love-Ten.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Crazy_little_thing_called_love-Tutti",
-                          "relpath":  "recordings\\Crazy_little_thing_called_love-Tutti.mp3",
-                          "type":  "mp3"
-                      }
-                  ],
-        "homeOrder":  1
+        "id": "crazy_little_thing_called_love",
+        "albumId": "queen_at_six",
+        "titulo": "Crazy Little Thing Called Love",
+        "artistaOriginal": "Queen",
+        "ano": 1979,
+        "duracao": null,
+        "dificuldade": 2,
+        "observacoes": "Arranjo para seis vozes: SMATBB",
+        "storagePath": "Queen_at_six/Crazy_little_thing_called_love",
+        "image": "Crazy_little_thing_called_love.jpg",
+        "files": [
+            {
+                "label": "Crazy_little_thing_called_love-Bai",
+                "relpath": "recordings\\Crazy_little_thing_called_love-Bai.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Crazy_little_thing_called_love-Bar",
+                "relpath": "recordings\\Crazy_little_thing_called_love-Bar.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Crazy_little_thing_called_love-Click",
+                "relpath": "recordings\\Crazy_little_thing_called_love-Click.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Crazy_little_thing_called_love-Con",
+                "relpath": "recordings\\Crazy_little_thing_called_love-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Crazy_little_thing_called_love-Mez",
+                "relpath": "recordings\\Crazy_little_thing_called_love-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Crazy_little_thing_called_love-Sop",
+                "relpath": "recordings\\Crazy_little_thing_called_love-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Crazy_little_thing_called_love-Ten",
+                "relpath": "recordings\\Crazy_little_thing_called_love-Ten.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Crazy_little_thing_called_love-Tutti",
+                "relpath": "recordings\\Crazy_little_thing_called_love-Tutti.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Crazy_Little_Thing_Called_Love-Bai-v2.6",
+                "relpath": "parts\\Crazy_Little_Thing_Called_Love-Bai-v2.6.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Crazy_Little_Thing_Called_Love-Bar-v2.6",
+                "relpath": "parts\\Crazy_Little_Thing_Called_Love-Bar-v2.6.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Crazy_Little_Thing_Called_Love-Con-v2.6",
+                "relpath": "parts\\Crazy_Little_Thing_Called_Love-Con-v2.6.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Crazy_Little_Thing_Called_Love-Mez-v2.6",
+                "relpath": "parts\\Crazy_Little_Thing_Called_Love-Mez-v2.6.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Crazy_Little_Thing_Called_Love-Sop-v2.6",
+                "relpath": "parts\\Crazy_Little_Thing_Called_Love-Sop-v2.6.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Crazy_Little_Thing_Called_Love-Ten-v2.6",
+                "relpath": "parts\\Crazy_Little_Thing_Called_Love-Ten-v2.6.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Crazy_Little_Thing_Called_Love-Tutti-v2.6",
+                "relpath": "parts\\Crazy_Little_Thing_Called_Love-Tutti-v2.6.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Crazy_Little_Thing_Called_Love",
+                "relpath": "Crazy_Little_Thing_Called_Love.sib",
+                "type": "sib"
+            }
+        ],
+        "homeOrder": 1
     },
     {
-        "id":  "good_company",
-        "albumId":  "queen_at_six",
-        "titulo":  "Good Company",
-        "artistaOriginal":  "Queen",
-        "ano":  1975,
-        "duracao":  null,
-        "dificuldade":  3,
-        "observacoes":  "Importado automaticamente do acervo",
-        "storagePath":  "Queen_at_six/Good_company",
-        "image":  "Good_company.jpg",
-        "files":  [
-                      {
-                          "label":  "Good_company",
-                          "relpath":  "Good_company.sib",
-                          "type":  "sib"
-                      },
-                      {
-                          "label":  "Good_company-Bai-v1.6",
-                          "relpath":  "parts\\Good_company-Bai-v1.6.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Good_company-Bar-v1.6",
-                          "relpath":  "parts\\Good_company-Bar-v1.6.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Good_company-Con-v1.6",
-                          "relpath":  "parts\\Good_company-Con-v1.6.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Good_company-Mez-v1.6",
-                          "relpath":  "parts\\Good_company-Mez-v1.6.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Good_company-Sop-v1.6",
-                          "relpath":  "parts\\Good_company-Sop-v1.6.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Good_company-Ten-v1.6",
-                          "relpath":  "parts\\Good_company-Ten-v1.6.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Good_company-Tutti-v1.6",
-                          "relpath":  "parts\\Good_company-Tutti-v1.6.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Good_company-Bai",
-                          "relpath":  "recordings\\Good_company-Bai.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Good_company-Bar",
-                          "relpath":  "recordings\\Good_company-Bar.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Good_company-Click",
-                          "relpath":  "recordings\\Good_company-Click.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Good_company-Con",
-                          "relpath":  "recordings\\Good_company-Con.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Good_company-Mez",
-                          "relpath":  "recordings\\Good_company-Mez.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Good_company-Sop",
-                          "relpath":  "recordings\\Good_company-Sop.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Good_company-Ten",
-                          "relpath":  "recordings\\Good_company-Ten.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Good_company-Tutti",
-                          "relpath":  "recordings\\Good_company-Tutti.mp3",
-                          "type":  "mp3"
-                      }
-                  ],
-        "homeOrder":  4
+        "id": "good_company",
+        "albumId": "queen_at_six",
+        "titulo": "Good Company",
+        "artistaOriginal": "Queen",
+        "ano": 1975,
+        "duracao": null,
+        "dificuldade": 3,
+        "observacoes": "Arranjo para seis vozes: SMATBB",
+        "storagePath": "Queen_at_six/Good_company",
+        "image": "Good_company.jpg",
+        "files": [
+            {
+                "label": "Good_company-Bai",
+                "relpath": "recordings\\Good_company-Bai.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_company-Bar",
+                "relpath": "recordings\\Good_company-Bar.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_company-Click",
+                "relpath": "recordings\\Good_company-Click.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_company-Con",
+                "relpath": "recordings\\Good_company-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_company-Mez",
+                "relpath": "recordings\\Good_company-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_company-Sop",
+                "relpath": "recordings\\Good_company-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_company-Ten",
+                "relpath": "recordings\\Good_company-Ten.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_company-Tutti",
+                "relpath": "recordings\\Good_company-Tutti.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_company-Bai-v1.6",
+                "relpath": "parts\\Good_company-Bai-v1.6.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Good_company-Bar-v1.6",
+                "relpath": "parts\\Good_company-Bar-v1.6.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Good_company-Con-v1.6",
+                "relpath": "parts\\Good_company-Con-v1.6.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Good_company-Mez-v1.6",
+                "relpath": "parts\\Good_company-Mez-v1.6.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Good_company-Sop-v1.6",
+                "relpath": "parts\\Good_company-Sop-v1.6.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Good_company-Ten-v1.6",
+                "relpath": "parts\\Good_company-Ten-v1.6.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Good_company-Tutti-v1.6",
+                "relpath": "parts\\Good_company-Tutti-v1.6.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Good_company",
+                "relpath": "Good_company.sib",
+                "type": "sib"
+            }
+        ],
+        "homeOrder": 4
     },
     {
-        "id":  "good_old-fashioned_lover_boy",
-        "albumId":  "queen_at_six",
-        "titulo":  "Good Old-Fashioned Lover Boy",
-        "artistaOriginal":  "Queen",
-        "ano":  1976,
-        "duracao":  null,
-        "dificuldade":  3,
-        "observacoes":  "Importado automaticamente do acervo",
-        "storagePath":  "Queen_at_six/Good_old-fashioned_lover_boy",
-        "image":  "Good_old-fashioned_lover_boy.jpg",
-        "files":  [
-                      {
-                          "label":  "Good_old-fashionned_lover_boy",
-                          "relpath":  "Good_old-fashionned_lover_boy.sib",
-                          "type":  "sib"
-                      },
-                      {
-                          "label":  "Good_old-fashionned_lover_boy-Bai-v2.1",
-                          "relpath":  "parts\\Good_old-fashionned_lover_boy-Bai-v2.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Good_old-fashionned_lover_boy-Bar-v2.1",
-                          "relpath":  "parts\\Good_old-fashionned_lover_boy-Bar-v2.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Good_old-fashionned_lover_boy-Con-v2.1",
-                          "relpath":  "parts\\Good_old-fashionned_lover_boy-Con-v2.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Good_old-fashionned_lover_boy-Mez-v2.1",
-                          "relpath":  "parts\\Good_old-fashionned_lover_boy-Mez-v2.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Good_old-fashionned_lover_boy-Sop-v2.1",
-                          "relpath":  "parts\\Good_old-fashionned_lover_boy-Sop-v2.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Good_old-fashionned_lover_boy-Ten-v2.1",
-                          "relpath":  "parts\\Good_old-fashionned_lover_boy-Ten-v2.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Good_old-fashionned_lover_boy-Tutti-v2.1",
-                          "relpath":  "parts\\Good_old-fashionned_lover_boy-Tutti-v2.1.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "Good_old_fashioned_lover_boy-Bai",
-                          "relpath":  "recordings\\Good_old_fashioned_lover_boy-Bai.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Good_old_fashioned_lover_boy-Bar",
-                          "relpath":  "recordings\\Good_old_fashioned_lover_boy-Bar.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Good_old_fashioned_lover_boy-Click",
-                          "relpath":  "recordings\\Good_old_fashioned_lover_boy-Click.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Good_old_fashioned_lover_boy-Con",
-                          "relpath":  "recordings\\Good_old_fashioned_lover_boy-Con.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Good_old_fashioned_lover_boy-Mez",
-                          "relpath":  "recordings\\Good_old_fashioned_lover_boy-Mez.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Good_old_fashioned_lover_boy-Sop",
-                          "relpath":  "recordings\\Good_old_fashioned_lover_boy-Sop.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Good_old_fashioned_lover_boy-Ten",
-                          "relpath":  "recordings\\Good_old_fashioned_lover_boy-Ten.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "Good_old_fashioned_lover_boy-Tutti",
-                          "relpath":  "recordings\\Good_old_fashioned_lover_boy-Tutti.mp3",
-                          "type":  "mp3"
-                      }
-                  ],
-        "homeOrder":  2
+        "id": "good_old-fashioned_lover_boy",
+        "albumId": "queen_at_six",
+        "titulo": "Good Old-Fashioned Lover Boy",
+        "artistaOriginal": "Queen",
+        "ano": 1976,
+        "duracao": null,
+        "dificuldade": 3,
+        "observacoes": "Arranjo para seis vozes: SMATBB",
+        "storagePath": "Queen_at_six/Good_old-fashioned_lover_boy",
+        "image": "Good_old-fashioned_lover_boy.jpg",
+        "files": [
+            {
+                "label": "Good_old_fashioned_lover_boy-Bai",
+                "relpath": "recordings\\Good_old_fashioned_lover_boy-Bai.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_old_fashioned_lover_boy-Bar",
+                "relpath": "recordings\\Good_old_fashioned_lover_boy-Bar.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_old_fashioned_lover_boy-Click",
+                "relpath": "recordings\\Good_old_fashioned_lover_boy-Click.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_old_fashioned_lover_boy-Con",
+                "relpath": "recordings\\Good_old_fashioned_lover_boy-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_old_fashioned_lover_boy-Mez",
+                "relpath": "recordings\\Good_old_fashioned_lover_boy-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_old_fashioned_lover_boy-Sop",
+                "relpath": "recordings\\Good_old_fashioned_lover_boy-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_old_fashioned_lover_boy-Ten",
+                "relpath": "recordings\\Good_old_fashioned_lover_boy-Ten.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_old_fashioned_lover_boy-Tutti",
+                "relpath": "recordings\\Good_old_fashioned_lover_boy-Tutti.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Good_old-fashionned_lover_boy-Bai-v2.1",
+                "relpath": "parts\\Good_old-fashionned_lover_boy-Bai-v2.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Good_old-fashionned_lover_boy-Bar-v2.1",
+                "relpath": "parts\\Good_old-fashionned_lover_boy-Bar-v2.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Good_old-fashionned_lover_boy-Con-v2.1",
+                "relpath": "parts\\Good_old-fashionned_lover_boy-Con-v2.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Good_old-fashionned_lover_boy-Mez-v2.1",
+                "relpath": "parts\\Good_old-fashionned_lover_boy-Mez-v2.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Good_old-fashionned_lover_boy-Sop-v2.1",
+                "relpath": "parts\\Good_old-fashionned_lover_boy-Sop-v2.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Good_old-fashionned_lover_boy-Ten-v2.1",
+                "relpath": "parts\\Good_old-fashionned_lover_boy-Ten-v2.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Good_old-fashionned_lover_boy-Tutti-v2.1",
+                "relpath": "parts\\Good_old-fashionned_lover_boy-Tutti-v2.1.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Good_old-fashionned_lover_boy",
+                "relpath": "Good_old-fashionned_lover_boy.sib",
+                "type": "sib"
+            }
+        ],
+        "homeOrder": 2
     },
     {
-        "id":  "the_show_must_go_on",
-        "albumId":  "queen_at_six",
-        "titulo":  "The Show Must Go On",
-        "artistaOriginal":  "Queen",
-        "ano":  1991,
-        "duracao":  null,
-        "dificuldade":  4,
-        "observacoes":  "Importado automaticamente do acervo",
-        "storagePath":  "Queen_at_six/The_show_must_go_on",
-        "image":  "The_show_must_go_on.jpg",
-        "files":  [
-                      {
-                          "label":  "The_show_must_go_on-Bai-v2.3",
-                          "relpath":  "parts\\The_show_must_go_on-Bai-v2.3.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_show_must_go_on-Bar-v2.3",
-                          "relpath":  "parts\\The_show_must_go_on-Bar-v2.3.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_show_must_go_on-Con-v2.3",
-                          "relpath":  "parts\\The_show_must_go_on-Con-v2.3.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_show_must_go_on-Mez-v2.3",
-                          "relpath":  "parts\\The_show_must_go_on-Mez-v2.3.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_show_must_go_on-Sop-v2.3",
-                          "relpath":  "parts\\The_show_must_go_on-Sop-v2.3.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_show_must_go_on-Ten-v2.3",
-                          "relpath":  "parts\\The_show_must_go_on-Ten-v2.3.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_show_must_go_on-Tutti-v2.3",
-                          "relpath":  "parts\\The_show_must_go_on-Tutti-v2.3.pdf",
-                          "type":  "pdf"
-                      },
-                      {
-                          "label":  "The_show_must_go_on-Bai",
-                          "relpath":  "recordings\\The_show_must_go_on-Bai.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_show_must_go_on-Bar",
-                          "relpath":  "recordings\\The_show_must_go_on-Bar.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_show_must_go_on-Click",
-                          "relpath":  "recordings\\The_show_must_go_on-Click.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_show_must_go_on-Con",
-                          "relpath":  "recordings\\The_show_must_go_on-Con.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_show_must_go_on-Mez",
-                          "relpath":  "recordings\\The_show_must_go_on-Mez.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_show_must_go_on-Sop",
-                          "relpath":  "recordings\\The_show_must_go_on-Sop.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_show_must_go_on-Ten",
-                          "relpath":  "recordings\\The_show_must_go_on-Ten.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_show_must_go_on-Tutti",
-                          "relpath":  "recordings\\The_show_must_go_on-Tutti.mp3",
-                          "type":  "mp3"
-                      },
-                      {
-                          "label":  "The_show_must_go_on",
-                          "relpath":  "The_show_must_go_on.sib",
-                          "type":  "sib"
-                      }
-                  ],
-        "homeOrder":  3
+        "id": "the_show_must_go_on",
+        "albumId": "queen_at_six",
+        "titulo": "The Show Must Go On",
+        "artistaOriginal": "Queen",
+        "ano": 1991,
+        "duracao": null,
+        "dificuldade": 4,
+        "observacoes": "Arranjo para seis vozes: SMATBB",
+        "storagePath": "Queen_at_six/The_show_must_go_on",
+        "image": "The_show_must_go_on.jpg",
+        "files": [
+            {
+                "label": "The_show_must_go_on-Bai",
+                "relpath": "recordings\\The_show_must_go_on-Bai.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_show_must_go_on-Bar",
+                "relpath": "recordings\\The_show_must_go_on-Bar.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_show_must_go_on-Click",
+                "relpath": "recordings\\The_show_must_go_on-Click.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_show_must_go_on-Con",
+                "relpath": "recordings\\The_show_must_go_on-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_show_must_go_on-Mez",
+                "relpath": "recordings\\The_show_must_go_on-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_show_must_go_on-Sop",
+                "relpath": "recordings\\The_show_must_go_on-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_show_must_go_on-Ten",
+                "relpath": "recordings\\The_show_must_go_on-Ten.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_show_must_go_on-Tutti",
+                "relpath": "recordings\\The_show_must_go_on-Tutti.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "The_show_must_go_on-Bai-v2.3",
+                "relpath": "parts\\The_show_must_go_on-Bai-v2.3.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_show_must_go_on-Bar-v2.3",
+                "relpath": "parts\\The_show_must_go_on-Bar-v2.3.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_show_must_go_on-Con-v2.3",
+                "relpath": "parts\\The_show_must_go_on-Con-v2.3.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_show_must_go_on-Mez-v2.3",
+                "relpath": "parts\\The_show_must_go_on-Mez-v2.3.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_show_must_go_on-Sop-v2.3",
+                "relpath": "parts\\The_show_must_go_on-Sop-v2.3.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_show_must_go_on-Ten-v2.3",
+                "relpath": "parts\\The_show_must_go_on-Ten-v2.3.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_show_must_go_on-Tutti-v2.3",
+                "relpath": "parts\\The_show_must_go_on-Tutti-v2.3.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "The_show_must_go_on",
+                "relpath": "The_show_must_go_on.sib",
+                "type": "sib"
+            }
+        ],
+        "homeOrder": 3
+    },
+    {
+        "id": "under_pressure",
+        "albumId": "queen_at_six",
+        "titulo": "Under Pressure",
+        "artistaOriginal": "Queen feat. David Bowie",
+        "ano": 1981,
+        "duracao": "4:08",
+        "dificuldade": 4,
+        "observacoes": "ClÃƒÂ¡ssico dos clÃƒÂ¡ssicos em arranjo vocal ousado",
+        "storagePath": "Queen_at_six/Under_pressure",
+        "image": "Under_pressure.jpg",
+        "files": [
+            {
+                "label": "Under_pressure-Bai",
+                "relpath": "recordings\\Under_pressure-Bai.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Under_pressure-Bar",
+                "relpath": "recordings\\Under_pressure-Bar.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Under_pressure-Con",
+                "relpath": "recordings\\Under_pressure-Con.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Under_pressure-Mez",
+                "relpath": "recordings\\Under_pressure-Mez.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Under_pressure-Sop",
+                "relpath": "recordings\\Under_pressure-Sop.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Under_pressure-Ten",
+                "relpath": "recordings\\Under_pressure-Ten.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Under_pressure-Tutti",
+                "relpath": "recordings\\Under_pressure-Tutti.mp3",
+                "type": "mp3"
+            },
+            {
+                "label": "Under_Pressure-Bai-v2.3",
+                "relpath": "parts\\Under_Pressure-Bai-v2.3.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Under_Pressure-Bar-v2.3",
+                "relpath": "parts\\Under_Pressure-Bar-v2.3.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Under_Pressure-Con-v2.3",
+                "relpath": "parts\\Under_Pressure-Con-v2.3.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Under_Pressure-Mez-v2.3",
+                "relpath": "parts\\Under_Pressure-Mez-v2.3.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Under_Pressure-Sop-v2.3",
+                "relpath": "parts\\Under_Pressure-Sop-v2.3.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Under_Pressure-Ten-v2.3",
+                "relpath": "parts\\Under_Pressure-Ten-v2.3.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Under_Pressure-Tutti-v2.3",
+                "relpath": "parts\\Under_Pressure-Tutti-v2.3.pdf",
+                "type": "pdf"
+            },
+            {
+                "label": "Under_Pressure",
+                "relpath": "Under_Pressure.sib",
+                "type": "sib"
+            }
+        ],
+        "homeOrder": 6
     }
 ]

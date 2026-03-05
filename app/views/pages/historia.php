@@ -52,6 +52,28 @@
                     <p class="text-muted small mb-3">
                         A história do VIP é marcada por dedicação, criatividade e paixão pela música vocal.
                     </p>
+                    <?php
+                        $mdPages = glob(DATA_DIR . '/md/*.md') ?: [];
+                        sort($mdPages);
+                    ?>
+                    <?php if (!empty($mdPages)): ?>
+                    <div class="mb-3">
+                        <h6 class="small text-uppercase text-muted mb-2">Páginas</h6>
+                        <div class="list-group list-group-flush">
+                            <?php foreach ($mdPages as $mdFile): ?>
+                                <?php
+                                    $slug = basename($mdFile, '.md');
+                                    $active = isset($current_page) && $current_page === $slug;
+                                    $label = ucwords(str_replace('_', ' ', $slug));
+                                ?>
+                                <a href="<?php echo url($slug); ?>" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center <?php echo $active ? 'active' : ''; ?>">
+                                    <span><?php echo e($label); ?></span>
+                                    <?php if ($active): ?><i class="bi bi-check2"></i><?php endif; ?>
+                                </a>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                    <?php endif; ?>
                     <hr>
                     <p class="mb-2">
                         <a href="<?php echo url('cantores'); ?>" class="btn btn-sm btn-outline-primary w-100 mb-2">

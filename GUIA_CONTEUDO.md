@@ -87,13 +87,13 @@ Texto completo da biografia.
 - [Facebook](https://...)
 ```
 
-## 5) Imagens de músicas e acervo
+## 5) Imagens de músicas e material
 
 No `arranjos.json`:
 
-- `storagePath` aponta para a pasta da música em `acervo/`
+- `storagePath` aponta para a pasta da música em `material/`
 - `image` pode ser:
-  - arquivo dentro do `acervo/<storagePath>/` (ex: `cover.jpg`)
+  - arquivo dentro do `material/<storagePath>/` (ex: `cover.jpg`)
   - caminho em `assets/` (ex: `img/minha_capa.jpg`)
 
 ## 6) Checklist rápido após editar

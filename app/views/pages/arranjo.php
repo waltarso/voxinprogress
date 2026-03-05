@@ -107,14 +107,26 @@
                         <?php 
                             $fileUrl = build_acervo_url($arranjo['storagePath'], $file['relpath']);
                             if (!$fileUrl) continue; // Skip invalid paths
+                            $downloadPath = parse_url($fileUrl, PHP_URL_PATH);
+                            if (!is_string($downloadPath) || $downloadPath === '') {
+                                $downloadPath = str_replace('\\', '/', $file['relpath']);
+                            }
+                            $downloadName = basename($downloadPath);
                         ?>
-                        <a href="<?php echo e($fileUrl); ?>" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" target="_blank" rel="noopener noreferrer">
+                        <div class="list-group-item d-flex justify-content-between align-items-center gap-2 flex-wrap">
                             <span>
-                                <?php echo file_icon($type); ?> 
+                                <?php echo file_icon($type); ?>
                                 <strong><?php echo e($file['label']); ?></strong>
                             </span>
-                            <i class="bi bi-download"></i>
-                        </a>
+                            <span class="d-flex gap-2">
+                                <a href="<?php echo e($fileUrl); ?>" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer">
+                                    <i class="bi bi-box-arrow-up-right"></i> Abrir
+                                </a>
+                                <a href="<?php echo e($fileUrl); ?>" class="btn btn-sm btn-primary" download="<?php echo e($downloadName); ?>">
+                                    <i class="bi bi-download"></i> Baixar
+                                </a>
+                            </span>
+                        </div>
                         <?php endforeach; ?>
                     </div>
                 </div>

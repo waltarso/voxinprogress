@@ -54,6 +54,18 @@ html, body {
     display: block;
 }
 
+/* tabelas vindas de markdown (historia/formacoes/cronologia) */
+.card-body table.table.table-sm.table-bordered.align-middle {
+    font-family: "Arial Narrow", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 0.86rem;
+    line-height: 1.2;
+}
+
+.card-body table.table.table-sm.table-bordered.align-middle th,
+.card-body table.table.table-sm.table-bordered.align-middle td {
+    padding: 0.35rem 0.45rem;
+}
+
 
 /* Hero gradient */
 .bg-gradient {
@@ -307,4 +319,43 @@ img {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-dark);
+}
+
+/* Ajustes tipograficos para telas pequenas */
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    body {
+        line-height: 1.45;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .display-1,
+    .display-2,
+    .display-3,
+    .display-4,
+    .display-5,
+    .display-6 {
+        font-size: clamp(1.8rem, 8vw, 2.6rem);
+        line-height: 1.2;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
 }
