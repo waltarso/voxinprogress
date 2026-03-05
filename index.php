@@ -119,6 +119,7 @@ elseif ($p === 'arranjos') {
     
     // Filtrar
     $arranjos = filter_arranjos($arranjos, $albumId, $q);
+    $arranjos = sort_arranjos_for_listing($arranjos);
     
     render('pages/arranjos', compact('albums', 'arranjos', 'albumId', 'q', 'pageTitle'));
 }

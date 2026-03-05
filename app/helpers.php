@@ -63,8 +63,8 @@ function asset($rel)
  *   - um nome de arquivo relativo ao diretório do arranjo em acervo
  *     (ex: "cover.jpg" ou "folder/cover.png").
  *
- * Para o segundo caso, construímos a URL usando build_acervo_url(), que
- * aponta para o subdiretório correspondente dentro de ACERVO_BASE_URL.
+ * Para o segundo caso, construímos a URL usando build_material_url(), que
+ * aponta para o subdiretório correspondente dentro de MATERIAL_BASE_URL.
  * Caso nenhum arquivo seja especificado, tentamos usar a imagem do álbum.
  */
 function arranjo_image_url($arranjo, $album = null)
@@ -77,7 +77,7 @@ function arranjo_image_url($arranjo, $album = null)
         }
         // caso contrário, presumimos que o arquivo fica no diretório de
         // armazenamento do arranjo (acervo).
-        $url = build_acervo_url($arranjo['storagePath'], $img);
+        $url = build_material_url($arranjo['storagePath'], $img);
         if ($url !== null) {
             return $url;
         }
@@ -91,7 +91,7 @@ function arranjo_image_url($arranjo, $album = null)
         }
         // caso contrário, assume que o caminho é relativo ao acervo raiz
         // (o JSON pode conter algo como "Queen_at_six/cover.jpg").
-        $base = rtrim(ACERVO_BASE_URL, '/') . '/';
+        $base = rtrim(MATERIAL_BASE_URL, '/') . '/';
         return $base . ltrim($img, '/');
     }
 
@@ -205,6 +205,55 @@ function filter_arranjos($arranjos, $albumId = null, $q = null)
     }
     
     return array_values($resultado);
+}
+
+/**
+ * Ordena arranjos para listagem: Order -> homeOrder -> titulo.
+ */
+function sort_arranjos_for_listing($arranjos)
+{
+    $resultado = array_values($arranjos);
+
+    usort($resultado, function ($a, $b) {
+        $orderA = $a['Order'] ?? null;
+        $orderB = $b['Order'] ?? null;
+        $homeA = $a['homeOrder'] ?? null;
+        $homeB = $b['homeOrder'] ?? null;
+
+        $hasOrderA = $orderA !== null && $orderA !== '' && is_numeric($orderA);
+        $hasOrderB = $orderB !== null && $orderB !== '' && is_numeric($orderB);
+
+        // Quem tem Order definido vem antes.
+        if ($hasOrderA !== $hasOrderB) {
+            return $hasOrderA ? -1 : 1;
+        }
+
+        if ($hasOrderA && $hasOrderB) {
+            $cmpOrder = (int) $orderA <=> (int) $orderB;
+            if ($cmpOrder !== 0) {
+                return $cmpOrder;
+            }
+        }
+
+        $hasHomeA = $homeA !== null && $homeA !== '' && is_numeric($homeA);
+        $hasHomeB = $homeB !== null && $homeB !== '' && is_numeric($homeB);
+
+        // Sem empate por Order, usa homeOrder como segundo critério.
+        if ($hasHomeA !== $hasHomeB) {
+            return $hasHomeA ? -1 : 1;
+        }
+
+        if ($hasHomeA && $hasHomeB) {
+            $cmpHome = (int) $homeA <=> (int) $homeB;
+            if ($cmpHome !== 0) {
+                return $cmpHome;
+            }
+        }
+
+        return strcasecmp((string) ($a['titulo'] ?? ''), (string) ($b['titulo'] ?? ''));
+    });
+
+    return $resultado;
 }
 
 /**
@@ -406,6 +455,150 @@ function group_files_by_type($files)
 }
 
 /**
+ * Gera label exibido a partir do id do arranjo e voice.
+ */
+function file_label_for_arranjo($arranjo, $file)
+{
+    if (!empty($file['label'])) {
+        return (string) $file['label'];
+    }
+
+    $arranjoId = (string) ($arranjo['id'] ?? 'arquivo');
+    $voice = trim((string) ($file['voice'] ?? ''));
+
+    return $voice !== '' ? $arranjoId . '-' . $voice : $arranjoId;
+}
+
+/**
+ * Resolve relpath de arquivo. Aceita formato antigo (relpath) e novo (voice).
+ */
+function file_relpath_for_arranjo($arranjo, $file)
+{
+    if (!empty($file['relpath'])) {
+        return str_replace('\\', '/', (string) $file['relpath']);
+    }
+
+    $storagePath = (string) ($arranjo['storagePath'] ?? '');
+    $arranjoId = (string) ($arranjo['id'] ?? 'arquivo');
+    $type = strtolower((string) ($file['type'] ?? 'other'));
+    $voice = trim((string) ($file['voice'] ?? ''));
+
+    $baseName = $arranjoId . ($voice !== '' ? '-' . $voice : '');
+    $ext = file_extension_for_type($type);
+
+    $resolved = resolve_material_relpath($storagePath, $type, $baseName, $ext);
+    if ($resolved !== null) {
+        return $resolved;
+    }
+
+    $dirs = file_dir_candidates_for_type($type);
+    $dir = $dirs[0] ?? '';
+    return ($dir !== '' ? $dir . '/' : '') . $baseName . '.' . $ext;
+}
+
+function file_extension_for_type($type)
+{
+    $map = [
+        'midi' => 'mid',
+        'mp3' => 'mp3',
+        'mp4' => 'mp4',
+        'pdf' => 'pdf',
+        'sib' => 'sib'
+    ];
+
+    return $map[$type] ?? strtolower((string) $type);
+}
+
+function file_dir_candidates_for_type($type)
+{
+    if ($type === 'pdf') {
+        return ['parts'];
+    }
+    if ($type === 'mp3' || $type === 'mp4') {
+        return ['recordings', 'audios', 'audio'];
+    }
+    if ($type === 'sib' || $type === 'midi') {
+        return ['', 'parts'];
+    }
+    return [''];
+}
+
+/**
+ * Tenta localizar no disco o melhor arquivo para baseName/type.
+ */
+function resolve_material_relpath($storagePath, $type, $baseName, $ext)
+{
+    $materialRoot = dirname(APP_DIR) . '/material';
+    $storageFs = $materialRoot . '/' . str_replace('/', DIRECTORY_SEPARATOR, str_replace('\\', '/', (string) $storagePath));
+    if (!is_dir($storageFs)) {
+        return null;
+    }
+
+    $targetNorm = normalize_file_token($baseName);
+    $bestRel = null;
+    $bestVersion = [];
+
+    foreach (file_dir_candidates_for_type($type) as $dirRel) {
+        $dirFs = $storageFs;
+        if ($dirRel !== '') {
+            $dirFs .= '/' . str_replace('/', DIRECTORY_SEPARATOR, $dirRel);
+        }
+        if (!is_dir($dirFs)) {
+            continue;
+        }
+
+        $entries = @scandir($dirFs);
+        if (!is_array($entries)) {
+            continue;
+        }
+
+        foreach ($entries as $entry) {
+            if ($entry === '.' || $entry === '..') {
+                continue;
+            }
+
+            $entryFs = $dirFs . DIRECTORY_SEPARATOR . $entry;
+            if (!is_file($entryFs)) {
+                continue;
+            }
+
+            $entryExt = strtolower(pathinfo($entry, PATHINFO_EXTENSION));
+            if ($type === 'midi') {
+                if ($entryExt !== 'mid' && $entryExt !== 'midi') {
+                    continue;
+                }
+            } elseif ($entryExt !== strtolower($ext)) {
+                continue;
+            }
+
+            $stem = pathinfo($entry, PATHINFO_FILENAME);
+            if (normalize_file_token($stem) !== $targetNorm) {
+                continue;
+            }
+
+            $candidateRel = ($dirRel !== '' ? $dirRel . '/' : '') . $entry;
+            if ($type !== 'pdf') {
+                return $candidateRel;
+            }
+
+            $version = extract_version_parts($stem);
+            if ($bestRel === null || compare_version_parts($version, $bestVersion) > 0) {
+                $bestRel = $candidateRel;
+                $bestVersion = $version;
+            }
+        }
+    }
+
+    return $bestRel;
+}
+
+function normalize_file_token($value)
+{
+    $value = strtolower(strip_version_suffix((string) $value));
+    return preg_replace('/[^a-z0-9]+/', '', $value);
+}
+
+/**
  * Retorna ícone Bootstrap Icons para tipo de arquivo
  */
 function file_icon($type)
@@ -586,7 +779,7 @@ function render_markdown_file($path)
 /**
  * Monta URL segura para arquivo no acervo (sem path traversal)
  */
-function build_acervo_url($storagePath, $relpath)
+function build_material_url($storagePath, $relpath)
 {
     // Validações de segurança
     if (strpos($relpath, '..') !== false) {
@@ -607,7 +800,7 @@ function build_acervo_url($storagePath, $relpath)
     // resolve automaticamente o arquivo de maior versão disponível.
     $relpath = resolve_latest_pdf_relpath($storagePath, $relpath);
     
-    $fullPath = ACERVO_BASE_URL . $storagePath . '/' . $relpath;
+    $fullPath = MATERIAL_BASE_URL . $storagePath . '/' . $relpath;
     
     // Normalizar barras múltiplas
     $fullPath = preg_replace('#/+#', '/', $fullPath);
@@ -685,8 +878,12 @@ function resolve_latest_pdf_relpath($storagePath, $relpath)
  */
 function strip_version_suffix($stem)
 {
-    $out = preg_replace('/(?:[._-](?:v|ver)[._-]?\d+(?:[._]\d+)*)$/i', '', $stem);
-    $out = preg_replace('/(?:[._-]\d+[._]\d+(?:[._]\d+)*)$/', '', $out);
+    // Remove tokens de versão em qualquer posição (ex.: _v4.0-, -ver-2.1, -2.3).
+    $out = preg_replace('/([._-])(?:v|ver)[._-]?\d+(?:[._]\d+)*/i', '$1', $stem);
+    $out = preg_replace('/([._-])\d+[._]\d+(?:[._]\d+)*/', '$1', $out);
+    // Limpa separadores duplicados ou sobrando no começo/fim.
+    $out = preg_replace('/([._-]){2,}/', '$1', $out);
+    $out = trim($out, '._-');
     return $out;
 }
 
@@ -695,15 +892,28 @@ function strip_version_suffix($stem)
  */
 function extract_version_parts($stem)
 {
-    if (preg_match('/(?:[._-](?:v|ver)[._-]?(\d+(?:[._]\d+)*))$/i', $stem, $m)
-        || preg_match('/(?:[._-](\d+[._]\d+(?:[._]\d+)*))$/', $stem, $m)) {
-        $parts = preg_split('/[._]/', $m[1]);
-        if (is_array($parts)) {
-            return array_map('intval', $parts);
+    $all = [];
+
+    if (preg_match_all('/(?:^|[._-])(?:v|ver)[._-]?(\d+(?:[._]\d+)*)/i', $stem, $m1)) {
+        $all = array_merge($all, $m1[1]);
+    }
+    if (preg_match_all('/(?:^|[._-])(\d+[._]\d+(?:[._]\d+)*)(?=$|[._-])/i', $stem, $m2)) {
+        $all = array_merge($all, $m2[1]);
+    }
+
+    $best = [];
+    foreach ($all as $raw) {
+        $parts = preg_split('/[._]/', $raw);
+        if (!is_array($parts)) {
+            continue;
+        }
+        $candidate = array_map('intval', $parts);
+        if (compare_version_parts($candidate, $best) > 0) {
+            $best = $candidate;
         }
     }
 
-    return [];
+    return $best;
 }
 
 /**

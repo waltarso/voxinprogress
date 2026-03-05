@@ -16,10 +16,10 @@
             <!-- Metadados -->
             <div class="card shadow-sm mb-4 border-0">
                 <div class="card-body">
-                    <h1 class="card-title mb-3"><?php echo e($arranjo['titulo']); ?></h1>
+                    <h1 class="card-title h3 fw-normal mb-3"><?php echo e($arranjo['titulo']); ?></h1>
                     <?php if (!empty($arranjo['image'])): ?>
-                        <p class="text-center mb-3">
-                            <img src="<?php echo e(arranjo_image_url($arranjo, $album)); ?>" alt="<?php echo e($arranjo['titulo']); ?>" class="img-fluid rounded">
+                        <p class="text-start mb-3 arranjo-detail-cover">
+                            <img src="<?php echo e(arranjo_image_url($arranjo, $album)); ?>" alt="<?php echo e($arranjo['titulo']); ?>" class="img-fluid rounded arranjo-cover-image" loading="lazy">
                         </p>
                     <?php endif; ?>
                     
@@ -69,18 +69,11 @@
                         <span class="text-muted">(<?php echo e($arranjo['dificuldade']); ?>/5)</span>
                     </p>
                     <?php endif; ?>
-
-                    <?php if (isset($arranjo['observacoes']) && $arranjo['observacoes']): ?>
-                    <div class="alert alert-info">
-                        <strong>Notas:</strong><br>
-                        <?php echo e($arranjo['observacoes']); ?>
-                    </div>
-                    <?php endif; ?>
                 </div>
             </div>
 
             <!-- Downloads -->
-            <h3 class="mb-3">
+            <h3 class="h5 fw-normal mb-3">
                 <i class="bi bi-download"></i> Arquivos Disponíveis
             </h3>
 
@@ -100,23 +93,25 @@
                 <?php foreach ($grouped as $type => $files): ?>
                 <div class="card shadow-sm mb-3 border-0">
                     <div class="card-header bg-light">
-                        <strong><?php echo isset($type_labels[$type]) ? $type_labels[$type] : ucfirst($type); ?></strong>
+                        <span class="fw-semibold small"><?php echo isset($type_labels[$type]) ? $type_labels[$type] : ucfirst($type); ?></span>
                     </div>
                     <div class="list-group list-group-flush">
                         <?php foreach ($files as $file): ?>
                         <?php 
-                            $fileUrl = build_acervo_url($arranjo['storagePath'], $file['relpath']);
+                            $fileLabel = file_label_for_arranjo($arranjo, $file);
+                            $fileRelpath = file_relpath_for_arranjo($arranjo, $file);
+                            $fileUrl = build_material_url($arranjo['storagePath'], $fileRelpath);
                             if (!$fileUrl) continue; // Skip invalid paths
                             $downloadPath = parse_url($fileUrl, PHP_URL_PATH);
                             if (!is_string($downloadPath) || $downloadPath === '') {
-                                $downloadPath = str_replace('\\', '/', $file['relpath']);
+                                $downloadPath = str_replace('\\', '/', $fileRelpath);
                             }
                             $downloadName = basename($downloadPath);
                         ?>
                         <div class="list-group-item d-flex justify-content-between align-items-center gap-2 flex-wrap">
                             <span>
                                 <?php echo file_icon($type); ?>
-                                <strong><?php echo e($file['label']); ?></strong>
+                                <span><?php echo e($fileLabel); ?></span>
                             </span>
                             <span class="d-flex gap-2">
                                 <a href="<?php echo e($fileUrl); ?>" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer">
@@ -143,7 +138,7 @@
         <div class="col-lg-4">
             <div class="card shadow-sm border-0 sticky-top arranjo-sidebar" style="top: 70px; z-index:102;">
                 <div class="card-body">
-                    <h5 class="card-title mb-3">
+                    <h5 class="card-title h6 fw-normal mb-3">
                         <i class="bi bi-info-circle"></i> Sobre esta Música
                     </h5>
                     <p class="text-muted small">
@@ -155,13 +150,13 @@
                             if (preg_match('#^(img/|assets/)#', $album['image'])) {
                                 $albumImage = asset($album['image']);
                             } else {
-                                $albumImage = rtrim(ACERVO_BASE_URL, '/') . '/' . ltrim($album['image'], '/');
+                                $albumImage = rtrim(MATERIAL_BASE_URL, '/') . '/' . ltrim($album['image'], '/');
                             }
                         }
                     ?>
                     <?php if (!empty($albumImage)): ?>
-                        <p class="text-center mb-2">
-                            <img src="<?php echo e($albumImage); ?>" alt="Capa de <?php echo e($album['titulo']); ?>" class="img-fluid rounded">
+                        <p class="text-start mb-2">
+                            <img src="<?php echo e($albumImage); ?>" alt="Capa de <?php echo e($album['titulo']); ?>" class="img-fluid rounded album-cover-image" loading="lazy">
                         </p>
                     <?php endif; ?>
                     <p class="text-muted small">

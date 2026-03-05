@@ -89,14 +89,19 @@ foreach ($albumDirs as $albumFolder) {
             continue;
         }
 
-        $scan = scanArranjoDir($arrFull);
+        $storagePath = $albumFolder . '/' . $arrFolder;
+        $storageKey = strtolower($storagePath);
+
+        $arranjoId = isset($existingByStorage[$storageKey])
+            ? (string) ($arranjos[$existingByStorage[$storageKey]]['id'] ?? slugify($arrFolder))
+            : slugify($arrFolder);
+
+        $scan = scanArranjoDir($arrFull, $arranjoId);
         if (empty($scan['files'])) {
             // Ignorar pastas sem arquivos de arranjo.
             continue;
         }
 
-        $storagePath = $albumFolder . '/' . $arrFolder;
-        $storageKey = strtolower($storagePath);
         $foundStorageKeys[$storageKey] = true;
 
         if (isset($existingByStorage[$storageKey])) {
@@ -158,7 +163,7 @@ echo "\nObservacao: arranjos removidos da pasta material NAO sao excluidos do JS
 
 afterChecks($arranjos, $foundStorageKeys);
 
-function scanArranjoDir(string $arrFull): array
+function scanArranjoDir(string $arrFull, string $arranjoId): array
 {
     $it = new RecursiveIteratorIterator(
         new RecursiveDirectoryIterator($arrFull, FilesystemIterator::SKIP_DOTS)
@@ -190,12 +195,15 @@ function scanArranjoDir(string $arrFull): array
             continue;
         }
 
-        $label = pathinfo($name, PATHINFO_FILENAME);
-        $files[] = [
-            'label' => $label,
-            'relpath' => $relative,
-            'type' => $type,
-        ];
+        $stem = pathinfo($name, PATHINFO_FILENAME);
+        $voice = deriveVoiceFromStem($stem, $arranjoId);
+
+        $entry = ['type' => $type];
+        if ($voice !== null && $voice !== '') {
+            $entry['voice'] = $voice;
+        }
+
+        $files[] = $entry;
     }
 
     usort($files, function (array $a, array $b): int {
@@ -203,7 +211,7 @@ function scanArranjoDir(string $arrFull): array
         if ($typeCmp !== 0) {
             return $typeCmp;
         }
-        return strcmp($a['label'], $b['label']);
+        return strcasecmp((string) ($a['voice'] ?? ''), (string) ($b['voice'] ?? ''));
     });
 
     $image = null;
@@ -224,6 +232,50 @@ function scanArranjoDir(string $arrFull): array
         'files' => $files,
         'image' => $image,
     ];
+}
+
+function stripVersionForVoice(string $stem): string
+{
+    $out = preg_replace('/([._-])(?:v|ver)[._-]?\d+(?:[._]\d+)*/i', '$1', $stem);
+    $out = preg_replace('/([._-])\d+[._]\d+(?:[._]\d+)*/', '$1', $out);
+    $out = preg_replace('/([._-]){2,}/', '$1', (string) $out);
+    return trim((string) $out, "._- ");
+}
+
+function deriveVoiceFromStem(string $stem, string $arranjoId): ?string
+{
+    $stem = stripVersionForVoice($stem);
+
+    $parts = preg_split('/[_\-\s]+/', $arranjoId);
+    $parts = array_values(array_filter(is_array($parts) ? $parts : [], fn($p) => $p !== ''));
+    if (!empty($parts)) {
+        $idPattern = implode('[ _\\-]*', array_map(fn($p) => preg_quote($p, '/'), $parts));
+
+        if (preg_match('/^' . $idPattern . '(?:[ _\\-]+(.+))?$/i', $stem, $m)) {
+            $voice = trim((string) ($m[1] ?? ''), " _-\t\r\n");
+            return $voice !== '' ? $voice : null;
+        }
+
+        if (preg_match('/^(.+?)[ _\\-]+' . $idPattern . '$/i', $stem, $m)) {
+            $voice = trim((string) ($m[1] ?? ''), " _-\t\r\n");
+            return $voice !== '' ? $voice : null;
+        }
+    }
+
+    $chunks = preg_split('/-+/', $stem);
+    if (is_array($chunks) && count($chunks) > 1) {
+        $last = trim((string) end($chunks));
+        if ($last !== '') {
+            $known = ['Tutti', 'Bai', 'Bar', 'Con', 'Mez', 'Sop', 'Ten', 'Click', 'Guia', 'Guide', 'Baixo', 'Baritono', 'Contralto', 'Mezzo', 'Soprano', 'Tenor', 'Fem', 'Mas', 'Solo', 'Vozes', 'Compacta'];
+            foreach ($known as $k) {
+                if (strcasecmp($last, $k) === 0) {
+                    return $last;
+                }
+            }
+        }
+    }
+
+    return null;
 }
 
 function detectType(string $ext): ?string
