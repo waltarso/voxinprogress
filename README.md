@@ -46,6 +46,32 @@ php -S localhost:8000
 
 Abra: `http://localhost:8000`
 
+## SCSS (opcional)
+
+O projeto agora suporta SCSS com compilação para `assets/css/site.css`.
+
+Instale as dependências uma vez:
+
+```bash
+npm install
+```
+
+Compile manualmente:
+
+```bash
+npm run build:css
+```
+
+Modo watch (recompila ao salvar):
+
+```bash
+npm run watch:css
+```
+
+Arquivo fonte SCSS:
+
+- `assets/scss/site.scss`
+
 ## Sincronizar novos arquivos do material
 
 Quando voce adicionar novos arquivos/pastas em `material/`, rode:

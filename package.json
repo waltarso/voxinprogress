@@ -1,0 +1,13 @@
+{
+  "name": "vip-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build tools for VIP site styles",
+  "scripts": {
+    "build:css": "sass assets/scss/site.scss assets/css/site.css --style=expanded --no-source-map",
+    "watch:css": "sass --watch assets/scss/site.scss:assets/css/site.css --style=expanded --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.83.0"
+  }
+}

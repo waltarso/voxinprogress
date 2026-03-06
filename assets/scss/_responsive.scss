@@ -1,0 +1,86 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+@include mobile($bp-mobile) {
+  .arranjo-detail-cover .arranjo-cover-image {
+    max-height: $size-arranjo-cover-mobile-max-height;
+  }
+
+  .arranjo-sidebar .album-cover-image {
+    max-height: $size-album-cover-mobile-max-height;
+  }
+}
+
+/* Sticky sidebar */
+@include desktop {
+  .sticky-top {
+    position: sticky;
+  }
+}
+
+/* Ajustes tipograficos para telas pequenas */
+@include mobile($bp-tablet) {
+  .p-4 {
+    padding: 0.3rem !important;
+  }
+
+  .card {
+    --bs-card-spacer-x: 0.3rem;
+    --bs-card-spacer-y: 0.3rem;
+  }
+
+  /* Force card-body spacing in pages that use Bootstrap padding utilities (e.g. p-4). */
+  .card > .card-body {
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  }
+
+  .row {
+    --bs-gutter-x: 0.75rem !important;
+  }
+
+  .container,
+  .container-fluid,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    --bs-gutter-x: 0.75rem !important;
+  }
+
+  html {
+    font-size: $font-size-mobile-root;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    line-height: 1.45;
+  }
+
+  h1 {
+    font-size: $font-size-h1-mobile;
+  }
+
+  h2 {
+    font-size: $font-size-h2-mobile;
+  }
+
+  h3 {
+    font-size: $font-size-h3-mobile;
+  }
+
+  .display-1,
+  .display-2,
+  .display-3,
+  .display-4,
+  .display-5,
+  .display-6 {
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+    line-height: 1.2;
+  }
+
+  .navbar-brand {
+    font-size: $font-size-navbar-brand-mobile;
+  }
+}

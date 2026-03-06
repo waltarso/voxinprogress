@@ -1,0 +1,79 @@
+@use "variables" as *;
+
+:root {
+  --primary-color: #{$color-primary};
+  --primary-dark: #{$color-primary-dark};
+  --secondary-color: #{$color-secondary};
+}
+
+html,
+body {
+  height: 100%;
+  font-family: $font-family-base;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+/* tabelas vindas de markdown (historia/formacoes/cronologia) */
+.card-body table.table.table-sm.table-bordered.align-middle {
+  font-family: $font-family-tables;
+  font-size: $font-size-table;
+  line-height: 1.2;
+}
+
+.card-body table.table.table-sm.table-bordered.align-middle th,
+.card-body table.table.table-sm.table-bordered.align-middle td {
+  padding: 0.35rem 0.45rem;
+}
+
+/* Form */
+.form-control,
+.form-select {
+  border: $size-border-thin solid $color-border-light;
+  transition: $transition-standard;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.25);
+}
+
+.was-validated .form-control:valid {
+  border-color: $color-success;
+}
+
+.was-validated .form-control:invalid {
+  border-color: $color-danger;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: $transition-color;
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-heading;
+  font-weight: 600;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}

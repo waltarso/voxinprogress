@@ -1,0 +1,206 @@
+@use "variables" as *;
+
+/* Navbar customizado */
+.navbar-dark {
+  background-color: $color-black !important;
+  box-shadow: $shadow-navbar;
+}
+
+.navbar-brand {
+  font-size: $font-size-navbar-brand;
+  letter-spacing: $letter-spacing-brand;
+}
+
+.navbar-brand i {
+  margin-right: $size-navbar-icon-gap;
+  color: var(--secondary-color);
+}
+
+/* ensure logo images never overflow the navbar */
+.navbar-brand img,
+.navbar-brand .logo-img {
+  max-height: $size-logo-max-height;
+  width: auto;
+}
+
+/* sidebar card offset and layering */
+.arranjo-sidebar {
+  top: $size-arranjo-sidebar-top;
+  z-index: 102;
+}
+
+/* thumbnails on the arranjos index: square thumbnails that fit the card */
+.arranjos-list .card-img-top {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* Imagens decorativas na pagina de arranjo: menores para priorizar conteudo */
+.arranjo-detail-cover .arranjo-cover-image {
+  max-height: $size-arranjo-cover-max-height;
+  width: auto;
+  object-fit: contain;
+}
+
+.arranjo-sidebar .album-cover-image {
+  max-height: $size-album-cover-max-height;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+/* Hero gradient */
+.bg-gradient {
+  background: $gradient-primary !important;
+}
+
+/* Cards com hover effect */
+.hover-card {
+  transition: $transition-standard;
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-card:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: $shadow-hover-card;
+}
+
+.hover-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba($color-primary, 0.05);
+  transition: $transition-sweep;
+}
+
+.hover-card:hover::before {
+  left: 100%;
+}
+
+/* Cards comuns */
+.card {
+  transition: $transition-shadow;
+}
+
+.card:hover {
+  box-shadow: $shadow-card-hover !important;
+}
+
+/* Badges */
+.badge {
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  letter-spacing: $letter-spacing-badge;
+}
+
+.badge.bg-primary {
+  background: $gradient-primary !important;
+}
+
+/* Botoes */
+.btn-primary {
+  background: $gradient-primary;
+  border: none;
+  transition: $transition-standard;
+}
+
+.btn-primary:hover {
+  transform: translateY(-0.125rem);
+  box-shadow: $shadow-button-hover;
+  background: $gradient-primary-reverse;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  background: $gradient-footer;
+  border-top: $size-border-accent solid var(--primary-color);
+}
+
+footer a {
+  transition: $transition-color;
+}
+
+footer a:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background-color: rgba($color-primary, 0.05);
+  padding: 0.75rem;
+  border-radius: $radius-breadcrumb;
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+  color: var(--primary-color);
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-dark);
+}
+
+.breadcrumb-item.active {
+  color: $color-muted;
+}
+
+/* Alert */
+.alert {
+  border: none;
+  border-left: $size-border-alert solid;
+}
+
+.alert-info {
+  background: rgba($color-info, 0.1);
+  border-color: $color-info;
+  color: $color-info-text;
+}
+
+.alert-success {
+  background: rgba($color-success, 0.1);
+  border-color: $color-success;
+  color: $color-success-text;
+}
+
+.alert-warning {
+  background: rgba($color-warning, 0.1);
+  border-color: $color-warning;
+  color: $color-warning-text;
+}
+
+.alert-danger {
+  background: rgba($color-danger, 0.1);
+  border-color: $color-danger;
+  color: $color-danger-text;
+}
+
+/* List Group */
+.list-group-item-action {
+  transition: $transition-standard;
+}
+
+.list-group-item-action:hover {
+  background-color: rgba($color-primary, 0.05);
+  color: var(--primary-color);
+}

@@ -14,8 +14,12 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?php echo asset('css/site.css'); ?>">
+    <!-- Custom CSS (cache-busted by file mtime) -->
+    <?php
+    $cssPath = dirname(__DIR__, 3) . '/assets/css/site.css';
+    $cssVersion = file_exists($cssPath) ? (string) filemtime($cssPath) : (string) time();
+    ?>
+    <link rel="stylesheet" href="<?php echo asset('css/site.css') . '?v=' . urlencode($cssVersion); ?>">
 </head>
 <body>
     <div class="d-flex flex-column min-vh-100">
