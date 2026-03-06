@@ -3,9 +3,9 @@
 ## Sobre
 Mezzo chega em 2025 e integrou a apresentação no Nimbus.
 
-## Trajetória no VIP
+## Trajetória no vip
 - Entrada no grupo:
-- Voz: Mezzosoprano
+- Voz: Mezzo
 - Destaques:
 
 ## Links

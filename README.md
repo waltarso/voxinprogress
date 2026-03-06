@@ -1,6 +1,6 @@
-# VIP (Vox in Progress)
+# vip (Vox in Progress)
 
-Site institucional do grupo vocal VIP, feito em PHP puro + Bootstrap, com dados em JSON.
+Site institucional do grupo vocal vip, feito em PHP puro + Bootstrap, com dados em JSON.
 
 ## Visão geral
 
@@ -9,7 +9,7 @@ Site institucional do grupo vocal VIP, feito em PHP puro + Bootstrap, com dados 
 - Bootstrap 5 e Bootstrap Icons via CDN
 - Dados em `app/data/*.json`
 - Acervo de arquivos em `material/`
-- Perfis dos cantores com foto e biografia em Markdown (`equipe/<id>/`)
+- Perfis dos colaboradores com foto e biografia em Markdown (`equipe/<id>/`)
 
 ## Estrutura principal
 
@@ -95,6 +95,8 @@ Regra da Home (Últimas Músicas):
 Campos relevantes:
 
 - `id`, `nome`, `voz`, `bioCurta`, `foto`, `links[]`
+- `entrada` (data de entrada no grupo)
+- `saida` (`null` para integrantes atuais, data para colaboradores históricos)
 - `whatsapp` (opcional)
 - `email` (opcional)
 
@@ -116,9 +118,9 @@ Exemplo:
 }
 ```
 
-## Perfis dos cantores (`equipe/<id>/`)
+## Perfis dos colaboradores (`equipe/<id>/`)
 
-Cada cantor pode ter pasta própria:
+Cada colaborador pode ter pasta própria:
 
 - `equipe/<id>/<id>.md` (bio completa)
 - `equipe/<id>/bio.md` (fallback)
@@ -150,4 +152,4 @@ Prioridade de foto:
 
 ## Edição de conteúdo
 
-Para atualização rápida de músicas, cantores e bios, veja [GUIA_CONTEUDO.md](GUIA_CONTEUDO.md).
+Para atualização rápida de músicas, colaboradores e bios, veja [GUIA_CONTEUDO.md](GUIA_CONTEUDO.md).

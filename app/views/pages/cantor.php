@@ -3,7 +3,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo url('home'); ?>">Home</a></li>
-            <li class="breadcrumb-item"><a href="<?php echo url('cantores'); ?>">Cantores</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo url('colaboradores'); ?>">Colaboradores</a></li>
             <li class="breadcrumb-item active"><?php echo e($cantor['nome']); ?></li>
         </ol>
     </nav>

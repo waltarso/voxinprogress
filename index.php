@@ -1,6 +1,6 @@
 <?php
 /**
- * VIP (Vox in Progress) - Router Principal
+ * vip (Vox in Progress) - Router Principal
  * Arquivo: index.php
  */
 
@@ -23,7 +23,7 @@ $cantores = load_json(DATA_DIR . '/cantores.json');
 $agenda = load_json(DATA_DIR . '/agenda.json');
 
 // Whitelist de páginas permitidas (fixas)
-$allowed_pages = ['home', 'arranjos', 'arranjo', 'historia', 'cantores', 'cantor', 'agenda', 'contato'];
+$allowed_pages = ['home', 'arranjos', 'arranjo', 'sobre', 'colaboradores', 'cantor', 'agenda', 'contato'];
 
 // Obter página da query string
 $p = $_GET['p'] ?? 'home';
@@ -38,6 +38,13 @@ if (!array_key_exists('p',
     } elseif (isset($_GET['album']) || isset($_GET['q'])) {
         $p = 'arranjos';
     }
+}
+
+// aliases de rotas antigas para manter compatibilidade de links existentes
+if ($p === 'historia') {
+    $p = 'sobre';
+} elseif ($p === 'cantores') {
+    $p = 'colaboradores';
 }
 
 // Validação inicial: nome válido e ou explícito ou corresponde a markdown disponível
@@ -71,6 +78,8 @@ include VIEWS_DIR . '/layout/header.php';
 // ===== HOME =====
 if ($p === 'home') {
     $pageTitle = 'Home';
+    [$cantoresAtuais] = split_cantores_e_colaboradores($cantores);
+    $cantores = $cantoresAtuais;
 
     // Exibir apenas arranjos com ordem definida no campo `homeOrder`
     $arranjos_home = array_values(array_filter($arranjos, function ($arr) {
@@ -151,18 +160,19 @@ elseif ($p === 'arranjo') {
     render('pages/arranjo', compact('arranjo', 'album', 'albums', 'pageTitle'));
 }
 
-// ===== HISTÓRIA =====
-elseif ($p === 'historia') {
-    $pageTitle = 'História';
+// ===== SOBRE O vip =====
+elseif ($p === 'sobre') {
+    $pageTitle = 'Sobre o vip';
     
-    render('pages/historia', compact('pageTitle', 'current_page'));
+    render('pages/sobre', compact('pageTitle', 'current_page'));
 }
 
-// ===== CANTORES (lista) =====
-elseif ($p === 'cantores') {
-    $pageTitle = 'Cantores';
+// ===== COLABORADORES (lista) =====
+elseif ($p === 'colaboradores') {
+    $pageTitle = 'Colaboradores';
+    [$cantoresAtuais, $colaboradores] = split_cantores_e_colaboradores($cantores);
     
-    render('pages/cantores', compact('cantores', 'pageTitle'));
+    render('pages/colaboradores', compact('cantoresAtuais', 'colaboradores', 'pageTitle'));
 }
 
 // ===== CANTOR (detalhe) =====
@@ -245,7 +255,7 @@ elseif ($p === 'contato') {
                 // Tentar enviar email
                 if (ENABLE_EMAIL) {
                     $to = CONTACT_EMAIL;
-                    $subject = '[VIP] ' . htmlspecialchars($assunto);
+                    $subject = '[vip] ' . htmlspecialchars($assunto);
                     $body = "Nome: " . htmlspecialchars($nome) . "\n";
                     $body .= "Email: " . htmlspecialchars($email) . "\n";
                     $body .= "Telefone: " . htmlspecialchars($telefone) . "\n";
@@ -255,7 +265,7 @@ elseif ($p === 'contato') {
                     
                     $headers = "From: " . htmlspecialchars($email) . "\r\n";
                     $headers .= "Reply-To: " . htmlspecialchars($email) . "\r\n";
-                    $headers .= "X-Mailer: VIP\r\n";
+                    $headers .= "X-Mailer: vip\r\n";
                     
                     if (mail($to, $subject, $body, $headers)) {
                         $message = ['type' => 'success', 'text' => 'Obrigado! Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.'];
@@ -277,5 +287,5 @@ elseif ($p === 'contato') {
 elseif (!in_array($p, $allowed_pages, true)) {
     // Nesta altura, a validação inicial já confirmou que DATA_DIR/md/$p.md existe.
     $pageTitle = ucwords(str_replace('_', ' ', $p));
-    render('pages/historia', compact('pageTitle', 'current_page'));
+    render('pages/sobre', compact('pageTitle', 'current_page'));
 }

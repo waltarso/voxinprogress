@@ -1,4 +1,4 @@
-# VIP - Guia de Teste (Atualizado)
+# vip - Guia de Teste (Atualizado)
 
 ## Ambiente local
 
@@ -18,7 +18,7 @@ Acesse: `http://localhost:8000`
 ### Home
 - [ ] Hero com fundo preto e imagem `pub.png`
 - [ ] Botões: `Ver Músicas` e `Próximos Shows`
-- [ ] Links sociais do VIP visíveis (Instagram/Facebook)
+- [ ] Links sociais do vip visíveis (Instagram/Facebook)
 - [ ] Seção `Últimas Músicas` exibe somente itens com `homeOrder`
 - [ ] Ordem da seção é crescente por `homeOrder`
 
@@ -35,12 +35,12 @@ Acesse: `http://localhost:8000`
 - [ ] Arquivos agrupados por tipo
 - [ ] Botão `Voltar ao Repertório`
 
-### Cantores (lista)
+### Colaboradores (lista)
 - [ ] Foto e nome clicam para o perfil
 - [ ] Não existe mais botão `Ver Perfil Completo`
 - [ ] Card mostra voz e bio curta
 
-### Cantor (perfil)
+### Colaborador (perfil)
 - [ ] Conteúdo ocupa largura total (sem painel lateral)
 - [ ] Foto carregada de `equipe/<id>/` quando disponível
 - [ ] Bio completa carregada de `equipe/<id>/<id>.md` (ou `bio.md`)
@@ -60,11 +60,13 @@ Acesse: `http://localhost:8000`
 
 ### `app/data/cantores.json`
 - [ ] `id` corresponde à pasta em `equipe/<id>/`
+- [ ] `entrada` e `saida` preenchidos conforme histórico
+- [ ] `saida: null` para integrantes atuais
 - [ ] `whatsapp` e `email` preenchidos quando houver
 - [ ] `links` com Instagram/Facebook corretos
 
 ### `equipe/<id>/`
-- [ ] Existe `<id>.md` para cada cantor
+- [ ] Existe `<id>.md` para cada colaborador
 - [ ] Foto com nome padrão (`foto.*`) ou qualquer imagem válida
 
 ---
@@ -75,10 +77,16 @@ Acesse: `http://localhost:8000`
 # Home
 curl -I "http://localhost:8000/?p=home"
 
+# Sobre o vip
+curl -I "http://localhost:8000/?p=sobre"
+
+# Colaboradores
+curl -I "http://localhost:8000/?p=colaboradores"
+
 # Repertório
 curl -I "http://localhost:8000/?p=arranjos"
 
-# Perfil cantor
+# Perfil colaborador
 curl -I "http://localhost:8000/?p=cantor&id=walter_de_tarso"
 ```
 

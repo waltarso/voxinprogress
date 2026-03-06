@@ -1,6 +1,6 @@
 <?php
 /**
- * VIP - Funções auxiliares
+ * vip - Funções auxiliares
  */
 
 /**
@@ -267,6 +267,130 @@ function find_cantor($cantores, $id)
         }
     }
     return null;
+}
+
+/**
+ * Retorna true quando o registro representa integrante atual.
+ * Regra: `saida` nula/vazia => ativo no grupo.
+ */
+function is_cantor_ativo($cantor)
+{
+    if (!is_array($cantor)) {
+        return false;
+    }
+
+    $saida = $cantor['saida'] ?? null;
+    return $saida === null || trim((string) $saida) === '';
+}
+
+/**
+ * Separa cadastros em [ativos, colaboradores].
+ */
+function split_cantores_e_colaboradores($cantores)
+{
+    $ativos = [];
+    $colaboradores = [];
+
+    foreach ((array) $cantores as $cantor) {
+        if (is_cantor_ativo($cantor)) {
+            $ativos[] = $cantor;
+        } else {
+            $colaboradores[] = $cantor;
+        }
+    }
+
+    usort($ativos, function ($a, $b) {
+        $voiceOrder = [
+            'soprano' => 1,
+            'mezzo' => 2,
+            'mezzosoprano' => 2,
+            'contralto' => 3,
+            'tenor' => 4,
+            'baritono' => 5,
+            'baixo' => 6
+        ];
+
+        $voiceA = normalize_person_name((string) ($a['voz'] ?? ''));
+        $voiceB = normalize_person_name((string) ($b['voz'] ?? ''));
+        $orderA = $voiceOrder[$voiceA] ?? 999;
+        $orderB = $voiceOrder[$voiceB] ?? 999;
+
+        if ($orderA !== $orderB) {
+            return $orderA <=> $orderB;
+        }
+
+        return strcasecmp((string) ($a['nome'] ?? ''), (string) ($b['nome'] ?? ''));
+    });
+
+    // Mais recentes primeiro (maior data de saida).
+    usort($colaboradores, function ($a, $b) {
+        $aTs = parse_member_date_to_timestamp($a['saida'] ?? null);
+        $bTs = parse_member_date_to_timestamp($b['saida'] ?? null);
+
+        if ($aTs === $bTs) {
+            return strcasecmp((string) ($a['nome'] ?? ''), (string) ($b['nome'] ?? ''));
+        }
+
+        return $bTs <=> $aTs;
+    });
+
+    return [$ativos, $colaboradores];
+}
+
+/**
+ * Converte data de membro para timestamp.
+ * Aceita YYYY-MM-DD, DD/MM/YYYY e YYYY.
+ */
+function parse_member_date_to_timestamp($value)
+{
+    $value = trim((string) $value);
+    if ($value === '') {
+        return 0;
+    }
+
+    if (preg_match('/^(\d{4})-(\d{2})-(\d{2})$/', $value)) {
+        $ts = strtotime($value . ' 00:00:00');
+        return $ts !== false ? $ts : 0;
+    }
+
+    if (preg_match('/^(\d{2})\/(\d{2})\/(\d{4})$/', $value, $m)) {
+        $iso = $m[3] . '-' . $m[2] . '-' . $m[1];
+        $ts = strtotime($iso . ' 00:00:00');
+        return $ts !== false ? $ts : 0;
+    }
+
+    if (preg_match('/^\d{4}$/', $value)) {
+        $ts = strtotime($value . '-01-01 00:00:00');
+        return $ts !== false ? $ts : 0;
+    }
+
+    $ts = strtotime($value);
+    return $ts !== false ? $ts : 0;
+}
+
+/**
+ * Formata data de cadastro para exibicao (DD/MM/YYYY ou apenas ano).
+ */
+function format_member_date($value)
+{
+    $value = trim((string) $value);
+    if ($value === '') {
+        return '';
+    }
+
+    if (preg_match('/^\d{4}$/', $value)) {
+        return $value;
+    }
+
+    if (preg_match('/^(\d{4})-(\d{2})-(\d{2})$/', $value, $m)) {
+        return $m[3] . '/' . $m[2] . '/' . $m[1];
+    }
+
+    if (preg_match('/^(\d{2})\/(\d{2})\/(\d{4})$/', $value)) {
+        return $value;
+    }
+
+    return $value;
 }
 
 function cantor_dir_path($cantorId)
@@ -651,7 +775,7 @@ function file_type_label($type)
  * Aceita cabeçalhos (# até ######), listas não ordenadas, negrito **texto** e
  * itálico *texto*.
  * Esta função não depende de bibliotecas externas e serve para páginas de
- * conteúdo como a história do VIP.
+ * conteúdo como a história do vip.
  */
 function render_markdown($text)
 {
@@ -660,17 +784,20 @@ function render_markdown($text)
     $text = preg_replace_callback('/\[(.*?)\]\((.*?)\)/', function ($m) use (&$links) {
         $label = htmlspecialchars($m[1], ENT_QUOTES, 'UTF-8');
         $url = $m[2];
+        $attrs = '';
         if (preg_match('/^[a-z0-9_\-]+\.md$/i', $url)) {
             // internal markdown page -> convert to router URL
             $p = pathinfo($url, PATHINFO_FILENAME);
             $href = url($p);
         } elseif (preg_match('/^https?:\/\//', $url)) {
             $href = $url;
+            $attrs = ' target="_blank" rel="noopener noreferrer"';
         } else {
             // leave relative URLs (could be to images/pdf etc.)
             $href = $url;
         }
-        $links[] = '<a href="' . $href . '">' . $label . '</a>';
+        $safeHref = htmlspecialchars($href, ENT_QUOTES, 'UTF-8');
+        $links[] = '<a href="' . $safeHref . '"' . $attrs . '>' . $label . '</a>';
         return '%%LINK' . (count($links) - 1) . '%%';
     }, $text);
 
@@ -694,9 +821,16 @@ function render_markdown($text)
 
     // listas não ordenadas (prefixo - ou *)
     $text = preg_replace('/^[\-\*]\s+(.*)$/m', '<li>$1</li>', $text);
-    // agrupar itens em <ul>
-    $text = preg_replace_callback('/(<li>.*?<\/li>)(\s*<li>.*?<\/li>)+/s', function ($m) {
-        return '<ul>' . $m[0] . '</ul>';
+    // agrupar blocos com 1+ itens em <ul>
+    $text = preg_replace_callback('/((?:^<li>.*<\/li>\s*$\R?)+)/m', function ($m) {
+        return '<ul>' . trim($m[1]) . '</ul>';
+    }, $text);
+
+    // regras horizontais (---, ***, ___)
+    $hrs = [];
+    $text = preg_replace_callback('/^\s*(?:-{3,}|\*{3,}|_{3,})\s*$/m', function () use (&$hrs) {
+        $hrs[] = '<hr>';
+        return '%%HR' . (count($hrs) - 1) . '%%';
     }, $text);
 
     // tabelas Markdown (linhas com | + linha separadora com ---)
@@ -760,6 +894,14 @@ function render_markdown($text)
     foreach ($tables as $idx => $tableHtml) {
         $text = str_replace('%%TABLE' . $idx . '%%', $tableHtml, $text);
     }
+
+    // restaurar regras horizontais após a etapa de parágrafos
+    foreach ($hrs as $idx => $hrHtml) {
+        $text = str_replace('%%HR' . $idx . '%%', $hrHtml, $text);
+    }
+
+    // evita markup inválido como <p><hr></p>
+    $text = preg_replace('/<p>\s*(<hr>)\s*<\/p>/', '$1', $text);
     
     return $text;
 }
@@ -774,6 +916,108 @@ function render_markdown_file($path)
     }
     $md = file_get_contents($path);
     return render_markdown($md);
+}
+
+/**
+ * Normaliza nome para comparacoes (sem acento, lowercase, sem pontuacao).
+ */
+function normalize_person_name($name)
+{
+    $value = trim((string) $name);
+    if ($value === '') {
+        return '';
+    }
+
+    if (function_exists('mb_strtolower')) {
+        $value = mb_strtolower($value, 'UTF-8');
+    } else {
+        $value = strtolower($value);
+    }
+    if (function_exists('iconv')) {
+        $converted = @iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $value);
+        if ($converted !== false) {
+            $value = $converted;
+        }
+    }
+
+    $value = preg_replace('/[^a-z0-9\s]/', ' ', $value);
+    $value = preg_replace('/\s+/', ' ', $value);
+    return trim($value);
+}
+
+/**
+ * Carrega colaboradores historicos a partir da tabela em formacoes.md.
+ * Exclui integrantes que estao na formacao atual (cantores.json).
+ */
+function load_colaboradores_historicos($formacoesMdPath, $cantoresAtuais)
+{
+    if (!file_exists($formacoesMdPath)) {
+        return [];
+    }
+
+    $currentNames = [];
+    foreach ((array) $cantoresAtuais as $cantor) {
+        $nome = (string) ($cantor['nome'] ?? '');
+        $norm = normalize_person_name($nome);
+        if ($norm !== '') {
+            $currentNames[$norm] = true;
+        }
+    }
+
+    $lines = preg_split('/\r\n|\r|\n/', (string) file_get_contents($formacoesMdPath));
+    if (!is_array($lines)) {
+        return [];
+    }
+
+    $colaboradores = [];
+    $seen = [];
+
+    foreach ($lines as $line) {
+        $line = trim($line);
+        if ($line === '' || strpos($line, '|') === false) {
+            continue;
+        }
+
+        // ignora cabecalho/separador da tabela
+        if (preg_match('/^\|\s*-+/', $line)) {
+            continue;
+        }
+
+        $cells = array_map('trim', explode('|', trim($line, '|')));
+        if (count($cells) < 5) {
+            continue;
+        }
+
+        if (strcasecmp($cells[0], 'Membro') === 0) {
+            continue;
+        }
+
+        $nome = trim(strip_tags(preg_replace('/\*\*(.*?)\*\*/', '$1', (string) $cells[0])));
+        $funcao = trim((string) $cells[1]);
+        $entrada = trim((string) $cells[2]);
+        $saida = trim((string) $cells[3]);
+        $observacoes = trim((string) $cells[4]);
+
+        $norm = normalize_person_name($nome);
+        if ($norm === '' || isset($currentNames[$norm]) || isset($seen[$norm])) {
+            continue;
+        }
+
+        $seen[$norm] = true;
+        $colaboradores[] = [
+            'nome' => $nome,
+            'funcao' => $funcao,
+            'entrada' => $entrada,
+            'saida' => $saida,
+            'observacoes' => $observacoes
+        ];
+    }
+
+    usort($colaboradores, function ($a, $b) {
+        return strcasecmp((string) ($a['nome'] ?? ''), (string) ($b['nome'] ?? ''));
+    });
+
+    return $colaboradores;
 }
 
 /**

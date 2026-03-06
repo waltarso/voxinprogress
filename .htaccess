@@ -1,4 +1,4 @@
-# VIP Project - .htaccess (Opcional)
+# vip Project - .htaccess (Opcional)
 # Use apenas se quiser URLs amigáveis sem ?p=
 
 <IfModule mod_rewrite.c>

@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-xl-5 d-flex justify-content-center align-items-center mt-4 mt-lg-0">
-                <img src="<?php echo asset('img/pub.png'); ?>" alt="VIP" class="img-fluid" style="max-width: 420px; width: 100%; height: auto;">
+                <img src="<?php echo asset('img/pub.png'); ?>" alt="vip" class="img-fluid" style="max-width: 420px; width: 100%; height: auto;">
             </div>
         </div>
     </div>
@@ -114,9 +114,9 @@
 <section class="py-5 bg-dark text-white">
     <div class="container text-center">
         <h2 class="mb-3">Quer nos conhecer mais?</h2>
-        <p class="lead mb-4">Explore nossa história e saiba mais sobre o VIP</p>
-        <a href="<?php echo url('historia'); ?>" class="btn btn-light btn-lg">
-            <i class="bi bi-book"></i> Leia Nossa História
+        <p class="lead mb-4">Conheça a trajetória e os bastidores do vip</p>
+        <a href="<?php echo url('sobre'); ?>" class="btn btn-light btn-lg">
+            <i class="bi bi-book"></i> Sobre o vip
         </a>
     </div>
 </section>

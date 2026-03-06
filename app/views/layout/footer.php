@@ -3,7 +3,7 @@
         <footer class="mt-5 py-4 bg-dark text-white text-center border-top">
             <div class="container-fluid">
                 <p class="mb-2">
-                    <img src="<?php echo asset('img/vip-logo-transp.png'); ?>" alt="VIP" style="height:2em;" class="d-inline-block align-text-bottom me-1"> 
+                    <img src="<?php echo asset('img/vip-logo-transp.png'); ?>" alt="vip" style="height:2em;" class="d-inline-block align-text-bottom me-1"> 
                     <strong><?php echo e(SITE_NAME); ?></strong> - <?php echo e(SITE_TAGLINE); ?>
                 </p>
                 <p class="mb-3 text-muted">
@@ -14,7 +14,8 @@
                 </p>
                 <p class="text-white-50 small mb-0">
                     &copy; <?php echo date('Y'); ?> 
-                    vip - Vox in Progress. Conteúdo livre; sinta-se à vontade para usar, copiar e modificar.
+                    vip - Vox in Progress.
+                    <a href="<?php echo url('licenca'); ?>" class="text-white-50 text-decoration-underline">Conteúdo livre; sinta-se à vontade para usar, copiar e modificar.</a>
                 </p>
             </div>
         </footer>

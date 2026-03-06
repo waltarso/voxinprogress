@@ -1,6 +1,6 @@
 <?php
 /**
- * VIP (Vox in Progress) - Configuração do Site
+ * vip (Vox in Progress) - Configuração do Site
  */
 
 // Informações do site

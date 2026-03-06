@@ -1,4 +1,4 @@
-vip (Vox in Progress) é um grupo vocal brasileiro dedicado à interpretação de repertório de rock — com ênfase em rock progressivo — por meio de arranjos vocais originais concebidos para pequeno conjunto. O projeto opera com direção musical e arranjos próprios, organizando o trabalho por ciclos de repertório. Ao longo do tempo, combinou duas finalidades: produção audiovisual e apresentações ao vivo. Na fase atual, a prioridade recai sobre a prática de ensaio e a execução em palco, enquanto a produção de vídeos permanece como objetivo de médio prazo, condicionada por requisitos técnicos e artísticos específicos.
+vip (Vox in Progress) é um grupo vocal brasileiro dedicado à interpretação de repertório de rock - com ênfase em rock progressivo - por meio de arranjos vocais originais concebidos para pequeno conjunto. O projeto opera com direção musical e arranjos próprios, organizando o trabalho por ciclos de repertório. Ao longo do tempo, combinou duas finalidades: produção audiovisual e apresentações ao vivo. Na fase atual, a prioridade recai sobre a prática de ensaio e a execução em palco, enquanto a produção de vídeos permanece como objetivo de médio prazo, condicionada por requisitos técnicos e artísticos específicos.
 
 A formação de referência atual – Fabíola (soprano), Luciene (mezzo), Karina (alto/contralto), João (tenor), Walter (barítono) e Araken (baixo) – foi consolidada em 2025 e sustenta um repertório capaz de alternar entre arranjos originais de rock progressivo (ciclo **Introspective**) e ciclos temáticos como **Queen at Six**. O documento anexo lista todas as formações desde 2016 e serve de referência para as mudanças narradas adiante.
 
@@ -21,7 +21,7 @@ A palavra “coral” costuma referir-se a conjunto de muitas vozes, frequenteme
 
 Polifonia designa textura em que múltiplas linhas melódicas coexistem com independência relativa. Contraponto é o conjunto de técnicas e princípios que regulam essa coexistência, tratando a relação entre movimentos melódicos (horizontalidade) e os resultados harmônicos (verticalidade). A condução de vozes busca coerência no deslocamento entre acordes e intervalos, preservando a identidade de tessitura e evitando cruzamentos sempre que possível.
 
-O vip organiza seus arranjos como escrita predominantemente polifônica e orientada por condução de vozes. Em situações específicas, recorre a paralelismos como recurso de reforço temático — sobretudo em terças e sextas — e admite exceções pontuais quando cumprem função estrutural clara.
+O vip organiza seus arranjos como escrita predominantemente polifônica e orientada por condução de vozes. Em situações específicas, recorre a paralelismos como recurso de reforço temático - sobretudo em terças e sextas - e admite exceções pontuais quando cumprem função estrutural clara.
 
 ### Quatro e seis vozes: implicações de textura, tessitura e legibilidade
 

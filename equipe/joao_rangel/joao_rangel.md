@@ -3,7 +3,7 @@
 ## Sobre
 Tenor e responsável pela divulgação, entrou em 2025 e canta em apresentações recentes.
 
-## Trajetória no VIP
+## Trajetória no vip
 - Entrada no grupo:
 - Voz: Tenor
 - Destaques:

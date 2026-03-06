@@ -3,7 +3,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="<?php echo url('home'); ?>">Home</a></li>
-            <li class="breadcrumb-item active">História</li>
+            <li class="breadcrumb-item active">Sobre o vip</li>
         </ol>
     </nav>
 
@@ -11,9 +11,9 @@
         <div class="col-lg-8">
             <div class="card shadow-sm border-0">
                 <div class="card-body p-4">
-                    <?php 
-                        // determine page key (fallback to 'historia' when not set)
-                        $pageKey = isset($current_page) ? $current_page : 'historia';
+                    <?php
+                        // determine page key (fallback to 'sobre' when not set)
+                        $pageKey = isset($current_page) ? $current_page : 'sobre';
                         // choose page-specific markdown if available
                         $mdPath = DATA_DIR . '/md/' . $pageKey . '.md';
                         if (file_exists($mdPath)) {
@@ -50,7 +50,7 @@
                         <i class="bi bi-book"></i> Saiba Mais
                     </h5>
                     <p class="text-muted small mb-3">
-                        A história do VIP é marcada por dedicação, criatividade e paixão pela música vocal.
+                        A trajetória do vip é marcada por dedicação, criatividade e paixão pela música vocal.
                     </p>
                     <?php
                         $mdPages = glob(DATA_DIR . '/md/*.md') ?: [];
@@ -76,8 +76,8 @@
                     <?php endif; ?>
                     <hr>
                     <p class="mb-2">
-                        <a href="<?php echo url('cantores'); ?>" class="btn btn-sm btn-outline-primary w-100 mb-2">
-                            <i class="bi bi-people"></i> Conheça os Cantores
+                        <a href="<?php echo url('colaboradores'); ?>" class="btn btn-sm btn-outline-primary w-100 mb-2">
+                            <i class="bi bi-people"></i> Conheça os Colaboradores
                         </a>
                     </p>
                     <p class="mb-2">

@@ -1,4 +1,4 @@
-# VIP - Guia Rápido de Edição de Conteúdo
+# vip - Guia Rápido de Edição de Conteúdo
 
 Este guia é para atualizar conteúdo sem mexer em código.
 
@@ -22,7 +22,7 @@ Exemplo:
 }
 ```
 
-## 2) Cantores (`cantores.json`)
+## 2) Colaboradores (`cantores.json`)
 
 Arquivo: `app/data/cantores.json`
 
@@ -31,6 +31,8 @@ Campos principais:
 - `id` (slug, ex: `joao_rangel`)
 - `nome`
 - `voz`
+- `entrada` (data no formato `YYYY-MM-DD` ou apenas ano)
+- `saida` (`null` para integrante atual; data para colaborador histórico)
 - `bioCurta`
 - `foto` (opcional)
 - `whatsapp` (opcional)
@@ -72,12 +74,12 @@ Exemplo:
 No arquivo `<id>.md`:
 
 ```md
-# Nome do Cantor
+# Nome do Colaborador
 
 ## Sobre
 Texto completo da biografia.
 
-## Trajetória no VIP
+## Trajetória no vip
 - Entrada no grupo:
 - Voz:
 - Destaques:
@@ -103,4 +105,4 @@ No `arranjos.json`:
 - Recarregar o navegador e testar:
   - Home
   - Repertório
-  - Perfil de cantor
+  - Perfil de colaborador

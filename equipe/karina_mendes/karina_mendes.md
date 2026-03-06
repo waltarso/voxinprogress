@@ -3,7 +3,7 @@
 ## Sobre
 Contralto de longa data, participou dos principais vídeos e eventos do grupo.
 
-## Trajetória no VIP
+## Trajetória no vip
 - Entrada no grupo:
 - Voz: Contralto
 - Destaques:

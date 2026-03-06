@@ -3,7 +3,7 @@
 ## Sobre
 Baixo estável desde 2023, participou das estreias no Tonton e Nimbus.
 
-## Trajetória no VIP
+## Trajetória no vip
 - Entrada no grupo:
 - Voz: Baixo
 - Destaques:

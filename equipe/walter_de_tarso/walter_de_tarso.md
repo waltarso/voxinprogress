@@ -3,7 +3,7 @@
 ## Sobre
 Fundador e regente, alterna entre barítono e direção desde 2019.
 
-## Trajetória no VIP
+## Trajetória no vip
 - Entrada no grupo:
 - Voz: Barítono
 - Destaques:
