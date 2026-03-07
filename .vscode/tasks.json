@@ -2,6 +2,14 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Start Dev Stack",
+            "dependsOrder": "parallel",
+            "dependsOn": [
+                "Start PHP Built-in Server",
+                "Watch SCSS"
+            ]
+        },
+        {
             "label": "Start PHP Built-in Server",
             "type": "shell",
             "command": "php -S localhost:8000 -t ${workspaceFolder}",
@@ -10,7 +18,19 @@
                 "reveal": "always",
                 "panel": "dedicated"
             },
-            "problemMatcher": []
+            "problemMatcher": [
+                {
+                    "owner": "custom",
+                    "pattern": {
+                        "regexp": ".*"
+                    },
+                    "background": {
+                        "activeOnStart": true,
+                        "beginsPattern": ".*",
+                        "endsPattern": "Development Server \\(http://localhost:8000\\) started"
+                    }
+                }
+            ]
         },
         {
             "label": "Watch SCSS",
@@ -21,7 +41,19 @@
                 "reveal": "always",
                 "panel": "dedicated"
             },
-            "problemMatcher": []
+            "problemMatcher": [
+                {
+                    "owner": "custom",
+                    "pattern": {
+                        "regexp": ".*"
+                    },
+                    "background": {
+                        "activeOnStart": true,
+                        "beginsPattern": "sass --watch|Compiled",
+                        "endsPattern": "Sass is watching for changes\\. Press Ctrl-C to stop\\."
+                    }
+                }
+            ]
         }
     ]
 }

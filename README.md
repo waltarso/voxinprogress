@@ -9,7 +9,7 @@ Site institucional do grupo vocal vip, feito em PHP puro + Bootstrap, com dados 
 - Bootstrap 5 e Bootstrap Icons via CDN
 - Dados em `app/data/*.json`
 - Acervo de arquivos em `material/`
-- Perfis dos colaboradores com foto e biografia em Markdown (`equipe/<id>/`)
+- Perfis dos colaboradores com foto e biografia em Markdown (`colaboradores/<id>/`)
 
 ## Estrutura principal
 
@@ -22,7 +22,7 @@ vip/
 │   ├── data/
 │   │   ├── albums.json
 │   │   ├── arranjos.json
-│   │   ├── cantores.json
+│   │   ├── colaboradores.json
 │   │   └── agenda.json
 │   └── views/
 │       ├── layout/
@@ -31,7 +31,7 @@ vip/
 │   ├── css/site.css
 │   └── img/
 ├── material/
-└── equipe/
+└── colaboradores/
     └── <cantor_id>/
         ├── <cantor_id>.md
         └── foto.(jpg|png|webp|avif)
@@ -116,7 +116,7 @@ Regra da Home (Últimas Músicas):
 - ordena crescente (`1, 2, 3...`)
 - não limita por quantidade (exibe todos com `homeOrder`)
 
-### `cantores.json`
+### `colaboradores.json`
 
 Campos relevantes:
 
@@ -144,12 +144,12 @@ Exemplo:
 }
 ```
 
-## Perfis dos colaboradores (`equipe/<id>/`)
+## Perfis dos colaboradores (`colaboradores/<id>/`)
 
 Cada colaborador pode ter pasta própria:
 
-- `equipe/<id>/<id>.md` (bio completa)
-- `equipe/<id>/bio.md` (fallback)
+- `colaboradores/<id>/<id>.md` (bio completa)
+- `colaboradores/<id>/bio.md` (fallback)
 - foto local (auto-detect)
 
 Prioridade de foto:

@@ -7,7 +7,7 @@
             "request": "launch",
             "url": "http://localhost:8000/index.php",
             "webRoot": "${workspaceFolder}",
-            "preLaunchTask": "Start PHP Built-in Server"
+            "preLaunchTask": "Start Dev Stack"
         }
     ]
 }

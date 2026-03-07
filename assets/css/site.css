@@ -36,6 +36,45 @@ body {
   padding: 0.35rem 0.45rem;
 }
 
+/* Period/date column can look visually larger; keep it compact and aligned. */
+.card-body table.table.table-sm.table-bordered.align-middle th:nth-child(2),
+.card-body table.table.table-sm.table-bordered.align-middle td:nth-child(2) {
+  font-size: 0.9em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Desktop tuning by table id generated from markdown headings. */
+#cantores th:nth-child(1),
+#cantores td:nth-child(1) {
+  width: 8rem;
+}
+
+#cantores th:nth-child(2),
+#cantores td:nth-child(2) {
+  width: 7.5rem;
+}
+
+#cantores th:nth-child(3),
+#cantores td:nth-child(3) {
+  min-width: 20rem;
+}
+
+#apoio-tecnico th:nth-child(1),
+#apoio-tecnico td:nth-child(1) {
+  width: 8rem;
+}
+
+#apoio-tecnico th:nth-child(2),
+#apoio-tecnico td:nth-child(2) {
+  width: 7rem;
+}
+
+#apoio-tecnico th:nth-child(3),
+#apoio-tecnico td:nth-child(3) {
+  min-width: 18rem;
+}
+
 /* Form */
 .form-control,
 .form-select {
@@ -95,7 +134,7 @@ img {
 
 .navbar-brand {
   font-size: 1.5rem;
-  letter-spacing: 0.03125rem;
+  letter-spacing: 0.03rem;
 }
 
 .navbar-brand i {
@@ -183,7 +222,7 @@ img {
 .badge {
   padding: 0.5rem 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.01875rem;
+  letter-spacing: 0.015rem;
 }
 
 .badge.bg-primary {
@@ -359,6 +398,60 @@ footer a:hover {
 }
 /* Ajustes tipograficos para telas pequenas */
 @media (max-width: 48rem) {
+  .card-body {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .card-body table.table.table-sm.table-bordered.align-middle {
+    width: 100%;
+    table-layout: auto;
+  }
+  .card-body table.table.table-sm.table-bordered.align-middle th,
+  .card-body table.table.table-sm.table-bordered.align-middle td {
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+  .card-body table.table.table-sm.table-bordered.align-middle th:nth-child(1),
+  .card-body table.table.table-sm.table-bordered.align-middle td:nth-child(1) {
+    width: 8rem;
+  }
+  .card-body table.table.table-sm.table-bordered.align-middle th:nth-child(2),
+  .card-body table.table.table-sm.table-bordered.align-middle td:nth-child(2) {
+    white-space: normal;
+    line-height: 1.15;
+    width: 5.5rem;
+  }
+  .card-body table.table.table-sm.table-bordered.align-middle th:nth-child(3),
+  .card-body table.table.table-sm.table-bordered.align-middle td:nth-child(3) {
+    min-width: 11rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  /* Mobile tuning by table id generated from markdown headings. */
+  #cantores th:nth-child(1),
+  #cantores td:nth-child(1) {
+    width: 8.5rem;
+  }
+  #cantores th:nth-child(2),
+  #cantores td:nth-child(2) {
+    width: 5.5rem;
+  }
+  #cantores th:nth-child(3),
+  #cantores td:nth-child(3) {
+    min-width: 12rem;
+  }
+  #apoio-tecnico th:nth-child(1),
+  #apoio-tecnico td:nth-child(1) {
+    width: 7.5rem;
+  }
+  #apoio-tecnico th:nth-child(2),
+  #apoio-tecnico td:nth-child(2) {
+    width: 5rem;
+  }
+  #apoio-tecnico th:nth-child(3),
+  #apoio-tecnico td:nth-child(3) {
+    min-width: 10.5rem;
+  }
   .p-4 {
     padding: 0.3rem !important;
   }
@@ -383,7 +476,7 @@ footer a:hover {
     --bs-gutter-x: 0.75rem !important;
   }
   html {
-    font-size: 0.9375rem;
+    font-size: 0.8rem;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
   }

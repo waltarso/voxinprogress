@@ -19,7 +19,8 @@ if (!isset($_SESSION['csrf_token'])) {
 // Carregar dados JSON
 $albums = load_json(DATA_DIR . '/albums.json');
 $arranjos = load_json(DATA_DIR . '/arranjos.json');
-$cantores = load_json(DATA_DIR . '/cantores.json');
+$colaboradoresData = load_json(DATA_DIR . '/colaboradores.json');
+$cantores = $colaboradoresData;
 $agenda = load_json(DATA_DIR . '/agenda.json');
 
 // Whitelist de páginas permitidas (fixas)
@@ -78,8 +79,8 @@ include VIEWS_DIR . '/layout/header.php';
 // ===== HOME =====
 if ($p === 'home') {
     $pageTitle = 'Home';
-    [$cantoresAtuais] = split_cantores_e_colaboradores($cantores);
-    $cantores = $cantoresAtuais;
+    [$participantesCantores] = split_colaboradores_por_funcao($colaboradoresData);
+    $cantores = $participantesCantores;
 
     // Exibir apenas arranjos com ordem definida no campo `homeOrder`
     $arranjos_home = array_values(array_filter($arranjos, function ($arr) {
@@ -170,9 +171,9 @@ elseif ($p === 'sobre') {
 // ===== COLABORADORES (lista) =====
 elseif ($p === 'colaboradores') {
     $pageTitle = 'Colaboradores';
-    [$cantoresAtuais, $colaboradores] = split_cantores_e_colaboradores($cantores);
+    [$participantesCantores, $participantesApoio, $colaboradoresEventuais, $parceiros] = split_colaboradores_por_funcao($colaboradoresData);
     
-    render('pages/colaboradores', compact('cantoresAtuais', 'colaboradores', 'pageTitle'));
+    render('pages/colaboradores', compact('participantesCantores', 'participantesApoio', 'colaboradoresEventuais', 'parceiros', 'pageTitle'));
 }
 
 // ===== CANTOR (detalhe) =====
@@ -187,7 +188,7 @@ elseif ($p === 'cantor') {
     }
     
     // Buscar cantor
-    $cantor = find_cantor($cantores, $id);
+    $cantor = find_cantor($colaboradoresData, $id);
     if (!$cantor) {
         $current_page = '404';
         render('pages/404');

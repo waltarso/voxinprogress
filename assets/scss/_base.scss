@@ -28,6 +28,45 @@ body {
   padding: 0.35rem 0.45rem;
 }
 
+/* Period/date column can look visually larger; keep it compact and aligned. */
+.card-body table.table.table-sm.table-bordered.align-middle th:nth-child(2),
+.card-body table.table.table-sm.table-bordered.align-middle td:nth-child(2) {
+  font-size: 0.9em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Desktop tuning by table id generated from markdown headings. */
+#cantores th:nth-child(1),
+#cantores td:nth-child(1) {
+  width: 8rem;
+}
+
+#cantores th:nth-child(2),
+#cantores td:nth-child(2) {
+  width: 7.5rem;
+}
+
+#cantores th:nth-child(3),
+#cantores td:nth-child(3) {
+  min-width: 20rem;
+}
+
+#apoio-tecnico th:nth-child(1),
+#apoio-tecnico td:nth-child(1) {
+  width: 8rem;
+}
+
+#apoio-tecnico th:nth-child(2),
+#apoio-tecnico td:nth-child(2) {
+  width: 7rem;
+}
+
+#apoio-tecnico th:nth-child(3),
+#apoio-tecnico td:nth-child(3) {
+  min-width: 18rem;
+}
+
 /* Form */
 .form-control,
 .form-select {

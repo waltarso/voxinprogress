@@ -30,14 +30,6 @@
                                 <?php echo e($arranjo['artistaOriginal']); ?>
                             </p>
                         </div>
-                        <div class="col-md-6">
-                            <p class="mb-2">
-                                <strong>Álbum:</strong><br>
-                                <a href="<?php echo url('arranjos', ['album' => $arranjo['albumId']]); ?>">
-                                    <?php echo e($album['titulo']); ?>
-                                </a>
-                            </p>
-                        </div>
                     </div>
 
                     <div class="row">
@@ -67,6 +59,13 @@
                             <i class="bi bi-star-fill" style="color: #ffc107;"></i>
                         <?php endfor; ?>
                         <span class="text-muted">(<?php echo e($arranjo['dificuldade']); ?>/5)</span>
+                    </p>
+                    <?php endif; ?>
+
+                    <?php if (!empty($arranjo['observacoes'])): ?>
+                    <p class="mb-0">
+                        <strong>Observações:</strong><br>
+                        <?php echo e($arranjo['observacoes']); ?>
                     </p>
                     <?php endif; ?>
                 </div>

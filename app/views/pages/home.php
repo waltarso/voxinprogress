@@ -3,7 +3,6 @@
     <div class="container py-2">
         <div class="row align-items-center">
             <div class="col-lg-8 col-xl-7 text-center text-lg-start">
-                <h1 class="display-3 fw-bold mb-3 text-white"><?php echo e(SITE_NAME); ?></h1>
                 <p class="lead mb-4"><?php echo e(SITE_TAGLINE); ?></p>
                 <div class="d-flex gap-2 justify-content-center justify-content-lg-start flex-wrap">
                     <a href="<?php echo url('arranjos'); ?>" class="btn btn-light btn-lg">

@@ -1,12 +1,12 @@
-## Histórico de Formações
-O vip se consolidou com um grupo vocal a cappella no ano de 2024, que pode ser considerado o ano de sua criação.
-Porém, houve valiosa paricipação de diversos colaboradores antes disso, que possibilitaram o amadurecimento do projeto.
+O vip se consolidou como grupo vocal a cappella em 2024, ano que pode ser considerado o de sua criação.
+Antes disso, porém, houve valiosa participação de diversos colaboradores, o que possibilitou o amadurecimento do projeto.
 
-### 2017 - Criação do projeto
-O vip não era um grupo vocal, apenas um projeto musical com participação de cantores convidados.
-A proposta era de gravação individual de vozes e produção de vídeos mostrando uma partitura. 
+**2017 - Criação do projeto**
 
-Colaboraram nessa fase:
+Em 2017, o vip ainda não era um grupo vocal, mas um projeto musical com a participação de cantores convidados.
+A proposta era gravar as vozes individualmente e produzir vídeos com partitura.
+
+Participaram dessa fase:
 - Soprano: Janaína Panizza
 - Mezzo: Alana Panizza  
 - Contralto: Marcia Malaquias
@@ -14,12 +14,19 @@ Colaboraram nessa fase:
 - Barítono: Marcelo Recski
 - Baixo: Walter de Tarso
 
-Alguns músicos cantaram mais de uma linha em diversas músicas.
+Alguns músicos cantaram mais de uma linha em diferentes músicas.
+Nesse período, foi publicada no YouTube a primeira versão da playlist [**Introspective**](https://www.youtube.com/playlist?list=PL0H_PSBi1G4qi4WLEG8SVCeNEzDdjiElp), consolidando o nome "Voz In Progress" como marca.
 
----
+**2018 - Criação do grupo vocal e do domínio vip**
 
-### 2018 - Criação do grupo vocal
-Primeira formação, com duas sopranos, dois tenores e dois baixos. A proposta era apenas  estudo e gravação de vozes individual, com eventuais encontros para filmagem e produção de vídeos para publicar no YouTube, somente as músicas do álbum Introspective. 
+Não houve atividades de gravação nesse ano mas, ao fim de 2018, nasceu a proposta do grupo vocal. 
+
+Em 14/11/2018, Walter de Tarso e Lívio Panizza adquiriram o domínio "voxinprogress.vip".
+A existência do domínio ".vip" foi uma surpresa e passou a ser usada como sigla para o grupo.
+
+**2019 - Primeira formação**
+
+A primeira formação do vip começou de fato em 2019, com duas sopranos, dois tenores e dois baixos. A proposta era estudo e gravação individual de vozes, com eventuais encontros para filmagem e produção de vídeos para publicar no YouTube, exclusivamente das músicas do álbum Introspective.
 
 - Soprano: Janaína Panizza
 - Mezzo: Alana Panizza  
@@ -28,12 +35,11 @@ Primeira formação, com duas sopranos, dois tenores e dois baixos. A proposta e
 - Barítono: Walter de Tarso  
 - Baixo: Claudio Rodrigues  
 
-O grupo não conseguiu gravar as músicas.
+O grupo não conseguiu gravar as músicas em virtude de dificuldades de agenda e tempo para dedicação.
 
----
+**2020-2021 - Pandemia**
 
-### 2020-2021 - Pandemia
-Diversos cantores saíram do vip. A pandemia do Covid impediu a organização de encontros presenciais.
+Diversos cantores saíram do vip. A pandemia de Covid impediu a organização de encontros presenciais.
 Com isso, a proposta mudou para uma produção individual, com cada colaborador enviando áudios ao produtor.
 
 Contribuíram nessa fase:
@@ -46,11 +52,10 @@ Contribuíram nessa fase:
 - Barítono: Lars Hugerth 
 - Baixo: Walter de Tarso
 
-Não foi possível completar nenhuma música.
+Não foi possível completar a gravação de nenhuma música.
 
----
+**2022 - Nova formação**
 
-### 2022 - Nova formação
 Uma nova composição de cantores permitiu a execução da proposta inicial do vip.
 
 - Soprano: Janaína Panizza
@@ -60,12 +65,11 @@ Uma nova composição de cantores permitiu a execução da proposta inicial do v
 - Barítono: Lars Hugerth
 - Baixo: Walter de Tarso
 
-Foram feitas versões iniciais dos dois primeiros vídeos, Astronomy domine e Wonderous stories, que não ficaram bons e não foram divulgados.
+Foram feitas versões iniciais dos dois primeiros vídeos, Astronomy domine e Wonderous stories, que não ficaram boas e não foram divulgadas.
 
----
+**2023 - Ensaios Regulares**
 
-### 2023 - Ensaios Regulares
-Nesse ano, mudou-se a proposta de trabalho, incluindo ensaios regulares quinzenais. Com isso, houve mudanças na composição do grupo.
+Nesse ano, a proposta de trabalho mudou e passou a incluir ensaios regulares quinzenais. Com isso, houve mudanças na composição do grupo.
 
 - Soprano: Janaína Panizza
 - Mezzo: Fabíola Kiforenco
@@ -74,12 +78,11 @@ Nesse ano, mudou-se a proposta de trabalho, incluindo ensaios regulares quinzena
 - Barítono: Felipe Martim
 - Baixo: Araken Souza
 
-Com essa formação, o vip fez sua estreia em 2024 com abertura de uma apresentação da banda Rocking Sounds no Tonton Music Bar, em São Paulo, cantando a música "Songs from the wood", a cappella, e fazendo acompanhamento na música Somebody to love.
+Com essa formação, o vip fez sua estreia em 2024, na abertura de uma apresentação da banda Rockin'Sounds no Tonton Music Bar, em São Paulo, cantando "Songs from the wood" a cappella e fazendo acompanhamento em "Somebody to love".
 
----
+**2024**
 
-### 2024
-Após a boa estreia, o vip alterou a proposta de trabalho, de produção de vídeos para apresentações ao vivo, adiando a produção do álbum "Introspective" para ensaiar as músicas do "Queen at six". 
+Após a boa estreia, o vip alterou a proposta de trabalho: saiu da produção de vídeos para focar em apresentações ao vivo, adiando a produção do álbum "Introspective" para ensaiar as músicas de "Queen at six".
 Houve nova mudança na formação.
 
 - Soprano: Fabíola Kiforenco
@@ -89,12 +92,11 @@ Houve nova mudança na formação.
 - Barítono: Felipe Martim 
 - Baixo: Araken Souza
 
-Ano oficial de início do vip.
+Este foi o ano oficial de início do vip.
 
----
+**2025 - Queen at six**
 
-### 2025 - Queen at six
-Esse pode ser considerado o primeiro ano de fato do grupo vocal Vox in progress. Todas as músicas do álbum "Queen at six" foram gravadas, ensaiadas a apresentadas no evento "Encontro de rock", com a participação das bandas Beds on fire e Rockin Sounds, no estúdio Nimbus Studio, em São Paulo. 
+Esse pode ser considerado o primeiro ano de fato do grupo vocal Vox in progress. Todas as músicas do álbum "Queen at six" foram gravadas, ensaiadas e apresentadas no evento "Encontro de rock", no estúdio Nimbus Studio, em São Paulo, com a participação das bandas Beds on fire e Rockin'Sounds.
 
 - Soprano: Fabíola Kiforenco
 - Mezzo: Luciene Lauer 
@@ -105,10 +107,9 @@ Esse pode ser considerado o primeiro ano de fato do grupo vocal Vox in progress.
 
 Regência: Walter de Tarso
 
----
+**2026**
 
-### 2026
-O álbum Queen at six deverá apresentado em diversos lugares, com a participação no Festival Coralusp confirmada.
+O álbum Queen at six deverá ser apresentado em diversos lugares, com a participação no Festival Coralusp confirmada.
 
 - Soprano: Fabíola Kiforenco
 - Mezzo: Luciene Lauer 
@@ -117,31 +118,48 @@ O álbum Queen at six deverá apresentado em diversos lugares, com a participaç
 - Barítono: Walter de Tarso
 - Baixo: Araken Souza
 
-Incluídas as músicas Songs from the wood e Sangue Latino no programa de apresentações;
+Foram incluídas as músicas Songs from the wood e Sangue Latino no programa de apresentações.
 
 ---
 
-## Tabela de colaboradores
-| Membro | Função | Entrada | Saída | Observações |
-|--------|-----|---------|-------|------------|
-| Walter de Tarso | Diretor | 2016 |  | Fundador, Barítono → Baixo → Barítono → Tenor → Regente → Barítono |
-| Janaína Panizza | Soprano | 2016 | 02/10/2024 | Co-fundadora, participou do primeiro video de Wonderous stories e na estreia no Tonton |
-| Alana Panizza | Mezzo | 22/11/2018 | 13/07/2019 | Integrante da primeira formação, contribuiu com os primeiros vídeos do Introspective |
-| Espártaco Soares de Paola | Tenor | 22/11/2018 | 27/02/2020 | Participou da primeira versão do álbum Introspective |
-| Ari Acioli | Tenor | 09/03/2020 | 26/08/2023 | Participou do primeiro video de Astronomy domine |
-| Marcelo Recski | Barítono | 2017  |  | Participou da primeira versão publicada de Astronomy Domine, virou agente do grupo em 23/01/2026 |
-| Marcella Halcsik | Soprano | 23/03/2022 | 15/01/2023 | participou do primeiro video de Wonderous stories |
-| Eduardo Dobay | Tenor | 22/11/2018 | 04/03/2022 | Integrante da primeira formação |
-| Claudio Rodrigues | Baixo | 22/11/2018 | 27/02/2020 | Integrante da primeira formação |
-| Lars Hugerth | Barítono | 24/09/2019 | 14/05/2023 | Participou do primeiro video de Astronomy domine |
-| Karina Mendes Gontijo | Mezzo | 27/12/2019 |  | Participou do primeiro video de Wonderous stories, na estreia no Tonton e na apresentação no Nimbus |
-| Lívio Panizza | Apoio administrativo/Técnico | 22/11/2018 | 05/04/2024 | Auxiliou na organização das filmagens e na criação do site do vip |
-| Fabíola | Soprano/Mezzo | 18/04/2021 |  | Entrou em 18/04/2021; saiu em 23/03/2022; retornou em 15/01/2023. Participou na estreia no Tonton e na apresentação no Nimbus |
-| Fernanda Koseki Pierre | Mezzo | 27/02/2020 | 13/12/2020 | Gravou Mezzo em Wonderous stories, mas não pode continuar. |
-| Fabiana Nonato | Mezzo | 01/10/2024 | 30/01/2025 | Gravou as músicas do álbum Queen at six |
-| Luciene Lauer | Soprano/Mezzo | 29/01/2025 |  | Participou na apresentação no Nimbus |
-| Felipe Martim | Barítono | 26/08/2023 | 08/01/2026 | Participou na estreia no Tonton e na apresentação no Nimbus |
-| João Rangel | Tenor | 2025 (aprox.) |  | Participou na apresentação no Nimbus. Cuida da divulgação do vip em redes sociais. |
-| Araken Souza | Baixo | 13/05/2023 |  | Participou na estreia no Tonton e na apresentação no Nimbus |
-| Sidnei Jorge (Jorge Primo) | Direção cênica | 22/11/2018 | 05/04/2024 | Fez a direção cênica e filmagens dos dois primeiros videos |
+**Colaboradores**
+
+
+**Cantores**
+
+| Membro | Período | Observações |
+|--------|---------|-------------|
+| Walter de Tarso | 2016 - | Arranjador, diretor, Barítono. Criou o vip. |
+| Janaína Panizza | 2016 - 02/10/2024 | Soprano e co-fundadora. Colaborou com a organização e gravações de todo o repertório. |
+| Alana Panizza | 22/11/2018 - 13/07/2019 | Mezzo. Integrante da primeira formação, contribuiu com os primeiros vídeos do Introspective. |
+| Espártaco de Paola | 22/11/2018 - 27/02/2020 | Tenor. Integrante da primeira formação, contribuiu com os primeiros vídeos do Introspective. |
+| Ari Acioli | 09/03/2020 - 26/08/2023 | Tenor. Gravou as músicas do Introspective e participou do primeiro vídeo de Astronomy domine. |
+| Marcelo Recski | 2017 - | Barítono. Participou da primeira versão publicada de Astronomy domine. Agente comercial do grupo. |
+| Marcella Halcsik | 23/03/2022 - 15/01/2023 | Soprano. Participou do primeiro vídeo de Wonderous stories. |
+| Eduardo Dobay | 22/11/2018 - 04/03/2022 | Tenor. Integrante da primeira formação. Gravou algumas músicas do Introspective. |
+| Claudio Rodrigues | 22/11/2018 - 27/02/2020 | Baixo. Integrante da primeira formação. Gravou algumas músicas do Introspective. |
+| Lars Hugerth | 24/09/2019 - 14/05/2023 | Barítono. Gravou algumas músicas do Introspective e participou do primeiro vídeo de Astronomy domine. |
+| Karina Gontijo | 27/12/2019 - | Contralto. Participou do primeiro vídeo de Wonderous stories, da estreia no Tonton e da apresentação no Nimbus. |
+| Fabíola Kiforenco | 18/04/2021 - | Soprano. Entrou em 18/04/2021, saiu em 23/03/2022 e retornou em 15/01/2023. Participou da estreia no Tonton e da apresentação no Nimbus. |
+| Fernanda Koseki | 27/02/2020 - 13/12/2020 | Mezzo. Gravou a linha de mezzo em Wonderous stories durante a pandemia. |
+| Fabiana Nonato | 01/10/2024 - 30/01/2025 | Mezzo. Gravou as músicas do álbum Queen at six. |
+| Luciene Lauer | 29/01/2025 - | Mezzo. Participou da apresentação no Nimbus. |
+| Felipe Martim | 26/08/2023 - 08/01/2026 | Barítono. Participou da estreia no Tonton e da apresentação no Nimbus. |
+| João Rangel | 2025 - | Tenor. Participou da apresentação no Nimbus e cuida da divulgação do vip em redes sociais. |
+| Araken Souza | 13/05/2023 - | Baixo. Participou da estreia no Tonton e da apresentação no Nimbus. |
+
+**Apoio técnico**
+
+| Membro | Período | Observações |
+|--------|---------|-------------|
+| Lívio Panizza | 22/11/2018 - 05/04/2024 | Auxiliou na organização das filmagens e na criação do site do vip. |
+| Regina Valentini | 2016 - | Responsável pelo registro fotográfico e filmagens do grupo em ensaios e apresentações. |
+| Jorge Primo | 22/11/2018 - 05/04/2024 | Direção cênica. Dirigiu as filmagens dos dois primeiros vídeos, além de uma prova de conceito em vídeo de todas as músicas do Introspective. |
+
+**Parcerias**
+
+| Parceiro | Período | Eventos |
+|--------|---------|-------------|
+| Rockin'Sounds | 19/05/2024 | Apresentação no Tonton Jazz & Music Bar. |
+| Beds on fire | 23/08/2025 | Apresentação no Nimbus Studio Bar |
 

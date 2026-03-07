@@ -22,9 +22,9 @@ Exemplo:
 }
 ```
 
-## 2) Colaboradores (`cantores.json`)
+## 2) Colaboradores (`colaboradores.json`)
 
-Arquivo: `app/data/cantores.json`
+Arquivo: `app/data/colaboradores.json`
 
 Campos principais:
 
@@ -57,17 +57,17 @@ Exemplo:
 }
 ```
 
-## 3) Pasta de cada cantor (`equipe/<id>/`)
+## 3) Pasta de cada cantor (`colaboradores/<id>/`)
 
 Estrutura recomendada:
 
-- `equipe/<id>/<id>.md` (bio completa)
+- `colaboradores/<id>/<id>.md` (bio completa)
 - imagem de perfil (`foto.jpg`, `foto.png`, `foto.webp`, `foto.avif`)
 
 Exemplo:
 
-- `equipe/walter_de_tarso/walter_de_tarso.md`
-- `equipe/walter_de_tarso/foto.jpg`
+- `colaboradores/walter_de_tarso/walter_de_tarso.md`
+- `colaboradores/walter_de_tarso/foto.jpg`
 
 ## 4) Bio completa em Markdown
 

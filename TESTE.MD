@@ -42,8 +42,8 @@ Acesse: `http://localhost:8000`
 
 ### Colaborador (perfil)
 - [ ] Conteúdo ocupa largura total (sem painel lateral)
-- [ ] Foto carregada de `equipe/<id>/` quando disponível
-- [ ] Bio completa carregada de `equipe/<id>/<id>.md` (ou `bio.md`)
+- [ ] Foto carregada de `colaboradores/<id>/` quando disponível
+- [ ] Bio completa carregada de `colaboradores/<id>/<id>.md` (ou `bio.md`)
 - [ ] Links exibem redes sociais + WhatsApp + Email (se preenchidos no JSON)
 
 ### Contato
@@ -58,14 +58,14 @@ Acesse: `http://localhost:8000`
 - [ ] Todos os itens necessários têm `homeOrder` numérico
 - [ ] Itens sem `homeOrder` não aparecem na Home
 
-### `app/data/cantores.json`
-- [ ] `id` corresponde à pasta em `equipe/<id>/`
+### `app/data/colaboradores.json`
+- [ ] `id` corresponde à pasta em `colaboradores/<id>/`
 - [ ] `entrada` e `saida` preenchidos conforme histórico
 - [ ] `saida: null` para integrantes atuais
 - [ ] `whatsapp` e `email` preenchidos quando houver
 - [ ] `links` com Instagram/Facebook corretos
 
-### `equipe/<id>/`
+### `colaboradores/<id>/`
 - [ ] Existe `<id>.md` para cada colaborador
 - [ ] Foto com nome padrão (`foto.*`) ou qualquer imagem válida
 

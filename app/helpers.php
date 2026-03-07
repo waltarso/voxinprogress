@@ -284,22 +284,32 @@ function is_cantor_ativo($cantor)
 }
 
 /**
- * Separa cadastros em [ativos, colaboradores].
+ * Normaliza o codigo de funcao de colaborador.
+ * c = cantor, a = apoio, p = parceiro
  */
-function split_cantores_e_colaboradores($cantores)
+function normalize_colaborador_funcao($registro)
 {
-    $ativos = [];
-    $colaboradores = [];
+    $funcao = strtolower(trim((string) ($registro['funcao'] ?? '')));
 
-    foreach ((array) $cantores as $cantor) {
-        if (is_cantor_ativo($cantor)) {
-            $ativos[] = $cantor;
-        } else {
-            $colaboradores[] = $cantor;
-        }
+    if (in_array($funcao, ['c', 'a', 'p'], true)) {
+        return $funcao;
     }
 
-    usort($ativos, function ($a, $b) {
+    // Compatibilidade com bases antigas sem campo `funcao`.
+    $voz = normalize_person_name((string) ($registro['voz'] ?? ''));
+    if (in_array($voz, ['apoio tecnico', 'apoio técnico', 'direcao cenica', 'direção cênica'], true)) {
+        return 'a';
+    }
+
+    return 'c';
+}
+
+/**
+ * Ordena pessoas por naipe (vozes) e nome.
+ */
+function sort_colaboradores_por_voz(&$registros)
+{
+    usort($registros, function ($a, $b) {
         $voiceOrder = [
             'soprano' => 1,
             'mezzo' => 2,
@@ -321,9 +331,49 @@ function split_cantores_e_colaboradores($cantores)
 
         return strcasecmp((string) ($a['nome'] ?? ''), (string) ($b['nome'] ?? ''));
     });
+}
+
+/**
+ * Segmenta colaboradores em:
+ * - participantes (cantores e apoio ativos)
+ * - colaboradores eventuais (nao ativos)
+ * - parceiros (funcao p, ao final)
+ */
+function split_colaboradores_por_funcao($registros)
+{
+    $participantesCantores = [];
+    $participantesApoio = [];
+    $colaboradoresEventuais = [];
+    $parceiros = [];
+
+    foreach ((array) $registros as $registro) {
+        $funcao = normalize_colaborador_funcao($registro);
+        $registro['funcao'] = $funcao;
+
+        if ($funcao === 'p') {
+            $parceiros[] = $registro;
+            continue;
+        }
+
+        if (is_cantor_ativo($registro)) {
+            if ($funcao === 'a') {
+                $participantesApoio[] = $registro;
+            } else {
+                $participantesCantores[] = $registro;
+            }
+        } else {
+            $colaboradoresEventuais[] = $registro;
+        }
+    }
+
+    sort_colaboradores_por_voz($participantesCantores);
+
+    usort($participantesApoio, function ($a, $b) {
+        return strcasecmp((string) ($a['nome'] ?? ''), (string) ($b['nome'] ?? ''));
+    });
 
     // Mais recentes primeiro (maior data de saida).
-    usort($colaboradores, function ($a, $b) {
+    usort($colaboradoresEventuais, function ($a, $b) {
         $aTs = parse_member_date_to_timestamp($a['saida'] ?? null);
         $bTs = parse_member_date_to_timestamp($b['saida'] ?? null);
 
@@ -334,7 +384,29 @@ function split_cantores_e_colaboradores($cantores)
         return $bTs <=> $aTs;
     });
 
-    return [$ativos, $colaboradores];
+    // Parceiros: ordem decrescente de entrada.
+    usort($parceiros, function ($a, $b) {
+        $aTs = parse_member_date_to_timestamp($a['entrada'] ?? null);
+        $bTs = parse_member_date_to_timestamp($b['entrada'] ?? null);
+
+        if ($aTs === $bTs) {
+            return strcasecmp((string) ($a['nome'] ?? ''), (string) ($b['nome'] ?? ''));
+        }
+
+        return $bTs <=> $aTs;
+    });
+
+    return [$participantesCantores, $participantesApoio, $colaboradoresEventuais, $parceiros];
+}
+
+/**
+ * Separa cadastros em [ativos, colaboradores].
+ */
+function split_cantores_e_colaboradores($cantores)
+{
+    [$participantesCantores, $participantesApoio, $colaboradoresEventuais] = split_colaboradores_por_funcao($cantores);
+    $ativos = array_merge($participantesCantores, $participantesApoio);
+    return [$ativos, $colaboradoresEventuais];
 }
 
 /**
@@ -399,7 +471,7 @@ function cantor_dir_path($cantorId)
         return null;
     }
 
-    return dirname(APP_DIR) . '/equipe/' . $cantorId;
+    return dirname(APP_DIR) . '/colaboradores/' . $cantorId;
 }
 
 function cantor_base_url($cantorId)
@@ -413,7 +485,7 @@ function cantor_base_url($cantorId)
         $base = '';
     }
 
-    return $base . '/equipe/' . rawurlencode($cantorId);
+    return $base . '/colaboradores/' . rawurlencode($cantorId);
 }
 
 function cantor_photo_url($cantor)
@@ -862,7 +934,7 @@ function render_markdown($text)
             return $m[0];
         }
 
-        $html = '<table class="table table-sm table-bordered align-middle"><thead><tr>';
+        $html = '<table class="table table-sm table-bordered align-middle md-table"><thead><tr>';
         foreach ($headers as $cell) {
             $html .= '<th>' . $cell . '</th>';
         }
@@ -902,6 +974,76 @@ function render_markdown($text)
 
     // evita markup inválido como <p><hr></p>
     $text = preg_replace('/<p>\s*(<hr>)\s*<\/p>/', '$1', $text);
+
+    // adiciona id/classe nas tabelas markdown com base no cabecalho anterior.
+    // Ex.: "### Cantores" seguido de tabela -> id="cantores".
+    $usedTableIds = [];
+    $slugify = function ($value) {
+        $slug = trim((string) $value);
+        if ($slug === '') {
+            return '';
+        }
+
+        $slug = html_entity_decode($slug, ENT_QUOTES, 'UTF-8');
+        $slug = strtr($slug, [
+            'Á' => 'A', 'À' => 'A', 'Â' => 'A', 'Ã' => 'A', 'Ä' => 'A',
+            'á' => 'a', 'à' => 'a', 'â' => 'a', 'ã' => 'a', 'ä' => 'a',
+            'É' => 'E', 'È' => 'E', 'Ê' => 'E', 'Ë' => 'E',
+            'é' => 'e', 'è' => 'e', 'ê' => 'e', 'ë' => 'e',
+            'Í' => 'I', 'Ì' => 'I', 'Î' => 'I', 'Ï' => 'I',
+            'í' => 'i', 'ì' => 'i', 'î' => 'i', 'ï' => 'i',
+            'Ó' => 'O', 'Ò' => 'O', 'Ô' => 'O', 'Õ' => 'O', 'Ö' => 'O',
+            'ó' => 'o', 'ò' => 'o', 'ô' => 'o', 'õ' => 'o', 'ö' => 'o',
+            'Ú' => 'U', 'Ù' => 'U', 'Û' => 'U', 'Ü' => 'U',
+            'ú' => 'u', 'ù' => 'u', 'û' => 'u', 'ü' => 'u',
+            'Ç' => 'C', 'ç' => 'c'
+        ]);
+
+        if (function_exists('iconv')) {
+            $converted = @iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', $slug);
+            if ($converted !== false) {
+                $slug = $converted;
+            }
+        }
+
+        $slug = strtolower($slug);
+        $slug = preg_replace('/[^a-z0-9]+/', '-', $slug);
+        $slug = trim((string) $slug, '-');
+        return $slug;
+    };
+
+    $text = preg_replace_callback(
+        '/(<h([1-6])>([^<]*)<\/h\2>\s*)(<table class="[^"]*md-table[^"]*")/',
+        function ($m) use (&$usedTableIds, $slugify) {
+            $headingText = trim(strip_tags($m[3]));
+            $baseId = $slugify($headingText);
+            if ($baseId === '') {
+                return $m[0];
+            }
+
+            $tableId = $baseId;
+            $suffix = 2;
+            while (isset($usedTableIds[$tableId])) {
+                $tableId = $baseId . '-' . $suffix;
+                $suffix++;
+            }
+            $usedTableIds[$tableId] = true;
+
+            $tableOpen = $m[4];
+            if (preg_match('/class="([^"]*)"/', $tableOpen, $classMatch) === 1) {
+                $classValue = trim($classMatch[1]);
+                $classValue .= ' md-table--' . $tableId;
+                $tableOpen = str_replace(
+                    'class="' . $classMatch[1] . '"',
+                    'class="' . $classValue . '" id="' . $tableId . '"',
+                    $tableOpen
+                );
+            }
+
+            return $m[1] . $tableOpen;
+        },
+        $text
+    );
     
     return $text;
 }
@@ -947,7 +1089,7 @@ function normalize_person_name($name)
 
 /**
  * Carrega colaboradores historicos a partir da tabela em formacoes.md.
- * Exclui integrantes que estao na formacao atual (cantores.json).
+ * Exclui integrantes que estao na formacao atual (colaboradores.json).
  */
 function load_colaboradores_historicos($formacoesMdPath, $cantoresAtuais)
 {
