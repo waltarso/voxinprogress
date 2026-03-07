@@ -24,7 +24,7 @@ $cantores = $colaboradoresData;
 $agenda = load_json(DATA_DIR . '/agenda.json');
 
 // Whitelist de páginas permitidas (fixas)
-$allowed_pages = ['home', 'arranjos', 'arranjo', 'sobre', 'colaboradores', 'cantor', 'agenda', 'contato'];
+$allowed_pages = ['home', 'arranjos', 'arranjo', 'sobre', 'colaboradores', 'cantor', 'agenda'];
 
 // Obter página da query string
 $p = $_GET['p'] ?? 'home';
@@ -108,7 +108,7 @@ if ($p === 'home') {
 
     $ultimos_arranjos = $arranjos_home;
     
-    render('pages/home', compact('albums', 'arranjos', 'cantores', 'ultimos_arranjos', 'pageTitle'));
+    render('pages/home', compact('albums', 'arranjos', 'cantores', 'ultimos_arranjos', 'agenda', 'pageTitle'));
 }
 
 // ===== ARRANJOS (lista com filtros) =====
@@ -205,83 +205,6 @@ elseif ($p === 'agenda') {
     $pageTitle = 'Agenda';
     
     render('pages/agenda', compact('agenda', 'pageTitle'));
-}
-
-// ===== CONTATO =====
-elseif ($p === 'contato') {
-    $pageTitle = 'Contato';
-    $message = null;
-    
-    // Processar formulário
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Validar CSRF
-        if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
-            $message = ['type' => 'danger', 'text' => 'Token de segurança inválido.'];
-        }
-        // Validar honeypot
-        elseif (!empty($_POST['website'])) {
-            // Bot detectado - silenciosamente fingir sucesso
-            $message = ['type' => 'success', 'text' => 'Obrigado! Sua mensagem foi enviada com sucesso.'];
-        }
-        else {
-            // Validar campos obrigatórios
-            $nome = trim($_POST['nome'] ?? '');
-            $email = trim($_POST['email'] ?? '');
-            $assunto = trim($_POST['assunto'] ?? '');
-            $mensagem = trim($_POST['mensagem'] ?? '');
-            $telefone = trim($_POST['telefone'] ?? '');
-            
-            $erros = [];
-            
-            if (empty($nome) || strlen($nome) < 2) {
-                $erros[] = 'Nome deve ter pelo menos 2 caracteres.';
-            }
-            
-            if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $erros[] = 'Email válido é obrigatório.';
-            }
-            
-            if (empty($assunto)) {
-                $erros[] = 'Assunto é obrigatório.';
-            }
-            
-            if (empty($mensagem) || strlen($mensagem) < 10) {
-                $erros[] = 'Mensagem deve ter pelo menos 10 caracteres.';
-            }
-            
-            if (!empty($erros)) {
-                $message = ['type' => 'danger', 'text' => 'Erros: ' . implode(' / ', $erros)];
-            }
-            else {
-                // Tentar enviar email
-                if (ENABLE_EMAIL) {
-                    $to = CONTACT_EMAIL;
-                    $subject = '[vip] ' . htmlspecialchars($assunto);
-                    $body = "Nome: " . htmlspecialchars($nome) . "\n";
-                    $body .= "Email: " . htmlspecialchars($email) . "\n";
-                    $body .= "Telefone: " . htmlspecialchars($telefone) . "\n";
-                    $body .= "Assunto: " . htmlspecialchars($assunto) . "\n";
-                    $body .= "---\n";
-                    $body .= htmlspecialchars($mensagem) . "\n";
-                    
-                    $headers = "From: " . htmlspecialchars($email) . "\r\n";
-                    $headers .= "Reply-To: " . htmlspecialchars($email) . "\r\n";
-                    $headers .= "X-Mailer: vip\r\n";
-                    
-                    if (mail($to, $subject, $body, $headers)) {
-                        $message = ['type' => 'success', 'text' => 'Obrigado! Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.'];
-                    } else {
-                        $message = ['type' => 'warning', 'text' => 'Mensagem recebida, mas houve um erro ao enviar email. Tentaremos contato logo.'];
-                    }
-                } else {
-                    // Email desabilitado - apenas simular sucesso
-                    $message = ['type' => 'success', 'text' => 'Obrigado! Sua mensagem foi recebida. Entraremos em contato em breve.'];
-                }
-            }
-        }
-    }
-    
-    render('pages/contato', compact('message', 'pageTitle'));
 }
 
 // ===== PÁGINAS MARKDOWN DINÂMICAS =====

@@ -83,7 +83,7 @@
                             <p class="card-text"><?php echo e($evento['descricao']); ?></p>
                             <?php endif; ?>
                             
-                            <?php if (isset($evento['link'])): ?>
+                            <?php if (!empty($evento['link'])): ?>
                             <a href="<?php echo e($evento['link']); ?>" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">
                                 <i class="bi bi-box-arrow-up-right"></i> Mais Informações
                             </a>
@@ -109,7 +109,7 @@
 
     <?php if (!empty($passados)): ?>
     <div class="row g-3">
-        <?php foreach (array_slice($passados, 0, 5) as $evento): ?>
+        <?php foreach ($passados as $evento): ?>
         <div class="col-12">
             <div class="card shadow-sm border-0" style="border-left: 5px solid #ccc; opacity: 0.8;">
                 <div class="card-body">
@@ -120,7 +120,7 @@
                                     <?php echo date('d', strtotime($evento['data'])); ?>
                                 </div>
                                 <div style="font-size: 1.2rem; color: #999;">
-                                    <?php echo strftime('%b', strtotime($evento['data'])); ?>
+                                    <?php echo date('M', strtotime($evento['data'])); ?>
                                 </div>
                                 <div style="color: #ccc; font-size: 0.9rem;">
                                     <?php echo date('Y', strtotime($evento['data'])); ?>
@@ -129,11 +129,27 @@
                         </div>
                         <div class="col-md-9">
                             <h5 class="card-title mb-2 text-muted"><?php echo e($evento['titulo']); ?></h5>
+
+                            <?php if (isset($evento['hora'])): ?>
+                            <p class="card-text text-muted small mb-1">
+                                <i class="bi bi-clock"></i> <?php echo e($evento['hora']); ?>
+                            </p>
+                            <?php endif; ?>
                             
                             <?php if (isset($evento['local'])): ?>
-                            <p class="card-text text-muted small mb-0">
+                            <p class="card-text text-muted small mb-1">
                                 <i class="bi bi-geo-alt"></i> <?php echo e($evento['local']); ?>
                             </p>
+                            <?php endif; ?>
+
+                            <?php if (isset($evento['descricao'])): ?>
+                            <p class="card-text text-muted small mb-1"><?php echo e($evento['descricao']); ?></p>
+                            <?php endif; ?>
+
+                            <?php if (!empty($evento['link'])): ?>
+                            <a href="<?php echo e($evento['link']); ?>" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-box-arrow-up-right"></i> Mais Informações
+                            </a>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -143,9 +159,6 @@
         <?php endforeach; ?>
     </div>
     
-    <?php if (count($passados) > 5): ?>
-    <p class="text-muted mt-3">... e mais <?php echo count($passados) - 5; ?> evento(s) anterior(es)</p>
-    <?php endif; ?>
     <?php else: ?>
     <div class="alert alert-info">
         <i class="bi bi-info-circle"></i>

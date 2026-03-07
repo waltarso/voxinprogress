@@ -34,11 +34,6 @@
                         <i class="bi bi-book"></i> Sobre o vip
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link <?php echo ($current_page === 'contato' ? 'active' : ''); ?>" href="<?php echo url('contato'); ?>">
-                        <i class="bi bi-envelope"></i> Contato
-                    </a>
-                </li>
             </ul>
         </div>
     </div>
