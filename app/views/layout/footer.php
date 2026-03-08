@@ -1,6 +1,10 @@
         </main>
         
-        <footer class="mt-5 py-4 bg-dark text-white text-center border-top">
+        <?php
+            $pageKey = $current_page ?? ($_GET['p'] ?? 'home');
+            $footerTopSpacing = ($pageKey === 'home') ? 'mt-0' : 'mt-5';
+        ?>
+        <footer class="<?php echo $footerTopSpacing; ?> py-4 bg-dark text-white text-center border-top">
             <div class="container-fluid">
                 <p class="mb-2">
                     <img src="<?php echo asset('img/vip-logo-transp.png'); ?>" alt="vip" style="height:2em;" class="d-inline-block align-text-bottom me-1"> 

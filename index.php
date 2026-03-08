@@ -20,11 +20,12 @@ if (!isset($_SESSION['csrf_token'])) {
 $albums = load_json(DATA_DIR . '/albums.json');
 $arranjos = load_json(DATA_DIR . '/arranjos.json');
 $colaboradoresData = load_json(DATA_DIR . '/colaboradores.json');
+$apoiosData = load_json(DATA_DIR . '/apoios.json');
 $cantores = $colaboradoresData;
 $agenda = load_json(DATA_DIR . '/agenda.json');
 
 // Whitelist de páginas permitidas (fixas)
-$allowed_pages = ['home', 'arranjos', 'arranjo', 'sobre', 'colaboradores', 'cantor', 'agenda'];
+$allowed_pages = ['home', 'arranjos', 'arranjo', 'sobre', 'apoio', 'apoiador', 'colaboradores', 'cantor', 'agenda'];
 
 // Obter página da query string
 $p = $_GET['p'] ?? 'home';
@@ -166,6 +167,37 @@ elseif ($p === 'sobre') {
     $pageTitle = 'Sobre o vip';
     
     render('pages/sobre', compact('pageTitle', 'current_page'));
+}
+
+// ===== PATROCINADORES E APOIO CULTURAL =====
+elseif ($p === 'apoio') {
+    $pageTitle = 'Patrocinadores e apoio cultural';
+
+    [$apoiosAtivos, $apoiosEmAberto] = split_apoios_por_status($apoiosData);
+
+    render('pages/apoio', compact('pageTitle', 'current_page', 'apoiosAtivos', 'apoiosEmAberto'));
+}
+
+// ===== APOIADOR (detalhe) =====
+elseif ($p === 'apoiador') {
+    $id = $_GET['id'] ?? null;
+
+    if (!$id || !valid_id($id)) {
+        $current_page = '404';
+        render('pages/404');
+        exit;
+    }
+
+    $apoio = find_apoio($apoiosData, $id);
+    if (!$apoio) {
+        $current_page = '404';
+        render('pages/404');
+        exit;
+    }
+
+    $pageTitle = $apoio['nome'];
+
+    render('pages/apoiador', compact('apoio', 'pageTitle', 'current_page'));
 }
 
 // ===== COLABORADORES (lista) =====

@@ -367,7 +367,21 @@
         "whatsapp":  null,
         "email":  null,
         "links":  [
-
+            {
+                "titulo": "Instagram",
+                "url": "https://www.instagram.com/marciacantoelocucao/",
+                "icon": "instagram"
+            },
+            {
+                "titulo": "Facebook",
+                "url": "https://www.facebook.com/marcia.malaquias.7587",
+                "icon": "facebook"
+            },
+            {
+                "titulo": "Cultura é trabalho",
+                "url": "https://www.instagram.com/culturaetrabalho?igsh=MnU5Y3B4N2c5am9n&utm_source=qr",
+                "icon": "instagram"
+            }
                   ],
         "funcao":  "c"
     },

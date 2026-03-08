@@ -1,0 +1,24 @@
+[
+  {
+    "id": "espaco_disponivel",
+    "nome": "Espaço disponível para patrocínio",
+    "categoria": "Apoio cultural",
+    "status": "aberto",
+    "inicio": "2026",
+    "fim": null,
+    "bioCurta": "Ainda não temos patrocinadores ativos cadastrados. Se a sua marca quiser construir essa história com a gente, será uma alegria conversar.",
+    "foto": "espaco_disponivel.png",
+    "whatsapp": "5511999011322",
+    "email": "vip@voxinprogress.vip",
+    "links": [
+      {
+        "titulo": "Instagram",
+        "url": "https://www.instagram.com/vox_in_progress/"
+      },
+        {
+            "titulo": "Facebook",
+            "url": "https://www.facebook.com/voxinprogress/"
+        }
+    ]
+  }
+]

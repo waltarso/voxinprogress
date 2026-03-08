@@ -149,4 +149,14 @@
   .navbar-brand {
     font-size: $font-size-navbar-brand-mobile;
   }
+
+  .sponsors-grid .sponsor-placeholder {
+    min-height: 6.5rem;
+    font-size: 0.82rem;
+  }
+
+  .apoio-logo-frame-lg {
+    width: 140px;
+    height: 140px;
+  }
 }

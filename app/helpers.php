@@ -625,6 +625,210 @@ function cantor_profile_links($cantor)
 }
 
 /**
+ * Busca apoiador/parceiro pelo ID.
+ */
+function find_apoio($apoios, $id)
+{
+    foreach ($apoios as $apoio) {
+        if (isset($apoio['id']) && $apoio['id'] === $id) {
+            return $apoio;
+        }
+    }
+
+    return null;
+}
+
+/**
+ * Segmenta apoios entre ativos e espacos em aberto.
+ */
+function split_apoios_por_status($registros)
+{
+    $apoiosAtivos = [];
+    $apoiosEmAberto = [];
+
+    foreach ((array) $registros as $registro) {
+        $status = strtolower(trim((string) ($registro['status'] ?? 'ativo')));
+        $registro['status'] = $status;
+
+        if ($status === 'ativo') {
+            $apoiosAtivos[] = $registro;
+            continue;
+        }
+
+        $apoiosEmAberto[] = $registro;
+    }
+
+    usort($apoiosAtivos, function ($a, $b) {
+        return strcasecmp((string) ($a['nome'] ?? ''), (string) ($b['nome'] ?? ''));
+    });
+
+    usort($apoiosEmAberto, function ($a, $b) {
+        return strcasecmp((string) ($a['nome'] ?? ''), (string) ($b['nome'] ?? ''));
+    });
+
+    return [$apoiosAtivos, $apoiosEmAberto];
+}
+
+function apoio_dir_path($apoioId)
+{
+    if (!valid_id($apoioId)) {
+        return null;
+    }
+
+    return dirname(APP_DIR) . '/apoios/' . $apoioId;
+}
+
+function apoio_base_url($apoioId)
+{
+    if (!valid_id($apoioId)) {
+        return null;
+    }
+
+    $base = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
+    if ($base === '/' || $base === '\\') {
+        $base = '';
+    }
+
+    return $base . '/apoios/' . rawurlencode($apoioId);
+}
+
+function apoio_photo_url($apoio)
+{
+    $apoioId = $apoio['id'] ?? null;
+    if (!$apoioId || !valid_id($apoioId)) {
+        return null;
+    }
+
+    $dirPath = apoio_dir_path($apoioId);
+    $baseUrl = apoio_base_url($apoioId);
+
+    if (!empty($apoio['foto']) && is_string($apoio['foto'])) {
+        $foto = trim($apoio['foto']);
+
+        if (preg_match('/^https?:\/\//i', $foto)) {
+            return $foto;
+        }
+
+        if (preg_match('#^(img/|assets/)#', $foto)) {
+            return asset($foto);
+        }
+
+        if ($dirPath && $baseUrl && is_dir($dirPath) && $foto !== '' && strpos($foto, '..') === false) {
+            $candidatePath = $dirPath . '/' . ltrim(str_replace('\\', '/', $foto), '/');
+            if (file_exists($candidatePath)) {
+                return $baseUrl . '/' . ltrim(str_replace('\\', '/', $foto), '/');
+            }
+        }
+    }
+
+    if (!$dirPath || !$baseUrl || !is_dir($dirPath)) {
+        return null;
+    }
+
+    $extensions = ['jpg', 'jpeg', 'png', 'webp', 'avif', 'svg'];
+    $priorityNames = ['logo', 'foto', 'profile', 'capa'];
+
+    foreach ($priorityNames as $name) {
+        foreach ($extensions as $ext) {
+            $fileName = $name . '.' . $ext;
+            if (file_exists($dirPath . '/' . $fileName)) {
+                return $baseUrl . '/' . $fileName;
+            }
+        }
+    }
+
+    foreach ($extensions as $ext) {
+        $matches = glob($dirPath . '/*.' . $ext);
+        if (!empty($matches)) {
+            $fileName = basename($matches[0]);
+            return $baseUrl . '/' . rawurlencode($fileName);
+        }
+    }
+
+    return null;
+}
+
+function apoio_bio_html($apoio)
+{
+    $apoioId = $apoio['id'] ?? null;
+    $bioCurta = trim((string) ($apoio['bioCurta'] ?? ''));
+
+    if ($apoioId && valid_id($apoioId)) {
+        $dirPath = apoio_dir_path($apoioId);
+        if ($dirPath && is_dir($dirPath)) {
+            $preferredFile = $dirPath . '/' . $apoioId . '.md';
+            if (file_exists($preferredFile)) {
+                return render_markdown_file($preferredFile);
+            }
+
+            $fallbackFile = $dirPath . '/bio.md';
+            if (file_exists($fallbackFile)) {
+                return render_markdown_file($fallbackFile);
+            }
+        }
+    }
+
+    return $bioCurta !== '' ? '<p class="lead">' . e($bioCurta) . '</p>' : '';
+}
+
+function apoio_profile_links($apoio)
+{
+    $resultado = [];
+
+    if (isset($apoio['links']) && is_array($apoio['links'])) {
+        foreach ($apoio['links'] as $link) {
+            if (!is_array($link)) {
+                continue;
+            }
+
+            $titulo = trim((string) ($link['titulo'] ?? ''));
+            $url = trim((string) ($link['url'] ?? ''));
+
+            if ($titulo === '' || $url === '') {
+                continue;
+            }
+
+            $resultado[] = [
+                'titulo' => $titulo,
+                'url' => $url,
+                'icon' => 'box-arrow-up-right'
+            ];
+        }
+    }
+
+    $whatsapp = trim((string) ($apoio['whatsapp'] ?? ''));
+    if ($whatsapp !== '') {
+        if (preg_match('#^https?://#i', $whatsapp)) {
+            $waUrl = $whatsapp;
+        } else {
+            $numero = preg_replace('/\D+/', '', $whatsapp);
+            if ($numero !== '') {
+                $waUrl = 'https://wa.me/' . $numero;
+            }
+        }
+
+        if (!empty($waUrl)) {
+            $resultado[] = [
+                'titulo' => 'WhatsApp',
+                'url' => $waUrl,
+                'icon' => 'whatsapp'
+            ];
+        }
+    }
+
+    $email = trim((string) ($apoio['email'] ?? ''));
+    if ($email !== '' && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $resultado[] = [
+            'titulo' => 'Email',
+            'url' => 'mailto:' . $email,
+            'icon' => 'envelope'
+        ];
+    }
+
+    return $resultado;
+}
+
+/**
  * Agrupa arquivos por tipo
  */
 function group_files_by_type($files)
@@ -891,12 +1095,92 @@ function render_markdown($text)
     $text = preg_replace('/\*\*(.*?)\*\*/', '<strong>$1</strong>', $text);
     $text = preg_replace('/\*(.*?)\*/', '<em>$1</em>', $text);
 
-    // listas não ordenadas (prefixo - ou *)
-    $text = preg_replace('/^[\-\*]\s+(.*)$/m', '<li>$1</li>', $text);
-    // agrupar blocos com 1+ itens em <ul>
-    $text = preg_replace_callback('/((?:^<li>.*<\/li>\s*$\R?)+)/m', function ($m) {
-        return '<ul>' . trim($m[1]) . '</ul>';
-    }, $text);
+    // quebra de linha manual em Markdown:
+    // - dois espacos no fim da linha
+    // - barra invertida no fim da linha
+    $text = preg_replace('/ {2,}(\r\n|\r|\n)/', '<br>$1', $text);
+    $text = preg_replace('/\\\\(\r\n|\r|\n)/', '<br>$1', $text);
+
+    // listas markdown (ordenadas, não ordenadas e aninhadas por indentação)
+    $lines = preg_split('/\r\n|\r|\n/', $text);
+    $out = [];
+    $stack = [];
+
+    $closeListLevel = function () use (&$stack, &$out) {
+        $top = array_pop($stack);
+        if (!$top) {
+            return;
+        }
+
+        if (!empty($top['liOpen'])) {
+            $out[] = '</li>';
+        }
+        $out[] = '</' . $top['type'] . '>';
+    };
+
+    $openListLevel = function ($type, $indent) use (&$stack, &$out) {
+        $out[] = '<' . $type . '>';
+        $stack[] = [
+            'type' => $type,
+            'indent' => $indent,
+            'liOpen' => false
+        ];
+    };
+
+    foreach ((array) $lines as $line) {
+        $lineForMatch = str_replace("\t", '    ', $line);
+        if (preg_match('/^(\s*)([-\*]|\d+\.)\s+(.*)$/', $lineForMatch, $m) === 1) {
+            $indent = strlen($m[1]);
+            $marker = $m[2];
+            $content = $m[3];
+            $type = preg_match('/^\d+\.$/', $marker) ? 'ol' : 'ul';
+
+            if (empty($stack)) {
+                $openListLevel($type, $indent);
+            } else {
+                while (!empty($stack) && $indent < $stack[count($stack) - 1]['indent']) {
+                    $closeListLevel();
+                }
+
+                if (!empty($stack) && $indent > $stack[count($stack) - 1]['indent']) {
+                    $openListLevel($type, $indent);
+                } elseif (!empty($stack) && $type !== $stack[count($stack) - 1]['type']) {
+                    $closeListLevel();
+                    $openListLevel($type, $indent);
+                }
+            }
+
+            if (!empty($stack) && !empty($stack[count($stack) - 1]['liOpen'])) {
+                $out[] = '</li>';
+                $stack[count($stack) - 1]['liOpen'] = false;
+            }
+
+            $out[] = '<li>' . $content;
+            if (!empty($stack)) {
+                $stack[count($stack) - 1]['liOpen'] = true;
+            }
+            continue;
+        }
+
+        if (!empty($stack)) {
+            if (trim($line) !== '' && !preg_match('/^<\/?(h[1-6]|p|ul|ol|li|table|thead|tbody|tr|th|td|hr)\b/i', trim($line))) {
+                $out[] = '<br>' . ltrim($line);
+                continue;
+            }
+
+            while (!empty($stack)) {
+                $closeListLevel();
+            }
+        }
+
+        $out[] = $line;
+    }
+
+    while (!empty($stack)) {
+        $closeListLevel();
+    }
+
+    $text = implode("\n", $out);
 
     // regras horizontais (---, ***, ___)
     $hrs = [];
@@ -958,8 +1242,9 @@ function render_markdown($text)
         return '%%TABLE' . (count($tables) - 1) . '%%';
     }, $text);
 
-    // parágrafos: separar por duas quebras de linha
-    $text = preg_replace('/(\r\n|\r|\n){2,}/', '</p><p>', $text);
+    // parágrafos: separar apenas por linha realmente em branco
+    // (evita tratar um único CRLF do Windows como quebra dupla).
+    $text = preg_replace('/(?:\r\n){2,}|\n{2,}|\r{2,}/', '</p><p>', $text);
     $text = '<p>' . $text . '</p>';
 
     // restaurar blocos de tabela após a etapa de parágrafos
@@ -974,6 +1259,10 @@ function render_markdown($text)
 
     // evita markup inválido como <p><hr></p>
     $text = preg_replace('/<p>\s*(<hr>)\s*<\/p>/', '$1', $text);
+
+    // evita wrappers <p> em blocos que já são estruturais
+    $text = preg_replace('/<p>\s*(<(?:h[1-6]|ul|ol|table)\b[^>]*>)/', '$1', $text);
+    $text = preg_replace('/(<\/(?:h[1-6]|ul|ol|table)>)\s*<\/p>/', '$1', $text);
 
     // adiciona id/classe nas tabelas markdown com base no cabecalho anterior.
     // Ex.: "### Cantores" seguido de tabela -> id="cantores".

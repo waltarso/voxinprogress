@@ -172,6 +172,70 @@ footer a:hover {
   font-weight: 500;
 }
 
+/* Sponsors and cultural support */
+.sponsors-section {
+  background: linear-gradient(180deg, rgba($color-primary, 0.08) 0%, rgba($color-primary-dark, 0.03) 100%);
+  border-top: $size-border-thin solid rgba($color-primary, 0.2);
+  border-bottom: $size-border-thin solid rgba($color-primary-dark, 0.2);
+}
+
+.sponsors-kicker {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--primary-color);
+  padding: 0.25rem 0.6rem;
+  border: $size-border-thin solid rgba($color-primary, 0.35);
+  border-radius: 999px;
+  background: rgba($color-primary, 0.08);
+}
+
+.sponsors-grid .sponsor-placeholder {
+  min-height: 8.25rem;
+  border-radius: 0.85rem;
+  border: $size-border-thin dashed rgba($color-primary, 0.35);
+  background: linear-gradient(160deg, rgba($color-primary, 0.12) 0%, rgba($color-primary-dark, 0.07) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-align: center;
+  transition: $transition-standard;
+}
+
+.sponsors-grid .sponsor-placeholder i {
+  font-size: 1.3rem;
+}
+
+.sponsors-grid .sponsor-placeholder:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.55rem 1rem rgba($color-primary, 0.15);
+}
+
+.apoio-logo-frame {
+  width: 96px;
+  height: 96px;
+  padding: 0;
+  border-radius: 50%;
+  border: $size-border-thin solid rgba($color-primary, 0.25);
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.apoio-logo-frame-lg {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
 /* Alert */
 .alert {
   border: none;

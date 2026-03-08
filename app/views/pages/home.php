@@ -126,15 +126,4 @@
     </div>
 </section>
 
-<!-- CTA Section -->
-<section class="py-5 bg-dark text-white">
-    <div class="container text-center">
-        <h2 class="mb-3">Quer nos conhecer mais?</h2>
-        <p class="lead mb-4">Conheça a trajetória e os bastidores do vip</p>
-        <a href="<?php echo url('sobre'); ?>" class="btn btn-light btn-lg">
-            <i class="bi bi-book"></i> Sobre o vip
-        </a>
-    </div>
-</section>
-
 <?php include VIEWS_DIR . '/layout/footer.php'; ?>

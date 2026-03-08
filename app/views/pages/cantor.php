@@ -29,7 +29,6 @@
                         </div>
 
                         <div class="col-md-8">
-                            <h3 class="mb-3">Sobre</h3>
                             <?php echo cantor_bio_html($cantor); ?>
 
                             <?php $profileLinks = cantor_profile_links($cantor); ?>

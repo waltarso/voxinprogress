@@ -1,6 +1,2 @@
-# Beds on Fire
-
-Parceiro do vip em eventos de rock.
-
-- Funcao: parceiro
-- Entrada: 2025
+### Eventos com o vip
+- Encontro de rock - 23/08/2025 no Nimbus Studio Bar

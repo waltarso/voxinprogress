@@ -30,6 +30,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link <?php echo (in_array($current_page, ['apoio', 'apoiador', 'dossie'], true) ? 'active' : ''); ?>" href="<?php echo url('apoio'); ?>">
+                        <i class="bi bi-megaphone"></i> Apoio Cultural
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link <?php echo ($current_page === 'sobre' ? 'active' : ''); ?>" href="<?php echo url('sobre'); ?>">
                         <i class="bi bi-book"></i> Sobre o vip
                     </a>
