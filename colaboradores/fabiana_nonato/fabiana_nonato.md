@@ -5,7 +5,5 @@
 - Voz: Mezzo
 - Destaques: Colaborou na transição do repertório para o ciclo Queen at Six.
 
-## Links
-- (sem links cadastrados)
 
 

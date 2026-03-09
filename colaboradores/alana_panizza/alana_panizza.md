@@ -5,7 +5,6 @@
 - Voz: Mezzo
 - Destaques: Integrante da primeira formação formal do vip.
 
-## Links
-- (sem links cadastrados)
+
 
 

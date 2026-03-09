@@ -5,7 +5,6 @@
 - Voz: Baixo
 - Destaques: Baixo da primeira formação formal do vip.
 
-## Links
-- (sem links cadastrados)
+
 
 

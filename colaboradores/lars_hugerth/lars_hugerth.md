@@ -5,7 +5,6 @@
 - Voz: Barítono
 - Destaques: Barítono de longa permanência durante a fase de consolidação de repertório.
 
-## Links
-- (sem links cadastrados)
+
 
 

@@ -1,8 +1,8 @@
 ﻿Nascido no Rio de Janeiro, em 1984, João Rangel iniciou sua relação com a música ainda na infância, participando de atividades musicais em grupos infantis da igreja que frequentava. Nesse período, mesmo sem formação formal, já demonstrava percepção e interesse musical.
 
-Em 1994, durante o ginásio, teve seus primeiros contatos com a educação musical estruturada, por meio de aulas de iniciação musical com flauta doce. Dois anos depois, passou a integrar o coral da escola, onde teve as primeiras experiências de canto coletivo, interpretando repertório de MPB em uníssono.
+Em 1994, durante o ginásio, teve seus primeiros contatos com a educação musical estruturada, por meio de aulas de iniciação musical com flauta doce e teclado. Dois anos depois, passou a integrar o coral da escola, onde teve as primeiras experiências de canto coletivo, interpretando repertório de MPB em uníssono.
 
-Já na vida adulta, em 2004, ingressou no Coro Jovem da Pró-Arte, no bairro das Laranjeiras (Rio de Janeiro), onde permaneceu por dois anos sob regência do maestro Julio Moretzsohn, doutor em Regência Coral e Música de Câmara pela Universidade Federal do Estado do Rio de Janeiro (UNIRIO).
+Já na vida adulta, em 2002, ingressou no Coro Jovem da Pró-Arte, no bairro das Laranjeiras (Rio de Janeiro), onde permaneceu por dois anos sob regência do maestro Julio Moretzsohn, doutor em Regência Coral e Música de Câmara pela Universidade Federal do Estado do Rio de Janeiro (UNIRIO).
 
 Em 2006, passou a integrar o Coro Canto em Canto, no bairro da Tijuca (Rio de Janeiro), permanecendo no grupo por dois anos. O coro era regido por Elza Lakschevitz, pós-graduada em Regência pela Universidade Federal do Rio de Janeiro (UFRJ) e ex-coordenadora do Projeto Villa-Lobos (FUNARTE). Nesse período, contou também com preparação vocal de Lina Santoro, cantora formada pela UNIRIO e atualmente professora no Instituto dos Meninos Cantores de Petrópolis.
 

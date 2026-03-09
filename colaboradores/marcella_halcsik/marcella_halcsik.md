@@ -5,7 +5,6 @@
 - Voz: Soprano
 - Destaques: Participou da retomada pós-pandemia e das primeiras filmagens do ciclo.
 
-## Links
-- (sem links cadastrados)
+
 
 

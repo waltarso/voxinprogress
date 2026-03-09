@@ -5,7 +5,6 @@
 - Voz: Soprano
 - Destaques: Co-fundadora do projeto e presença marcante nas primeiras fases do Introspective.
 
-## Links
-- (sem links cadastrados)
+
 
 

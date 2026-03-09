@@ -5,7 +5,6 @@
 - Voz: Tenor
 - Destaques: Tenor da primeira fase do grupo e colaborador das versões iniciais do repertório.
 
-## Links
-- (sem links cadastrados)
+
 
 

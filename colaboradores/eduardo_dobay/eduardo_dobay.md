@@ -5,7 +5,6 @@
 - Voz: Tenor
 - Destaques: Tenor da primeira formação formal do grupo.
 
-## Links
-- (sem links cadastrados)
+
 
 

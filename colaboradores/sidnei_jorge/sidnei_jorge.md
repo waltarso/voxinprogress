@@ -5,8 +5,7 @@
 - Voz: Direção cênica
 - Destaques: Atuou na direção cênica e em filmagens dos primeiros vídeos do grupo.
 
-## Links
-- (sem links cadastrados)
+
 
 
 

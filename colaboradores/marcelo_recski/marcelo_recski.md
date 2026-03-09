@@ -5,7 +5,5 @@
 - Voz: Barítono
 - Destaques: Colaborador vocal das primeiras publicações e apoiador estratégico do projeto.
 
-## Links
-- (sem links cadastrados)
 
 

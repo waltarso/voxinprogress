@@ -5,8 +5,5 @@
 - Voz: Contralto
 - Destaques: Contralto de longa data, participou dos principais vídeos e eventos do grupo.
 
-## Links
-- [Instagram](https://www.instagram.com/vox_in_progress/)
-- [Facebook](https://www.facebook.com/voxinprogress)
 
 

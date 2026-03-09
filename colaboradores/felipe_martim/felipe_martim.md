@@ -5,7 +5,5 @@
 - Voz: Barítono
 - Destaques: Barítono no ciclo de palco, participou das apresentações no Tonton e Nimbus.
 
-## Links
-- (sem links cadastrados)
 
 

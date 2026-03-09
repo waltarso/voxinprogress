@@ -5,7 +5,5 @@
 - Voz: Mezzo
 - Destaques: Participou de gravações de mezzo no período remoto de 2020.
 
-## Links
-- (sem links cadastrados)
 
 

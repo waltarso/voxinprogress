@@ -5,7 +5,5 @@
 - Voz: Tenor
 - Destaques: Participou do ciclo de reorganização e das gravações no período pós-pandemia.
 
-## Links
-- (sem links cadastrados)
 
 
