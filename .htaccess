@@ -6,6 +6,10 @@
     # O site será servido diretamente em https://voxinprogress.vip/,
 # portanto a base é a raiz do domínio.
 RewriteBase /
+
+    # Não reescrever pastas de conteúdo estático/publicado.
+    # Isso evita que URLs como /imagens caiam na rota ?p=imagens.
+    RewriteRule ^(assets|imagens|material|colaboradores|apoios)(/|$) - [L,NC]
     
     # Redirecionar HTTPS
     # RewriteCond %{HTTPS} off
