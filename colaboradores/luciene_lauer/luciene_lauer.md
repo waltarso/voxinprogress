@@ -1,4 +1,4 @@
-﻿Luciene Lauer integra o vip como cantor(a).
+﻿Luciene Lauer integra o vip como cantora.
 
 ## Trajetória no vip
 - Participação: 2025-01-30 - atual

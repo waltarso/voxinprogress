@@ -1,4 +1,4 @@
-﻿Araken Souza integra o vip como cantor(a).
+﻿Araken Souza integra o vip como cantor.
 
 ## Trajetória no vip
 - Participação: 2023-05-13 - atual

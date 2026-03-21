@@ -1,4 +1,4 @@
-﻿Felipe Martim integra o vip como cantor(a).
+﻿Felipe Martim integrou o vip como cantor.
 
 ## Trajetória no vip
 - Participação: 2023-08-26 - 2026-01-08

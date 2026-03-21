@@ -1,4 +1,4 @@
-﻿Ari Acioli integra o vip como cantor(a).
+﻿Ari Acioli integrou o vip como cantor.
 
 ## Trajetória no vip
 - Participação: 2020-03-09 - 2023-08-26

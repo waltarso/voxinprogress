@@ -1,4 +1,4 @@
-﻿Fernanda Koseki Pierre integra o vip como cantor(a).
+﻿Fernanda Koseki Pierre integrou o vip como cantora.
 
 ## Trajetória no vip
 - Participação: 2020-02-27 - 2020-12-13

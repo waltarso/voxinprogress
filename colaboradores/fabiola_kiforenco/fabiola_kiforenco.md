@@ -1,4 +1,4 @@
-﻿Fabíola Kiforenco integra o vip como cantor(a).
+﻿Fabíola Kiforenco integra o vip como cantora.
 
 ## Trajetória no vip
 - Participação: 2021-04-18 - atual

@@ -9,7 +9,7 @@ RewriteBase /
 
     # Não reescrever pastas de conteúdo estático/publicado.
     # Isso evita que URLs como /imagens caiam na rota ?p=imagens.
-    RewriteRule ^(assets|imagens|material|colaboradores|apoios)(/|$) - [L,NC]
+    RewriteRule ^(assets|imagens|material|apoios)(/|$) - [L,NC]
     
     # Redirecionar HTTPS
     # RewriteCond %{HTTPS} off

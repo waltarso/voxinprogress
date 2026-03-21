@@ -1,4 +1,4 @@
-﻿Lars Hugerth integra o vip como cantor(a).
+﻿Lars Hugerth integrou o vip como cantor.
 
 ## Trajetória no vip
 - Participação: 2019-09-24 - 2023-05-14

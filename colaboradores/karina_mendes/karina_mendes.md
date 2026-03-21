@@ -1,4 +1,4 @@
-﻿Karina Mendes Gontijo integra o vip como cantor(a).
+﻿Karina Mendes Gontijo integra o vip como cantora.
 
 ## Trajetória no vip
 - Participação: 2019-12-27 - atual

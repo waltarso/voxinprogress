@@ -1,4 +1,4 @@
-﻿Marcella Halcsik integra o vip como cantor(a).
+﻿Marcella Halcsik integrou o vip como cantora.
 
 ## Trajetória no vip
 - Participação: 2022-03-23 - 2023-01-15

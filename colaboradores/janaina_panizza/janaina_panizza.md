@@ -1,4 +1,4 @@
-﻿Janaína Panizza integra o vip como cantor(a).
+﻿Janaína Panizza integrou o vip como cantora.
 
 ## Trajetória no vip
 - Participação: 2016 - 2024-10-02
