@@ -12,15 +12,16 @@
         "image": "Can_utility_and_the_coastliners.jpg",
         "files": [
             {
-                "type": "mp3"
-            },
-            {
                 "type": "mp3",
                 "voice": "Bai"
             },
             {
                 "type": "mp3",
                 "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Click"
             },
             {
                 "type": "mp3",
@@ -37,6 +38,10 @@
             {
                 "type": "mp3",
                 "voice": "Ten"
+            },
+            {
+                "type": "mp3",
+                "voice": "Tutti"
             },
             {
                 "type": "pdf",
@@ -99,11 +104,11 @@
             },
             {
                 "type": "mp3",
-                "voice": "Con"
+                "voice": "Click"
             },
             {
                 "type": "mp3",
-                "voice": "Guia"
+                "voice": "Con"
             },
             {
                 "type": "mp3",
