@@ -5,6 +5,9 @@
             <div class="col-lg-8 col-xl-7 text-center text-lg-start">
                 <p class="lead mb-2 hero-tagline"><?php echo e(SITE_TAGLINE); ?></p>
                 <div class="d-flex gap-2 justify-content-center justify-content-lg-start flex-wrap mt-2">
+                    <a href="https://www.youtube.com/@voxinprogress" class="btn btn-sm btn-outline-light" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-youtube"></i> YouTube
+                    </a>
                     <a href="https://www.instagram.com/vox_in_progress/" class="btn btn-sm btn-outline-light" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-instagram"></i> Instagram
                     </a>
