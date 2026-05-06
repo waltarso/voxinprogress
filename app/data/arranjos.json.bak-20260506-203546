@@ -1,0 +1,1279 @@
+[
+    {
+        "id": "can_utility_and_the_coastliners",
+        "albumId": "introspective",
+        "titulo": "Can-Utility and the Coastliners",
+        "artistaOriginal": "Genesis",
+        "ano": 1972,
+        "duracao": null,
+        "dificuldade": 5,
+        "observacoes": "Música com letra inspirada na lenda do rei nórdico Canute, que teria ordenado às ondas do mar que recuassem para demonstrar a futilidade de seu poder. O arranjo tem uma intervenção com o lema dos Cavaleiros Templários 'Non nobis, Domine, non nobis, sed nomini tuo da gloriam'.",
+        "storagePath": "Introspective/Can_utility_and_the_coastliners",
+        "image": "Can_utility_and_the_coastliners.jpg",
+        "files": [
+            {
+                "type": "mp3",
+                "voice": "Bai"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Click"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "mp3",
+                "voice": "Ten"
+            },
+            {
+                "type": "mp3",
+                "voice": "Tutti"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti-Compacta"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 1,
+        "homeOrder": null
+    },
+    {
+        "id": "kashmir",
+        "albumId": "introspective",
+        "titulo": "Kashmir",
+        "artistaOriginal": "Led Zeppelin",
+        "ano": 1975,
+        "duracao": "8:00",
+        "dificuldade": 4,
+        "observacoes": "Música de caráter progressivo, com letra de Robert Plant inspirada em uma viagem ao Marrocos. Kashmir não é um deserto, mas a letra evoca uma paisagem desértica, o que contribui para a atmosfera mística da canção.",
+        "storagePath": "Introspective/kashmir",
+        "image": "kashmir.webp",
+        "files": [
+            {
+                "type": "mp3",
+                "voice": "Bai"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Click"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "mp3",
+                "voice": "Ten"
+            },
+            {
+                "type": "mp3",
+                "voice": "Tutti"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            }
+        ],
+        "Order": 2,
+        "homeOrder": null
+    },
+    {
+        "id": "songs_from_the_wood",
+        "albumId": "introspective",
+        "titulo": "Songs from the Wood",
+        "artistaOriginal": "Jethro Tull",
+        "ano": 1977,
+        "duracao": "3:50",
+        "dificuldade": 4,
+        "observacoes": "Composição de Ian Anderson em sua fase folk rock.",
+        "storagePath": "Introspective/Songs_from_the_wood",
+        "image": "Songs_from_the_Wood.jpg",
+        "files": [
+            {
+                "type": "mp3",
+                "voice": "Bai"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Guia"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "mp3",
+                "voice": "Ten"
+            },
+            {
+                "type": "mp3",
+                "voice": "Tutti"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 3,
+        "homeOrder": null
+    },
+    {
+        "id": "the_prophets_song",
+        "albumId": "introspective",
+        "titulo": "The Prophet's Song",
+        "artistaOriginal": "Queen",
+        "ano": 1975,
+        "duracao": null,
+        "dificuldade": 5,
+        "observacoes": "Composição de Brian May inspirada em um sonho sobre a história da arca de Noé.",
+        "storagePath": "Introspective/The_Prophets_Song",
+        "image": "The_Prophets_Song.jpg",
+        "files": [
+            {
+                "type": "mp3",
+                "voice": "Bai"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "mp3",
+                "voice": "Ten"
+            },
+            {
+                "type": "mp3",
+                "voice": "Tutti"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 4,
+        "homeOrder": null
+    },
+    {
+        "id": "wonderous_stories",
+        "albumId": "introspective",
+        "titulo": "Wonderous Stories",
+        "artistaOriginal": "Yes",
+        "ano": 1977,
+        "duracao": "5:20",
+        "dificuldade": 5,
+        "observacoes": "Arranjo focado em vozes femininas, com acompanhamento das vozes masculinas em bocca chiusa.",
+        "storagePath": "Introspective/Wonderous_Stories",
+        "image": "Wonderous_Stories.avif",
+        "files": [
+            {
+                "type": "mp3"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Fem"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mas"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 5,
+        "homeOrder": null
+    },
+    {
+        "id": "astronomy_domine",
+        "albumId": "introspective",
+        "titulo": "Astronomy Domine",
+        "artistaOriginal": "Pink Floyd",
+        "ano": 1967,
+        "duracao": "4:15",
+        "dificuldade": 4,
+        "observacoes": "Rock psicodélico de Syd Barrett. Arranjo baseado na versão do álbum Ummagumma para vozes masculinas com acompanhamento em bocca chiusa das vozes femininas.",
+        "storagePath": "Introspective/Astronomy_Domine",
+        "image": "Astronomy_Domine.jpg",
+        "files": [
+            {
+                "type": "mp3",
+                "voice": "Bai"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Click"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "mp3",
+                "voice": "Ten"
+            },
+            {
+                "type": "mp3",
+                "voice": "Tutti"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 6,
+        "homeOrder": null
+    },
+    {
+        "id": "crazy_little_thing_called_love",
+        "albumId": "queen_at_six",
+        "titulo": "Crazy Little Thing Called Love",
+        "artistaOriginal": "Queen",
+        "ano": 1979,
+        "duracao": null,
+        "dificuldade": 3,
+        "observacoes": "Resgate do estilo rockabilly de Freddie Mercury.",
+        "storagePath": "Queen_at_six/Crazy_little_thing_called_love",
+        "image": "Crazy_little_thing_called_love.jpg",
+        "files": [
+            {
+                "type": "mp3",
+                "voice": "Bai"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Click"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "mp3",
+                "voice": "Ten"
+            },
+            {
+                "type": "mp3",
+                "voice": "Tutti"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 7,
+        "homeOrder": 1
+    },
+    {
+        "id": "good_old-fashioned_lover_boy",
+        "albumId": "queen_at_six",
+        "titulo": "Good Old-Fashioned Lover Boy",
+        "artistaOriginal": "Queen",
+        "ano": 1976,
+        "duracao": null,
+        "dificuldade": 4,
+        "observacoes": "Arranjo para seis vozes: SMATBB",
+        "storagePath": "Queen_at_six/Good_old-fashioned_lover_boy",
+        "image": "Good_old-fashioned_lover_boy.jpg",
+        "files": [
+            {
+                "type": "mp3",
+                "voice": "Bai"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Click"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "mp3",
+                "voice": "Ten"
+            },
+            {
+                "type": "mp3",
+                "voice": "Tutti"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 8,
+        "homeOrder": 2
+    },
+    {
+        "id": "the_show_must_go_on",
+        "albumId": "queen_at_six",
+        "titulo": "The Show Must Go On",
+        "artistaOriginal": "Queen",
+        "ano": 1991,
+        "duracao": null,
+        "dificuldade": 4,
+        "observacoes": "Uma lembrança emocionante do legado de Freddie Mercury, arranjo para seis vozes: SMATBB",
+        "storagePath": "Queen_at_six/The_show_must_go_on",
+        "image": "The_show_must_go_on.jpg",
+        "files": [
+            {
+                "type": "mp3",
+                "voice": "Bai"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Click"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "mp3",
+                "voice": "Ten"
+            },
+            {
+                "type": "mp3",
+                "voice": "Tutti"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 9,
+        "homeOrder": 3
+    },
+    {
+        "id": "good_company",
+        "albumId": "queen_at_six",
+        "titulo": "Good Company",
+        "artistaOriginal": "Queen",
+        "ano": 1975,
+        "duracao": null,
+        "dificuldade": 3,
+        "observacoes": "Composição de Brian May com arranjo para seis vozes: SMATBB",
+        "storagePath": "Queen_at_six/Good_company",
+        "image": "Good_company.jpg",
+        "files": [
+            {
+                "type": "mp3",
+                "voice": "Bai"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Click"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "mp3",
+                "voice": "Ten"
+            },
+            {
+                "type": "mp3",
+                "voice": "Tutti"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 10,
+        "homeOrder": 4
+    },
+    {
+        "id": "bicycle_race",
+        "albumId": "queen_at_six",
+        "titulo": "Bicycle Race",
+        "artistaOriginal": "Queen",
+        "ano": 1978,
+        "duracao": "3:00",
+        "dificuldade": 4,
+        "observacoes": "Diversão e energia para seis vozes",
+        "storagePath": "Queen_at_six/Bicycle_Race",
+        "image": "Bicycle_Race.jpg",
+        "files": [
+            {
+                "type": "mp3",
+                "voice": "Bai"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Click"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "mp3",
+                "voice": "Ten"
+            },
+            {
+                "type": "mp3",
+                "voice": "Tutti"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 11,
+        "homeOrder": 5
+    },
+    {
+        "id": "under_pressure",
+        "albumId": "queen_at_six",
+        "titulo": "Under Pressure",
+        "artistaOriginal": "Queen feat. David Bowie",
+        "ano": 1981,
+        "duracao": "4:08",
+        "dificuldade": 3,
+        "observacoes": "Clássico em arranjo vocal ousado",
+        "storagePath": "Queen_at_six/Under_pressure",
+        "image": "Under_pressure.jpg",
+        "files": [
+            {
+                "type": "mp3",
+                "voice": "Bai"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "mp3",
+                "voice": "Ten"
+            },
+            {
+                "type": "mp3",
+                "voice": "Tutti"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 12,
+        "homeOrder": 6
+    },
+    {
+        "id": "sangue_latino",
+        "albumId": "insanity",
+        "titulo": "Sangue Latino",
+        "artistaOriginal": "Secos & Molhados",
+        "ano": 1973,
+        "duracao": null,
+        "dificuldade": 1,
+        "observacoes": "Arranjo para ser cantado em conjunto com outros grupos, em encontros de corais.",
+        "storagePath": "Insanity/Sangue_latino",
+        "image": "Sangue_latino.webp",
+        "files": [
+            {
+                "type": "mp3",
+                "voice": "Bai"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Click"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "mp3",
+                "voice": "Ten"
+            },
+            {
+                "type": "mp3",
+                "voice": "Tutti"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 13,
+        "homeOrder": null
+    },
+    {
+        "id": "here_comes_the_sun",
+        "albumId": "insanity",
+        "titulo": "Here Comes the Sun",
+        "artistaOriginal": "The Beatles",
+        "ano": 1969,
+        "duracao": "3:05",
+        "dificuldade": 3,
+        "observacoes": "Arranjo para seis vozes: SMATBB",
+        "storagePath": "Insanity/Here_comes_the_sun",
+        "image": "Here_comes_the_sun.avif",
+        "files": [
+            {
+                "type": "mp3"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bai"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Click"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "mp3",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 14,
+        "homeOrder": null
+    },
+    {
+        "id": "maluco_beleza",
+        "albumId": "insanity",
+        "titulo": "Maluco Beleza",
+        "artistaOriginal": "Raul Seixas",
+        "ano": 1977,
+        "duracao": null,
+        "dificuldade": 3,
+        "observacoes": "Arranjo para seis vozes: SMATBB",
+        "storagePath": "Insanity/Maluco_Beleza",
+        "image": "Maluco_Beleza.jpg",
+        "files": [
+            {
+                "type": "mp3"
+            },
+            {
+                "type": "mp3",
+                "voice": "Baixo"
+            },
+            {
+                "type": "mp3",
+                "voice": "Baritono"
+            },
+            {
+                "type": "mp3",
+                "voice": "Contralto"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mezzo"
+            },
+            {
+                "type": "mp3",
+                "voice": "Soprano"
+            },
+            {
+                "type": "mp3",
+                "voice": "Tenor"
+            },
+            {
+                "type": "pdf"
+            },
+            {
+                "type": "pdf",
+                "voice": "Baixo"
+            },
+            {
+                "type": "pdf",
+                "voice": "Baritono"
+            },
+            {
+                "type": "pdf",
+                "voice": "Contralto"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mezzo"
+            },
+            {
+                "type": "pdf",
+                "voice": "Soprano"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tenor"
+            }
+        ],
+        "Order": 15,
+        "homeOrder": null
+    },
+    {
+        "id": "the_wall",
+        "albumId": "insanity",
+        "titulo": "The Wall",
+        "artistaOriginal": "Pink Floyd",
+        "ano": 1979,
+        "duracao": null,
+        "dificuldade": 4,
+        "observacoes": "Arranjo das músicas The best days of our lives, Another brick in the wall (part 2)",
+        "storagePath": "Insanity/The_Wall",
+        "image": "The_Wall.jpg",
+        "files": [
+            {
+                "type": "mp3"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bai"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "mp3",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 16,
+        "homeOrder": null
+    },
+    {
+        "id": "balada_do_louco",
+        "albumId": "insanity",
+        "titulo": "Balada do Louco",
+        "artistaOriginal": "Raul Seixas",
+        "ano": 1974,
+        "duracao": "5:30",
+        "dificuldade": 2,
+        "observacoes": "Arranjo em desenvolvimento.",
+        "storagePath": "Insanity/Balada_do_louco",
+        "image": "Balada_do_louco.jpg",
+        "files": [
+            {
+                "type": "midi"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 17,
+        "homeOrder": null
+    },
+    {
+        "id": "hocus_pocus",
+        "albumId": "insanity",
+        "titulo": "Hocus Pocus",
+        "artistaOriginal": "Focus",
+        "ano": 1971,
+        "duracao": null,
+        "dificuldade": 3,
+        "observacoes": "Arranjo em desenvolvimento.",
+        "storagePath": "Insanity/Hocus_Pocus",
+        "image": "Hocus_Pocus.jpg",
+        "files": [
+            {
+                "type": "sib"
+            }
+        ],
+        "Order": 18,
+        "homeOrder": null
+    }
+]
