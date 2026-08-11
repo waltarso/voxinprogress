@@ -78,10 +78,11 @@ function arranjo_image_url($arranjo, $album = null)
         // caso contrário, presumimos que o arquivo fica no diretório de
         // armazenamento do arranjo (acervo).
         $url = build_material_url($arranjo['storagePath'], $img);
-        if ($url !== null) {
+        $filePath = dirname(APP_DIR) . '/material/' . $arranjo['storagePath'] . '/' . $img;
+        if ($url !== null && file_exists($filePath)) {
             return $url;
         }
-        // se a URL falhar, cairá no comportamento abaixo de álbum
+        // se a URL falhar ou arquivo não existir, cairá no comportamento abaixo de álbum
     }
 
     if ($album && !empty($album['image'])) {
@@ -92,7 +93,11 @@ function arranjo_image_url($arranjo, $album = null)
         // caso contrário, assume que o caminho é relativo ao acervo raiz
         // (o JSON pode conter algo como "Queen_at_six/cover.jpg").
         $base = rtrim(MATERIAL_BASE_URL, '/') . '/';
-        return $base . ltrim($img, '/');
+        $url = $base . ltrim($img, '/');
+        $filePath = dirname(APP_DIR) . '/material/' . $img;
+        if (file_exists($filePath)) {
+            return $url;
+        }
     }
 
     return null;
