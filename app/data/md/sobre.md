@@ -37,7 +37,7 @@ No uso corrente, “rock” designa um conjunto amplo de estilos de música popu
 
 Essas características tornam o repertório progressivo particularmente exigente para transposição vocal, pois a escrita precisa preservar coerência estrutural sem depender de timbres instrumentais.
 
-O vip prefere músicas de caráter progressivo e sofisticado, escolhendo seu repertório a partir de bandas conhecidas do gênero ou de composições mais elaboradas de bandas de outras vertentes do rock.
+O vip prefere músicas de caráter progressivo, ousado e sofisticado, escolhendo seu repertório a partir de bandas conhecidas do gênero ou de composições mais elaboradas de bandas de outras vertentes do rock.
 
 **Caráter: Coral, grupo vocal**
 
@@ -57,7 +57,7 @@ O vip organiza seus arranjos como escrita predominantemente polifônica e orient
 
 Arranjos a quatro vozes (SATB) oferecem equilíbrio básico e um repertório amplo de soluções tradicionais. Em contextos corais, essa estrutura costuma ser eficiente para manter estabilidade e viabilidade de ensaio.
 
-A escrita a seis vozes amplia o adensamento harmônico. Isso aumenta o risco de cruzamentos de vozes, quintas e oitavas paralelas e uníssonos, especialmente em acordes fechados. 
+A escrita a seis vozes amplia o adensamento harmônico. Isso aumenta o risco de cruzamentos de vozes, uníssonos, quintas e oitavas paralelas, especialmente em acordes fechados, que acabam por servir como recurso para enfatizar temas. 
 
 **Arranjos de eficácia imediata e arranjos de escuta especializada**
 
@@ -67,7 +67,7 @@ Há diversos grupos vocais que executam com muita qualidade arranjos vocais prag
 
 Há também arranjos que privilegiam procedimentos estruturais mais densos: polifonia elaborada, condução refinada, distribuição de tema por tessitura, imitação e reforço dinâmico. Esses arranjos tendem a exigir mais tempo de ensaio e maior concentração auditiva do público.
 
-O vip prefere arranjos mais sofisticados não por serem melhores, mas por serem diferentes.
+O vip prefere arranjos mais sofisticados não por serem melhores, mas por serem ousados e diferentes.
 O público é diferente.
 
 

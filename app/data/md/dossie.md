@@ -1,10 +1,10 @@
 ## Vox in Progress (vip)
-**Dossiê de Espetáculo a Cappella**\
+**Um Espetáculo a Cappella**\
 **Proposta para patrocinadores**
 
 ** 1. Identificação**
 
-Grupo vocal a cappella, seis vozes, microfonado.
+Grupo vocal de rock a cappella.
 
 **Cantores**
 
@@ -22,17 +22,19 @@ Grupo vocal a cappella, seis vozes, microfonado.
 
 ** 2. Sinopse**
 
-O Vox in Progress (vip) apresenta um espetáculo a cappella de rock clássico e progressivo, com arranjos originais para seis vozes. O repertório é organizado em dois programas autorais ("Queen at Six" e "Introspective") e um bloco em desenvolvimento ("Insanity"), reunindo releituras vocais de Queen, Pink Floyd, Yes, Led Zeppelin, Jethro Tull, Genesis, Focus e clássicos brasileiros.
+O Vox in Progress (vip) apresenta um espetáculo a cappella de rock clássico e progressivo, com arranjos originais. 
+
+O repertório é organizado em dois programas ("Queen at Six" e "Introspective") e um bloco em desenvolvimento ("Insanity"), reunindo releituras vocais de Queen, Pink Floyd, Yes, Led Zeppelin, Jethro Tull, Genesis, Focus e clássicos brasileiros.
 
 ** 3. Proposta artística**
 
-O projeto oferece uma alternativa rara no circuito brasileiro: grupo vocal dedicado ao rock, com arranjos inéditos e performance microfonada. A linguagem do VIP explora texturas polifônicas, precisão rítmica e recursos vocais para preservar o impacto das obras originais.
+O projeto oferece uma alternativa rara no circuito brasileiro: grupo vocal dedicado ao rock com arranjos inéditos. 
+A linguagem do VIP explora texturas polifônicas, precisão rítmica e recursos vocais para preservar o impacto das obras originais.
 
 ** 4. Relevância e aderência**
 
-- Alta singularidade: muitos grupos vocais de MPB e poucos grupos vocais de rock.
+- Alta singularidade: encontram-se muitos grupos vocais de MPB no Brasil, poucos grupos vocais de rock. O vip tenta ocupar esse vazio.
 - Repertório com apelo intergeracional (rock clássico) e com nicho culturalmente ativo (rock progressivo).
-- Possibilidade de ação formativa complementar (opcional), sem alterar o formato do show.
 
 ** 5. Objetivos**
 
@@ -45,7 +47,7 @@ O projeto oferece uma alternativa rara no circuito brasileiro: grupo vocal dedic
 | Item | Descrição |
 |---|---|
 | Duração | 60-75 minutos (programa principal) + bloco adicional Insanity (opcional). |
-| Montagem | 6 cantores microfonados. |
+| Montagem | 6 cantores microfonados com equipamento próprio. |
 | Palco | Semicírculo ou linha, conforme espaço. |
 | Cenografia | Palco limpo. |
 | Passagem de som | 45-75 minutos (dependendo do ambiente). |
@@ -66,20 +68,20 @@ Todas as músicas possuem arranjos originais desenvolvidos pelo próprio grupo p
 ** Introspective**
 
 1. Astronomy Domine (Pink Floyd)
-2. Wonderous Stories (Yes)
+2. Wonderous stories (Yes)
 3. Kashmir (Led Zeppelin)
-4. Songs from the Wood (Jethro Tull)
-5. Can-Utility and the Coastliners (Genesis)
+4. Songs from the wood (Jethro Tull)
+5. Can-utility and the coastliners (Genesis)
 6. The Prophet's song (Queen)
 
 ** Insanity **
 
-1. Here Comes the Sun (Beatles)
+1. Here comes the sun (Beatles)
 2. The Wall (Pink Floyd)
-3. Maluco Beleza (Raul Seixas)
-4. Sangue Latino (Secos e Molhados)
-5. Balada do Louco (Os Mutantes) - em desenvolvimento
-6. Hocus Pocus (Focus) - em desenvolvimento
+3. Maluco beleza (Raul Seixas)
+4. Sangue latino (Secos e Molhados)
+5. Balada do louco (Os Mutantes)
+6. Hocus pocus (Focus) - em desenvolvimento
 
 ** 8. Ação educativa (opcional)**
 
@@ -89,10 +91,10 @@ Todas as músicas possuem arranjos originais desenvolvidos pelo próprio grupo p
 ** 9. Rider técnico (síntese)**
 
 ** Áudio (mínimo)**
-
+O grupo possui equipamento próprio.
+Se o patrocinador preferir a utilização de seus próprios recursos, são necessários:
 - 6 microfones vocais cardioides.
-- Mesa com 6 canais disponíveis + P.A. adequado ao espaço.
-- Técnico de som da casa para passagem e operação.
+- Mesa de som, caixa de retorno e P.A. adequado ao espaço.
 
 ** Iluminação (mínimo)**
 
