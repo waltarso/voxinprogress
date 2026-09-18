@@ -1,11 +1,19 @@
 [
   {
     "data": "2026-09-25",
-    "hora": "19:00",
+    "hora": "20:30",
     "titulo": "Festival CoralUSP 2026",
     "local": "Centro Cultural Camargo Guarnieri - São Paulo",
-    "descricao": "Encontro dos grupos do CoralUSP com participação de outros corais de todo o Brasil.",
-    "link": "https://coralusp.prceu.usp.br/?page_id=9596"
+    "descricao": "Encontro do vip com os grupos do CoralUSP com participação de outros corais de todo o Brasil.",
+    "link": "https://www.facebook.com/photo/?fbid=1378853287561826&set=pcb.1378853800895108&locale=pt_BR"
+  },
+  {
+    "data": "2026-07-04",
+    "hora": "11:00",
+    "titulo": "Sarau da gente",
+    "local": "Centro de Convivência Araucárias - Praça do Relógio - Cidade Universitária - São Paulo - SP",
+    "descricao": "Sarau dos alunos da Professora Beth Amin, do Coralusp, com participação do vip.",
+    "link": "https://puspc.usp.br/usodocampus/centros-de-convivencia/"    
   },
   {
     "data": "2026-05-15",

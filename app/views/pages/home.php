@@ -8,7 +8,7 @@
                     <a href="https://www.youtube.com/@voxinprogress" class="btn btn-sm btn-outline-light" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-youtube"></i> YouTube
                     </a>
-                    <a href="https://www.instagram.com/vox_in_progress/" class="btn btn-sm btn-outline-light" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/voxinprogress/" class="btn btn-sm btn-outline-light" target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-instagram"></i> Instagram
                     </a>
                     <a href="https://www.facebook.com/voxinprogress" class="btn btn-sm btn-outline-light" target="_blank" rel="noopener noreferrer">

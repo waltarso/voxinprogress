@@ -138,7 +138,7 @@ Exemplo:
   "whatsapp": "5511999999999",
   "email": "joao_rangel@exemplo.com",
   "links": [
-    { "titulo": "Instagram", "url": "https://www.instagram.com/vox_in_progress/" },
+    { "titulo": "Instagram", "url": "https://www.instagram.com/voxinprogress/" },
     { "titulo": "Facebook", "url": "https://www.facebook.com/voxinprogress" }
   ]
 }
