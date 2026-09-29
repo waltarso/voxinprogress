@@ -673,8 +673,8 @@
         "duracao": null,
         "dificuldade": 5,
         "observacoes": "Composição de Brian May inspirada em um sonho sobre a história da arca de Noé.",
-        "storagePath": "Introspective/The_Prophets_Song",
-        "image": "The_Prophets_Song.jpg",
+        "storagePath": "Introspective/the_prophets_song",
+        "image": "the_prophets_song.jpg",
         "files": [
             {
                 "type": "mp3",
@@ -703,6 +703,10 @@
             {
                 "type": "mp3",
                 "voice": "Tutti"
+            },
+            {
+                "type": "mp3",
+                "voice": "Click"
             },
             {
                 "type": "pdf",
