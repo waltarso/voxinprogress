@@ -1317,5 +1317,86 @@
         ],
         "Order": 12,
         "homeOrder": 6
+    },
+    {
+        "id": "suppers_ready",
+        "albumId": "revelation",
+        "titulo": "Supper's Ready",
+        "artistaOriginal": "Genesis",
+        "ano": null,
+        "duracao": null,
+        "dificuldade": null,
+        "observacoes": "Uma travessia: parte de uma relação íntima, atravessa medo, conflito, absurdo e transformação, e termina numa visão de libertação. As imagens bíblicas, mitológicas e surreais funcionam como símbolos de crise, perda de referências e confronto entre forças opostas. No fim, o retorno ao amor e à casa, no sentido de percurso, reconciliação e chegada.",
+        "storagePath": "Revelation/Suppers_ready",
+        "image": "Suppers_ready.jpg",
+        "files": [
+            {
+                "type": "midi"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bai"
+            },
+            {
+                "type": "mp3",
+                "voice": "Bar"
+            },
+            {
+                "type": "mp3",
+                "voice": "Click"
+            },
+            {
+                "type": "mp3",
+                "voice": "Con"
+            },
+            {
+                "type": "mp3",
+                "voice": "Mez"
+            },
+            {
+                "type": "mp3",
+                "voice": "Sop"
+            },
+            {
+                "type": "mp3",
+                "voice": "Ten"
+            },
+            {
+                "type": "mp3",
+                "voice": "Tutti"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bai"
+            },
+            {
+                "type": "pdf",
+                "voice": "Bar"
+            },
+            {
+                "type": "pdf",
+                "voice": "Con"
+            },
+            {
+                "type": "pdf",
+                "voice": "Mez"
+            },
+            {
+                "type": "pdf",
+                "voice": "Sop"
+            },
+            {
+                "type": "pdf",
+                "voice": "Ten"
+            },
+            {
+                "type": "pdf",
+                "voice": "Tutti"
+            },
+            {
+                "type": "sib"
+            }
+        ],
+        "homeOrder": null
     }
 ]

@@ -43,53 +43,49 @@
         return strcmp($a['data'], $b['data']);
     });
 ?>
+<?php if (!empty($eventosFuturos)): ?>
+    <section class="py-4">
+        <div class="container">
+            <h2 class="mb-4" style="border-bottom: 3px solid #667eea; padding-bottom: 10px; display: inline-block;">
+                <i class="bi bi-calendar-check"></i> Próximos eventos
+            </h2>
 
-<section class="py-4">
-    <div class="container">
-        <h2 class="mb-4" style="border-bottom: 3px solid #667eea; padding-bottom: 10px; display: inline-block;">
-            <i class="bi bi-calendar-check"></i> Próximos eventos
-        </h2>
-
-        <?php if (!empty($eventosFuturos)): ?>
-        <div class="row g-3">
-            <?php foreach ($eventosFuturos as $evento): ?>
-            <div class="col-12">
-                <div class="card shadow-sm border-0" style="border-left: 5px solid #667eea;">
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col-md-3 text-center text-md-start mb-2 mb-md-0">
-                                <strong><?php echo date('d/m/Y', strtotime($evento['data'])); ?></strong>
-                                <?php if (!empty($evento['hora'])): ?>
-                                <span class="text-muted"> - <?php echo e($evento['hora']); ?></span>
-                                <?php endif; ?>
-                            </div>
-                            <div class="col-md-9">
-                                <h5 class="card-title mb-1"><?php echo e($evento['titulo'] ?? 'Evento'); ?></h5>
-                                <?php if (!empty($evento['local'])): ?>
-                                <p class="card-text text-muted mb-1"><i class="bi bi-geo-alt"></i> <?php echo e($evento['local']); ?></p>
-                                <?php endif; ?>
-                                <?php if (!empty($evento['descricao'])): ?>
-                                <p class="card-text mb-2"><?php echo e($evento['descricao']); ?></p>
-                                <?php endif; ?>
-                                <?php if (!empty($evento['link'])): ?>
-                                <a href="<?php echo e($evento['link']); ?>" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">
-                                    <i class="bi bi-box-arrow-up-right"></i> Mais Informações
-                                </a>
-                                <?php endif; ?>
+            <div class="row g-3">
+                <?php foreach ($eventosFuturos as $evento): ?>
+                <div class="col-12">
+                    <div class="card shadow-sm border-0" style="border-left: 5px solid #667eea;">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-3 text-center text-md-start mb-2 mb-md-0">
+                                    <strong><?php echo date('d/m/Y', strtotime($evento['data'])); ?></strong>
+                                    <?php if (!empty($evento['hora'])): ?>
+                                    <span class="text-muted"> - <?php echo e($evento['hora']); ?></span>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="col-md-9">
+                                    <h5 class="card-title mb-1"><?php echo e($evento['titulo'] ?? 'Evento'); ?></h5>
+                                    <?php if (!empty($evento['local'])): ?>
+                                    <p class="card-text text-muted mb-1"><i class="bi bi-geo-alt"></i> <?php echo e($evento['local']); ?></p>
+                                    <?php endif; ?>
+                                    <?php if (!empty($evento['descricao'])): ?>
+                                    <p class="card-text mb-2"><?php echo e($evento['descricao']); ?></p>
+                                    <?php endif; ?>
+                                    <?php if (!empty($evento['link'])): ?>
+                                    <a href="<?php echo e($evento['link']); ?>" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">
+                                        <i class="bi bi-box-arrow-up-right"></i> Mais Informações
+                                    </a>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php endforeach; ?>
             </div>
-            <?php endforeach; ?>
         </div>
-        <?php else: ?>
-        <div class="alert alert-light border mb-0">
-            <i class="bi bi-info-circle"></i> Nenhum evento futuro cadastrado no momento.
-        </div>
-        <?php endif; ?>
-    </div>
-</section>
+    </section>
+<?php else: ?>
+<?php endif; ?>
 
 <!-- Seção de Formação -->
 <section class="py-5 bg-light">

@@ -19,5 +19,12 @@
     "descricao": "Homenagem a Queen em arranjos para seis vozes, foco das apresentações de 2024–25",
     "image": "Queen_at_six/Queen-at-six-Chimp.png",
     "ordem": 3
+  },
+  {
+    "id": "revelation",
+    "titulo": "Revelation",
+    "descricao": "Homenagem ao grupo Genesis, com arranjos de rock progressivo, para produção de áudios em estúdio.",
+    "image": "Revelation/Revelation.png",
+    "ordem": 4
   }
 ]
